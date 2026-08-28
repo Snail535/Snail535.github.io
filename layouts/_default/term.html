@@ -1,0 +1,15 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<div class="portrait-card-grid">
+  {{ range .Pages }}
+  <div class="portrait-card">
+    <a href="{{ .RelPermalink }}">
+      {{ with .Params.cover.image }}
+      <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+      {{ end }}
+      <h3>{{ .Title }}</h3>
+    </a>
+  </div>
+  {{ end }}
+</div>
+{{ end }}

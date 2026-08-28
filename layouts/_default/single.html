@@ -1,0 +1,124 @@
+{{- define "main" }}
+{{ $mode := .Params.mode }}
+<article class="post-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="post-title">
+      {{ .Title }}
+      {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+    </h1>
+    {{/* 海报区域，电影/书籍/写真共用 */}}
+    {{ with .Params.cover.image }}
+    <div style="display:flex;gap:1.5rem;margin:1rem 0;flex-wrap:wrap;align-items:flex-start;">
+      <div style="flex:0 0 auto;">
+        <img src="{{ . }}" alt="{{ $.Params.cover.alt }}" style="max-width:240px;width:100%;height:auto;object-fit:contain;border-radius:6px;">
+      </div>
+      <div style="flex:1;min-width:260px;font-size:1.05rem;line-height:1.8;">
+        {{ if eq $mode "movie" }}
+          {{/* 电影信息：保留 */}}
+          {{ with $.Params.director }}<div><strong>导演：</strong>{{ . }}</div>{{ end }}
+          {{ with $.Params.screenwriter }}<div><strong>编剧：</strong>{{ . }}</div>{{ end }}
+          {{ with $.Params.cast }}<div><strong>主演：</strong>{{ . }}</div>{{ end }}
+          {{ with $.Params.genre }}<div><strong>类型：</strong>{{ . }}</div>{{ end }}
+          {{ with $.Params.language }}<div><strong>语言：</strong>{{ . }}</div>{{ end }}
+          {{ with $.Params.releaseDate }}<div><strong>上映日期：</strong>{{ . }}</div>{{ end }}
+          {{ with $.Params.duration }}<div><strong>片长：</strong>{{ . }}</div>{{ end }}
+          {{ with $.Params.aka }}<div><strong>又名：</strong>{{ . }}</div>{{ end }}
+          {{ with $.Params.imdb }}<div><strong>IMDb：</strong>{{ . }}</div>{{ end }}
+          {{ with $.Params.doubanId }}<div><strong>豆瓣ID：</strong>{{ . }}</div>{{ end }}
+        {{ end }}
+        {{/* book 和 photo：右侧区域什么都不输出 */}}
+      </div>
+    </div>
+    {{ end }}
+    {{- if .Description }}
+    <div class="post-description">
+      {{ .Description }}
+    </div>
+    {{- end }}
+    {{- if not (.Param "hideMeta") }}
+    <div class="post-meta">
+      {{- partial "post_meta.html" . -}}
+      {{- partial "translation_list.html" . -}}
+      {{- partial "edit_post.html" . -}}
+      {{- partial "post_canonical.html" . -}}
+    </div>
+    {{- end }}
+  </header>
+  {{- if (.Param "ShowToc") }}
+  {{- partial "toc.html" . }}
+  {{- end }}
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+
+  {{/* ========== 根据mode渲染预览图 ========== */}}
+  {{ if eq $mode "movie" }}
+    {{/* 电影剧照 */}}
+    {{ if (or .Params.poster1 .Params.poster2) }}
+    <div style="margin-top:2rem;">
+      <h3>电影剧照</h3>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:0.5rem;">
+        {{ with .Params.poster1 }}
+        <div style="flex:1;min-width:220px;">
+          <img src="{{ . }}" alt="剧照" style="width:100%;border-radius:6px;">
+        </div>
+        {{ end }}
+        {{ with .Params.poster2 }}
+        <div style="flex:1;min-width:220px;">
+          <img src="{{ . }}" alt="剧照" style="width:100%;border-radius:6px;">
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  {{ end }}
+
+  {{ if eq $mode "book" }}
+    {{/* 书籍：四张预览图2×2网格 */}}
+    {{ if (or .Params.preview1 .Params.preview2 .Params.preview3 .Params.preview4) }}
+    <div style="margin-top:2rem;">
+      <h3>内容预览</h3>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:0.5rem;">
+        {{ with .Params.preview1 }}
+        <div><img src="{{ . }}" alt="预览" style="width:100%;border-radius:8px;"></div>
+        {{ end }}
+        {{ with .Params.preview2 }}
+        <div><img src="{{ . }}" alt="预览" style="width:100%;border-radius:8px;"></div>
+        {{ end }}
+        {{ with .Params.preview3 }}
+        <div><img src="{{ . }}" alt="预览" style="width:100%;border-radius:8px;"></div>
+        {{ end }}
+        {{ with .Params.preview4 }}
+        <div><img src="{{ . }}" alt="预览" style="width:100%;border-radius:8px;"></div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  {{ end }}
+
+  {{ if eq $mode "photo" }}
+    {{/* 写真：四张预览图2×2网格，标题【部分预览】 */}}
+    {{ if (or .Params.preview1 .Params.preview2 .Params.preview3 .Params.preview4) }}
+    <div style="margin-top:2rem;">
+      <h3>部分预览</h3>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:0.5rem;">
+        {{ with .Params.preview1 }}
+        <div><img src="{{ . }}" alt="预览" style="width:100%;border-radius:8px;"></div>
+        {{ end }}
+        {{ with .Params.preview2 }}
+        <div><img src="{{ . }}" alt="预览" style="width:100%;border-radius:8px;"></div>
+        {{ end }}
+        {{ with .Params.preview3 }}
+        <div><img src="{{ . }}" alt="预览" style="width:100%;border-radius:8px;"></div>
+        {{ end }}
+        {{ with .Params.preview4 }}
+        <div><img src="{{ . }}" alt="预览" style="width:100%;border-radius:8px;"></div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  {{ end }}
+
+</article>
+{{- end }}

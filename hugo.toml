@@ -1,0 +1,47 @@
+baseURL = "https://Snail535.github.io/"
+locale = "zh‑CN"
+title = "新叶素材" #【修改这里】博客网站标题
+theme = "PaperMod"
+
+[params]
+  env = "production"
+  homeMode = "cards"
+  homeCardsLayout = "compact"
+  homeCardsImageHeight = "210px"
+  showSummary = false
+  coverResponsiveImages = true
+  ShowReadingTime = true
+  displayCopyrightInFooter = false
+  homeSections = ["movies", "books", "portraits"]
+
+
+[menu]
+[[menu.main]]
+name = "首页"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "电影"
+url = "/movies/"
+weight = 2
+
+[[menu.main]]
+name = "书籍"
+url = "/books/"
+weight =3
+
+[[menu.main]]
+name = "写真"
+url = "/portraits/"
+weight =4
+
+[[menu.main]]
+name = "关于"
+url = "/about/"
+weight =5
+
+[taxonomies]
+  category = "categories"
+  region = "regions"
+  studio = "studios"

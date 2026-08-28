@@ -1,0 +1,44 @@
+{{ define "main" }}
+{{ $site := .Site }}
+
+<h1>{{ .Title }}</h1>
+
+{{/* 顶部地区-工作室筛选栏 */}}
+<div class="portrait-filter-bar">
+{{ range $region := $site.Taxonomies.regions }}
+  <div class="region-block">
+    <h4>{{ $region.Page.Title }}</h4>
+    <div class="studio-link-group">
+    {{ $regName := $region.Page.Title }}
+    {{ range $studio := $site.Taxonomies.studios }}
+      {{ $match := false }}
+      {{ range $artPage := $studio.Pages }}
+        {{ if in $artPage.Params.regions $regName }}
+          {{ $match = true }}
+          {{ break }}
+        {{ end }}
+      {{ end }}
+      {{ if $match }}
+        <a href="{{ $studio.Page.RelPermalink }}" class="studio-tag">{{ $studio.Page.Title }}</a>
+      {{ end }}
+    {{ end }}
+    </div>
+  </div>
+{{ end }}
+</div>
+
+{{/* 写真5列卡片 */}}
+<div class="portrait-card-grid">
+  {{ range .Pages }}
+  <div class="portrait-card">
+    <a href="{{ .RelPermalink }}">
+      {{ with .Params.cover.image }}
+      <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+      {{ end }}
+      <h3>{{ .Title }}</h3>
+    </a>
+  </div>
+  {{ end }}
+</div>
+
+{{ end }}
