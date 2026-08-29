@@ -51,7 +51,6 @@
   <div class="post-content">
     {{ .Content }}
   </div>
-
   {{/* ========== 根据mode渲染预览图 ========== */}}
   {{ if eq $mode "movie" }}
     {{/* 电影剧照 */}}
@@ -73,7 +72,6 @@
     </div>
     {{ end }}
   {{ end }}
-
   {{ if eq $mode "book" }}
     {{/* 书籍：四张预览图2×2网格 */}}
     {{ if (or .Params.preview1 .Params.preview2 .Params.preview3 .Params.preview4) }}
@@ -96,7 +94,6 @@
     </div>
     {{ end }}
   {{ end }}
-
   {{ if eq $mode "photo" }}
     {{/* 写真：四张预览图2×2网格，标题【部分预览】 */}}
     {{ if (or .Params.preview1 .Params.preview2 .Params.preview3 .Params.preview4) }}
@@ -118,6 +115,20 @@
       </div>
     </div>
     {{ end }}
+  {{ end }}
+
+  {{/* ======== 新增：下载区块，配置 download_url 才显示 ======== */}}
+  {{ if .Params.download_url }}
+  <div style="margin-top:3rem;padding:1.5rem;border:1px solid #e2e8f0;border-radius:8px;background:#f8fafc;">
+    <h3>📦资源下载</h3>
+    <div style="margin-top:1rem;">
+      <p>🔗网盘地址：<a href="{{ .Params.download_url }}" target="_blank">{{ .Params.download_url }}</a></p>
+      {{ if .Params.download_pwd }}
+      <p>🔑提取密码：<code>{{ .Params.download_pwd }}</code></p>
+      {{ end }}
+      <p style="margin‑top:0.8rem;color:#666;font‑size:0.9rem;">资源为7z加密压缩包，请使用7‑Zip解压；网页仅展示预览缩略图。</p>
+    </div>
+  </div>
   {{ end }}
 
 </article>
