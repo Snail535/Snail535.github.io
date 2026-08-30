@@ -1,5 +1,5 @@
 baseURL = "https://Snail535.github.io/"
-locale = "zh‑CN"
+locale = "zh-CN"
 title = "新叶素材" #【修改这里】博客网站标题
 theme = "PaperMod"
 

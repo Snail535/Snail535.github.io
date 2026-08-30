@@ -29,7 +29,7 @@
 
 {{/* 写真5列卡片 */}}
 <div class="portrait-card-grid">
-  {{ range .Pages }}
+  {{ range .RegularPages }}
   <div class="portrait-card">
     <a href="{{ .RelPermalink }}">
       {{ with .Params.cover.image }}
