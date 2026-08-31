@@ -30,6 +30,13 @@
       <description></description>
     </item>
     <item>
+      <title>Graphis</title>
+      <link>http://localhost:1313/studios/graphis/</link>
+      <pubDate>Thu, 20 Aug 2026 12:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/studios/graphis/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>JVID</title>
       <link>http://localhost:1313/studios/jvid/</link>
       <pubDate>Thu, 20 Aug 2026 12:00:00 +0800</pubDate>
@@ -41,6 +48,13 @@
       <link>http://localhost:1313/studios/makemodel/</link>
       <pubDate>Thu, 20 Aug 2026 12:00:00 +0800</pubDate>
       <guid>http://localhost:1313/studios/makemodel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SuperPoseBook</title>
+      <link>http://localhost:1313/studios/superposebook/</link>
+      <pubDate>Thu, 20 Aug 2026 12:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/studios/superposebook/</guid>
       <description></description>
     </item>
     <item>
