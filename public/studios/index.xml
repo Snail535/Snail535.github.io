@@ -9,6 +9,13 @@
     <lastBuildDate>Thu, 20 Aug 2026 12:00:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/studios/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>ArtGravia</title>
+      <link>http://localhost:1313/studios/artgravia/</link>
+      <pubDate>Thu, 20 Aug 2026 12:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/studios/artgravia/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Escape</title>
       <link>http://localhost:1313/studios/escape/</link>
       <pubDate>Thu, 20 Aug 2026 12:00:00 +0800</pubDate>
@@ -48,6 +55,13 @@
       <link>http://localhost:1313/studios/makemodel/</link>
       <pubDate>Thu, 20 Aug 2026 12:00:00 +0800</pubDate>
       <guid>http://localhost:1313/studios/makemodel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PureMedia</title>
+      <link>http://localhost:1313/studios/puremedia/</link>
+      <pubDate>Thu, 20 Aug 2026 12:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/studios/puremedia/</guid>
       <description></description>
     </item>
     <item>

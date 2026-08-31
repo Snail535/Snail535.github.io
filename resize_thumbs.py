@@ -20,26 +20,37 @@ def make_thumbnail(src_path: str, dst_path: str):
         print(f"跳过已存在: {dst_path}")
         return
 
-    with Image.open(src_path) as img:
-        width, height = img.size
-        # 计算缩放比例，长边等于MAX_LONG_SIDE
-        if width >= height:
-            new_w = MAX_LONG_SIDE
-            new_h = int(height * (MAX_LONG_SIDE / width))
-        else:
-            new_h = MAX_LONG_SIDE
-            new_w = int(width * (MAX_LONG_SIDE / height))
+    try:
+        with Image.open(src_path) as img:
+            width, height = img.size
 
-        # LANCZOS高质量缩放
-        img_resized = img.resize((new_w, new_h), Image.Resampling.LANCZOS)
+            # 关键修复：P调色板模式转RGB，否则无法保存JPG
+            if img.mode == "P":
+                img = img.convert("RGB")
+            # 带透明通道RGBA转RGB（jpg不支持透明）
+            if img.mode == "RGBA":
+                img = img.convert("RGB")
 
-        # 保存图片
-        if dst_path.lower().endswith(".png"):
-            img_resized.save(dst_path, "PNG")
-        else:
-            img_resized.save(dst_path, quality=QUALITY, optimize=True)
+            # 计算缩放比例，长边等于MAX_LONG_SIDE
+            if width >= height:
+                new_w = MAX_LONG_SIDE
+                new_h = int(height * (MAX_LONG_SIDE / width))
+            else:
+                new_h = MAX_LONG_SIDE
+                new_w = int(width * (MAX_LONG_SIDE / height))
 
-        print(f"生成缩略图: {src_path} -> {dst_path}")
+            # LANCZOS高质量缩放
+            img_resized = img.resize((new_w, new_h), Image.Resampling.LANCZOS)
+
+            # 保存图片
+            if dst_path.lower().endswith(".png"):
+                img_resized.save(dst_path, "PNG")
+            else:
+                img_resized.save(dst_path, quality=QUALITY, optimize=True)
+
+            print(f"生成缩略图: {src_path} -> {dst_path}")
+    except Exception as e:
+        print(f"❌处理失败 {src_path} ,错误信息: {str(e)}")
 
 
 def scan_folder():
@@ -55,4 +66,4 @@ def scan_folder():
 
 if __name__ == "__main__":
     scan_folder()
-    print("\n✅ 缩略图全部处理完成！")
+    print("\n✅ 缩略图扫描处理完成！")
