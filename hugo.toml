@@ -45,3 +45,7 @@ weight =5
   category = "categories"
   region = "regions"
   studio = "studios"
+
+[pagination]
+pagerSize = 30
+path = 'page'

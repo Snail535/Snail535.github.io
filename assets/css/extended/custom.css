@@ -1,31 +1,3 @@
-/*首页卡片4列 大屏4，平板3，小屏2，手机480px一行3张*/
-.home-cards {
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 1.4rem !important;
-}
-@media (max-width:1024px){
-  .home-cards{grid-template-columns: repeat(3,1fr)!important;}
-}
-@media (max-width:768px){
-  .home-cards{grid-template-columns: repeat(2,1fr)!important;}
-}
-/*手机480px：首页一行3列，缩小间距*/
-@media (max-width:480px){
-  .home-cards{
-    grid-template-columns: repeat(3,1fr)!important;
-    gap:0.6rem !important;
-  }
-}
-
-/*详情页标题下方手动海报，居中限制宽度*/
-.single-post-content > p > img:first-of-type {
-    max-width: 520px !important;
-    max-height: 620px;
-    display: block;
-    margin:1rem auto;
-}
-
 /*========写真页面顶部筛选栏========*/
 .portrait-filter-bar {
   background:#f7f8fa;
@@ -73,7 +45,7 @@
   font-size:14px;
   margin:6px 0;
 }
-/*====响应式适配====*/
+/*写真响应式*/
 @media (max-width:1200px){
   .portrait-card-grid{grid-template-columns:repeat(3,1fr)!important;}
 }
@@ -83,7 +55,6 @@
     height:180px;
   }
 }
-/*写真页面 手机480px一行3张，缩小间距与图片高度*/
 @media (max-width:480px){
   .portrait-card-grid{
     grid-template-columns:repeat(3,1fr)!important;
@@ -95,4 +66,57 @@
   .portrait-card h3 {
     font-size:12px;
   }
+}
+
+/*详情页标题下方手动海报，居中限制宽度*/
+.single-post-content > p > img:first-of-type {
+    max-width: 520px !important;
+    max-height: 620px;
+    display: block;
+    margin:1rem auto;
+}
+
+/* ========== 首页、电影、书籍列表页 custom‑card‑grid ========== */
+.custom-card-grid{
+  display:grid !important;
+  grid-template-columns:repeat(5,1fr) !important;  /* PC改成5列 */
+  gap:1.4rem !important;
+}
+@media(max-width:1024px){
+  .custom-card-grid{grid-template-columns:repeat(3,1fr) !important;}
+}
+@media(max-width:768px){
+  .custom-card-grid{grid-template-columns:repeat(2,1fr) !important;}
+}
+@media(max-width:480px){
+  .custom-card-grid{
+    grid-template-columns:repeat(3,1fr) !important;
+    gap:0.6rem !important;
+  }
+}
+.custom-card-grid .card-item{
+  border:1px solid var(--border);
+  border-radius:8px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column; /* 让卡片内部纵向排布，高度统一 */
+  height:100%;
+}
+.custom-card-grid .card-image{
+  width:100%;
+  height:180px; /* 固定图片容器高度 */
+}
+.custom-card-grid .card-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.custom-card-grid .card-body{
+  padding:0.8rem;
+  flex-grow:1; /* 标题区域自动占剩余空间，所有卡片底部对齐 */
+}
+.custom-card-grid .card-body h3{
+  font-size:14px;
+  margin:0;
+  line-height:1.4;
 }
