@@ -13,6 +13,7 @@ theme = "PaperMod"
   ShowReadingTime = true
   displayCopyrightInFooter = false
   homeSections = ["movies", "books", "portraits"]
+  search = true
 
 
 [menu]
@@ -41,6 +42,11 @@ name = "关于"
 url = "/about/"
 weight =5
 
+[[menu.main]]
+name = "搜索"
+url = "/search/"
+weight = 9
+
 [taxonomies]
   category = "categories"
   region = "regions"
@@ -49,3 +55,16 @@ weight =5
 [pagination]
 pagerSize = 30
 path = 'page'
+
+# ========== 搜索功能配置 ==========
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[params.fuseOpts]
+isCaseSensitive = false
+shouldSort = true
+location = 0
+distance = 1000
+threshold = 0.4
+minMatchCharLength = 1
+keys = ["title", "summary", "content"]
