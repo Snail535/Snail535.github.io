@@ -69,14 +69,20 @@
   {{- $dlUrl := .Params.download_url | default ($dlMag.url | default "") }}
   {{- $dlPwd := .Params.download_pwd | default ($dlMag.pwd | default "") }}
   {{- $dlNote := $dlMag.note | default (site.Data.downloads.defaults.note | default "") }}
-  <div class="mg-download">
+  {{- $dlKey := printf "%s-%s" .Params.magazine_slug .File.TranslationBaseName }}
+  {{- $api := site.Params.linkApi | default "" }}
+  <div class="mg-download" data-mgdl
+       data-key="{{ $dlKey }}"
+       data-api="{{ $api }}"
+       data-limit="{{ site.Params.linkDailyLimit | default 5 }}"
+       {{- with $dlUrl }} data-dl="{{ . | base64Encode }}"{{ end }}>
     <h3>下载</h3>
     {{- if $dlUrl }}
     <p class="mg-dl-row">
-      <span class="mg-dl-label">网盘</span>
-      <a class="mg-dl-link" href="{{ $dlUrl }}" target="_blank" rel="noopener nofollow">打开夸克网盘 {{ if not .Params.download_url }}（{{ .Params.magazine }} 整刊）{{ end }}</a>
-      <button class="mg-copy" type="button" data-copy="{{ $dlUrl }}">复制链接</button>
+      <button type="button" class="mg-dl-btn" data-act="open">打开夸克网盘 {{ if not .Params.download_url }}（{{ .Params.magazine }} 整刊）{{ end }}</button>
+      <button type="button" class="mg-copy" data-act="copy">复制链接</button>
     </p>
+    <p class="mg-dl-status" data-role="status"></p>
     {{- with $dlPwd }}
     <p class="mg-dl-row">
       <span class="mg-dl-label">提取码</span>
@@ -94,7 +100,7 @@
   </div>
 
   <script>
-  document.querySelectorAll('.mg-copy').forEach(function (b) {
+  document.querySelectorAll('.mg-copy[data-copy]').forEach(function (b) {
     b.addEventListener('click', function () {
       var t = b.dataset.copy || '';
       var done = function () {
@@ -122,6 +128,129 @@
       b.textContent = '已显示原图';
     });
   });
+  </script>
+
+  {{- /* 下载入口配额：接口配置了走服务端计数，没配置就退化为浏览器本地计数 */ -}}
+  <script>
+  (function () {
+    var box = document.querySelector('[data-mgdl]');
+    if (!box) return;
+    var key = box.dataset.key || '';
+    var api = (box.dataset.api || '').replace(/\/+$/, '');
+    var total = parseInt(box.dataset.limit, 10) || 5;
+    var statusEl = box.querySelector('[data-role="status"]');
+    var btns = Array.prototype.slice.call(box.querySelectorAll('[data-act]'));
+    var remaining = total;
+    var known = false; // 接口模式下，服务端返回过余量没有
+
+    function shanghaiNow() { return new Date(Date.now() + 8 * 3600 * 1000); }
+    function todayKey() { return 'mgdl:' + shanghaiNow().toISOString().slice(0, 10); }
+    function localUsed() {
+      try { return parseInt(localStorage.getItem(todayKey()), 10) || 0; } catch (e) { return 0; }
+    }
+    function bumpLocal(n) {
+      try { localStorage.setItem(todayKey(), String((parseInt(localStorage.getItem(todayKey()), 10) || 0) + n)); } catch (e) {}
+    }
+    function resetLabel() {
+      var d = shanghaiNow();
+      var t = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate() + 1));
+      return (t.getUTCMonth() + 1) + '月' + t.getUTCDate() + '日 0 点';
+    }
+
+    function paint() {
+      btns.forEach(function (b) { b.disabled = remaining <= 0; });
+      box.classList.toggle('is-locked', remaining <= 0);
+      if (remaining <= 0) {
+        statusEl.textContent = '今日 ' + total + ' 次下载入口已用完，' + resetLabel() + '（北京时间）恢复';
+      } else if (api && !known) {
+        statusEl.textContent = '每天最多 ' + total + ' 次，' + resetLabel() + '（北京时间）重置';
+      } else {
+        statusEl.textContent = '今日还可打开 ' + remaining + ' 次（每天 ' + total + ' 次，' + resetLabel() + '重置）';
+      }
+    }
+
+    function flash(msg) {
+      var prev = statusEl.textContent;
+      statusEl.textContent = msg;
+      setTimeout(function () { if (statusEl.textContent === msg) paint(); }, 1800);
+    }
+
+    function copyText(t) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(t).then(function () { flash('链接已复制'); }, function () { flash('复制失败，请手动打开'); });
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = t;
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); flash('链接已复制'); } catch (e) { flash('复制失败'); }
+        document.body.removeChild(ta);
+      }
+    }
+
+    function deliver(act, url) {
+      if (act === 'copy') copyText(url);
+      else window.open(url, '_blank', 'noopener');
+    }
+
+    function viaApi(act) {
+      var win = act === 'open' ? window.open('', '_blank') : null;
+      fetch(api + '/link?k=' + encodeURIComponent(key), { credentials: 'omit' })
+        .then(function (r) { return r.json().then(function (b) { return { status: r.status, body: b }; }); })
+        .then(function (res) {
+          var b = res.body || {};
+          if (!b.ok) {
+            if (win) win.close();
+            if (b.reason === 'limit') {
+              remaining = 0;
+              paint();
+            } else if (b.reason === 'not_found') {
+              statusEl.textContent = '本期下载入口暂未开通';
+            } else {
+              statusEl.textContent = '下载入口暂时不可用，请稍后再试';
+            }
+            return;
+          }
+          remaining = typeof b.remaining === 'number' ? b.remaining : remaining - 1;
+          known = true;
+          paint();
+          if (act === 'open') {
+            if (win) win.location.href = b.url;
+            else window.open(b.url, '_blank', 'noopener');
+          } else {
+            copyText(b.url);
+          }
+        })
+        .catch(function () {
+          if (win) win.close();
+          statusEl.textContent = '网络异常，未能获取下载入口，请稍后重试';
+        });
+    }
+
+    function viaLocal(act) {
+      var used = localUsed();
+      if (used >= total) { remaining = 0; paint(); return; }
+      var url = '';
+      try { url = atob(box.dataset.dl || ''); } catch (e) { url = ''; }
+      if (!url) { statusEl.textContent = '下载入口缺失'; return; }
+      bumpLocal(1);
+      remaining = Math.max(0, total - used - 1);
+      paint();
+      deliver(act, url);
+    }
+
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var act = b.dataset.act;
+        if (api) viaApi(act);
+        else viaLocal(act);
+      });
+    });
+
+    if (api) remaining = total;
+    else remaining = Math.max(0, total - localUsed());
+    paint();
+  })();
   </script>
 
 

@@ -424,6 +424,18 @@
 }
 .mg-copy:hover { border-color: var(--secondary); }
 .mg-dl-note { font-size: .8rem; color: var(--secondary); margin: .4rem 0 0; }
+.mg-dl-btn {
+  font: inherit; font-weight: 600; font-size: .92rem;
+  padding: .45rem 1.05rem; cursor: pointer; border-radius: 8px;
+  border: 1px solid transparent; background: var(--primary); color: var(--theme);
+  transition: opacity .15s ease, transform .1s ease;
+}
+.mg-dl-btn:hover { opacity: .86; }
+.mg-dl-btn:active { transform: translateY(1px); }
+.mg-dl-btn:disabled { opacity: .42; cursor: not-allowed; transform: none; }
+.mg-dl-status { font-size: .8rem; color: var(--secondary); margin: .45rem 0 0; }
+.mg-download.is-locked .mg-dl-status { color: #b3261e; font-weight: 600; }
+.mg-download.is-locked .mg-pwd { opacity: .55; }
 
 /* ---------- 内容识别打码（原图保留，点击查看才显示） ---------- */
 .mg-censored,
