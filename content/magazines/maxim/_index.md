@@ -7,7 +7,7 @@ color: "#b0202a"
 adult: false
 description: "马克西姆，男性生活方式、时尚与封面女郎。"
 cover:
-  thumb: "/thumbs/magazines/maxim/2026-06-usa/thumb.jpg"
+  thumb: "/thumbs/magazines/maxim/2026-06-usa/thumb.webp"
   alt: "Maxim"
 ---
 

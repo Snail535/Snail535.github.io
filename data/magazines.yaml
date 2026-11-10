@@ -249,13 +249,13 @@ magazines:
 #   pages: 120
 #   adult: true
 #   cover:
-#     image: "/thumbs/magazines/playboy/2026-11/cover.jpg"
-#     thumb: "/thumbs/magazines/playboy/2026-11/thumb.jpg"
+#     image: "/thumbs/magazines/playboy/2026-11/cover.webp"
+#     thumb: "/thumbs/magazines/playboy/2026-11/thumb.webp"
 #     alt: "Playboy 2026 年 11 月刊"
-#   preview1: "/thumbs/magazines/playboy/2026-11/p1.jpg"
-#   preview2: "/thumbs/magazines/playboy/2026-11/p2.jpg"
-#   preview3: "/thumbs/magazines/playboy/2026-11/p3.jpg"
-#   preview4: "/thumbs/magazines/playboy/2026-11/p4.jpg"
+#   preview1: "/thumbs/magazines/playboy/2026-11/p1.webp"
+#   preview2: "/thumbs/magazines/playboy/2026-11/p2.webp"
+#   preview3: "/thumbs/magazines/playboy/2026-11/p3.webp"
+#   preview4: "/thumbs/magazines/playboy/2026-11/p4.webp"
 #   download_url: ""
 #   download_pwd: ""
 #   ---

@@ -7,7 +7,7 @@ color: "#111111"
 adult: false
 description: "花花公子，成人向生活方式、人物访谈与经典摄影。"
 cover:
-  thumb: "/thumbs/magazines/playboy/2026-09-usa/thumb.jpg"
+  thumb: "/thumbs/magazines/playboy/2026-09-usa/thumb.webp"
   alt: "Playboy"
 ---
 

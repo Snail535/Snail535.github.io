@@ -7,7 +7,7 @@ color: "#0b3d91"
 adult: false
 description: "福布斯，企业家、富豪榜与商业趋势观察。"
 cover:
-  thumb: "/thumbs/magazines/forbes/2026-12-usa/thumb.jpg"
+  thumb: "/thumbs/magazines/forbes/2026-12-usa/thumb.webp"
   alt: "Forbes"
 ---
 
