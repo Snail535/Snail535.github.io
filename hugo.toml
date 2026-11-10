@@ -1,0 +1,64 @@
+baseURL = "https://Snail535.github.io/"
+locale = "zh-CN"
+title = "新叶素材"
+theme = "PaperMod"
+buildFuture = true
+buildExpired = true
+
+[params]
+  env = "production"
+  description = "免费分享的英文原版杂志库"
+  ShowReadingTime = false
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = false
+  displayCopyrightInFooter = false
+  search = true
+  mainSections = ["magazines"]
+
+[menu]
+[[menu.main]]
+name = "首页"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "杂志库"
+url = "/magazines/"
+weight = 2
+
+[[menu.main]]
+name = "分类"
+url = "/categories/"
+weight = 3
+
+[[menu.main]]
+name = "关于"
+url = "/about/"
+weight = 4
+
+[[menu.main]]
+name = "搜索"
+url = "/search/"
+weight = 9
+
+[taxonomies]
+  category = "categories"
+  edition = "editions"
+  year = "years"
+
+[pagination]
+pagerSize = 30
+path = 'page'
+
+# ========== 搜索功能配置 ==========
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[params.fuseOpts]
+isCaseSensitive = false
+shouldSort = true
+location = 0
+distance = 1000
+threshold = 0.4
+minMatchCharLength = 1
+keys = ["title", "summary", "content", "magazine"]

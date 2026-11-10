@@ -1,0 +1,133 @@
+{{ define "main" }}
+<article class="post-single mg-single">
+  <header class="post-header">
+    {{- partial "breadcrumbs.html" . }}
+    <h1 class="post-title">{{ .Title }}</h1>
+    <div class="mg-single-sub">
+      {{- $cad := dict "weekly" "周刊" "monthly" "月刊" "bimonthly" "双月刊" "biweekly" "双周刊" "quarterly" "季刊" }}
+      <a href="{{ printf "/magazines/%s/" .Params.magazine_slug | relURL }}">{{ .Params.magazine }}</a>
+      {{- with .Params.edition }} · <a href="{{ printf "/editions/%s/" (. | urlize) | relURL }}">{{ . }}</a> 版{{ end }}
+      {{- with .Params.cadence }} · {{ index $cad . | default . }}{{ end }}
+    </div>
+  </header>
+
+  <div class="mg-hero{{ if .Params.adult }} is-adult{{ end }}">
+    {{- with .Params.cover.image }}
+    {{- $safe := index (site.Data.censored_previews | default dict) . | default . }}
+    <div class="mg-hero-cover{{ if ne $safe . }} mg-censored{{ end }}">
+      <img src="{{ $safe | relURL }}" alt="{{ $.Params.cover.alt | default $.Title }}" decoding="async" fetchpriority="high"{{ if ne $safe . }} data-raw="{{ . | relURL }}"{{ end }}>
+      {{- if ne $safe . }}
+      <span class="mg-censor-tag">已打码</span>
+      <button type="button" class="mg-reveal">查看原图</button>
+      {{- end }}
+      {{- if $.Params.adult }}<span class="mg-adult">18+</span>{{ end }}
+    </div>
+    {{- end }}
+    <dl class="mg-facts">
+      <div><dt>刊物</dt><dd>{{ .Params.magazine }}{{ with .Params.edition }}（{{ . }}）{{ end }}</dd></div>
+      <div><dt>期次</dt><dd>{{ .Params.issue_label | default .Title }}</dd></div>
+      {{- with .Params.pages }}<div><dt>页数</dt><dd>{{ . }} 页</dd></div>{{ end }}
+      {{- with .Params.file_size }}<div><dt>文件</dt><dd>{{ . }} PDF</dd></div>{{ end }}
+      <div><dt>年份</dt><dd><a href="{{ printf "/years/%s/" ($.Date.Format "2006") | relURL }}">{{ $.Date.Format "2006" }}</a></dd></div>
+      {{- with .Params.categories }}<div><dt>分类</dt><dd>{{ range $i, $c := . }}{{ if $i }} / {{ end }}<a href="{{ printf "/categories/%s/" ($c | urlize) | relURL }}">{{ $c }}</a>{{ end }}</dd></div>{{ end }}
+      <div><dt>入库</dt><dd>{{ .Date.Format "2006-01-02" }}</dd></div>
+    </dl>
+  </div>
+
+  {{- with .Content }}
+  <div class="post-content">{{ . }}</div>
+  {{- end }}
+
+  {{- $previews := slice }}
+  {{- range $i := slice 1 2 3 4 }}
+    {{- $v := index $.Params (printf "preview%d" $i) }}
+    {{- with $v }}{{ $previews = $previews | append . }}{{ end }}
+  {{- end }}
+  {{- with $previews }}
+  <div class="mg-previews{{ if $.Params.adult }} is-adult{{ end }}">
+    <h3>内页预览</h3>
+    <div class="mg-preview-grid">
+      {{- range . }}
+      {{- $safe := index (site.Data.censored_previews | default dict) . | default . }}
+      {{- if ne $safe . }}
+      <div class="mg-preview-item mg-censored">
+        <img src="{{ $safe | relURL }}" alt="内页预览（已打码）" loading="lazy" decoding="async" data-raw="{{ . | relURL }}">
+        <span class="mg-censor-tag">已打码</span>
+        <button type="button" class="mg-reveal">查看原图</button>
+      </div>
+      {{- else }}
+      <a href="{{ . | relURL }}" target="_blank" rel="noopener">
+        <img src="{{ . | relURL }}" alt="内页预览" loading="lazy" decoding="async">
+      </a>
+      {{- end }}
+      {{- end }}
+    </div>
+  </div>
+  {{- end }}
+
+  {{- $dlMag := index (site.Data.downloads.magazines | default dict) .Params.magazine_slug | default dict }}
+  {{- $dlUrl := .Params.download_url | default ($dlMag.url | default "") }}
+  {{- $dlPwd := .Params.download_pwd | default ($dlMag.pwd | default "") }}
+  {{- $dlNote := $dlMag.note | default (site.Data.downloads.defaults.note | default "") }}
+  <div class="mg-download">
+    <h3>下载</h3>
+    {{- if $dlUrl }}
+    <p class="mg-dl-row">
+      <span class="mg-dl-label">网盘</span>
+      <a class="mg-dl-link" href="{{ $dlUrl }}" target="_blank" rel="noopener nofollow">打开夸克网盘 {{ if not .Params.download_url }}（{{ .Params.magazine }} 整刊）{{ end }}</a>
+      <button class="mg-copy" type="button" data-copy="{{ $dlUrl }}">复制链接</button>
+    </p>
+    {{- with $dlPwd }}
+    <p class="mg-dl-row">
+      <span class="mg-dl-label">提取码</span>
+      <code class="mg-pwd">{{ . }}</code>
+      <button class="mg-copy" type="button" data-copy="{{ . }}">复制</button>
+    </p>
+    {{- end }}
+    <p class="mg-dl-note">
+      {{- if not .Params.download_url }}{{ $dlNote }}：{{ end -}}
+      本期文件 <code>{{ .Params.netdisk_file | default (.Params.file_name | default (printf "%s_%s" .Params.magazine (.Date.Format "2006-01"))) }}</code>
+    </p>
+    {{- else }}
+    <p class="mg-muted">本期下载地址整理中，稍后补充。</p>
+    {{- end }}
+  </div>
+
+  <script>
+  document.querySelectorAll('.mg-copy').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var t = b.dataset.copy || '';
+      var done = function () {
+        var old = b.textContent;
+        b.textContent = '已复制';
+        setTimeout(function () { b.textContent = old; }, 1500);
+      };
+      if (navigator.clipboard) { navigator.clipboard.writeText(t).then(done); }
+      else {
+        var ta = document.createElement('textarea');
+        ta.value = t; document.body.appendChild(ta); ta.select();
+        document.execCommand('copy'); document.body.removeChild(ta); done();
+      }
+    });
+  });
+  document.querySelectorAll('.mg-reveal').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var box = b.closest('.mg-censored');
+      var img = box && box.querySelector('img');
+      if (!img || !img.dataset.raw) return;
+      img.src = img.dataset.raw;
+      img.alt = img.alt.replace('（已打码）', '');
+      box.classList.add('is-revealed');
+      b.disabled = true;
+      b.textContent = '已显示原图';
+    });
+  });
+  </script>
+
+
+  <nav class="mg-nav">
+    {{- with .PrevInSection }}<a class="prev" href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ else }}<span></span>{{ end }}
+    {{- with .NextInSection }}<a class="next" href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+  </nav>
+</article>
+{{ end }}

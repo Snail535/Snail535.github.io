@@ -1,0 +1,102 @@
+{{ define "main" }}
+{{- if .Sections }}
+{{- /* ========== 刊物总览页 /magazines/ ========== */}}
+<header class="list-head">
+  <h1>{{ .Title }}</h1>
+  {{- with .Content }}<div class="list-intro">{{ . }}</div>{{ end }}
+  <div class="list-stat">共 {{ len .Sections }} 种刊物 · {{ $total := 0 }}{{ range .Sections }}{{ $total = add $total (len .RegularPages) }}{{ end }}{{ $total }} 期</div>
+</header>
+
+{{- range .Sections.GroupByParam "category" }}
+<section class="cat-block">
+  <h2 class="cat-title">{{ .Key }}</h2>
+  <div class="mz-grid">
+    {{- range .Pages.ByWeight }}
+    {{ partial "mag_title_card.html" . }}
+    {{- end }}
+  </div>
+</section>
+{{- end }}
+
+{{- else }}
+{{- /* ========== 单一刊物页 /magazines/<slug>/ ========== */}}
+{{- $pages := .RegularPages.ByDate.Reverse }}
+{{- $years := slice }}{{ $eds := slice }}
+{{- range $pages }}
+  {{- $years = $years | append (.Date.Format "2006") }}
+  {{- with .Params.edition }}{{ $eds = $eds | append . }}{{ end }}
+{{- end }}
+{{- $years = $years | sort | uniq }}
+{{- $eds = $eds | sort | uniq }}
+
+<header class="list-head">
+  <h1 {{ with .Params.color }}style="color:{{ . }}"{{ end }}>{{ .Title }}</h1>
+  <div class="list-stat">
+    {{ .Params.category }}{{ with .Params.cadence }} · {{ . }}{{ end }} ·
+    共 <span id="mg-count">{{ len $pages }}</span> 期
+  </div>
+  {{- with .Content }}<div class="list-intro">{{ . }}</div>{{ end }}
+</header>
+
+{{- if or (gt (len $years) 1) (gt (len $eds) 1) }}
+<div class="filter-bar" id="mg-filter">
+  {{- if gt (len $years) 1 }}
+  <div class="filter-row">
+    <span class="filter-label">年份</span>
+    <button class="chip is-active" data-filter="year" data-value="">全部</button>
+    {{- range $years }}
+    <button class="chip" data-filter="year" data-value="{{ . }}">{{ . }}</button>
+    {{- end }}
+  </div>
+  {{- end }}
+  {{- if gt (len $eds) 1 }}
+  <div class="filter-row">
+    <span class="filter-label">国家</span>
+    <button class="chip is-active" data-filter="edition" data-value="">全部</button>
+    {{- range $eds }}
+    <button class="chip" data-filter="edition" data-value="{{ . }}">{{ . }}</button>
+    {{- end }}
+  </div>
+  {{- end }}
+</div>
+{{- end }}
+
+<div class="mg-grid">
+  {{- range $pages }}
+  {{ partial "mag_issue_card.html" . }}
+  {{- end }}
+</div>
+
+{{- if or (gt (len $years) 1) (gt (len $eds) 1) }}
+<script>
+(function () {
+  var bar = document.getElementById('mg-filter');
+  if (!bar) return;
+  var cards = [].slice.call(document.querySelectorAll('.mg-grid .mg-card'));
+  var out = document.getElementById('mg-count');
+  var state = { year: '', edition: '' };
+  function apply() {
+    var n = 0;
+    cards.forEach(function (c) {
+      var ok = (!state.year || c.dataset.year === state.year) &&
+               (!state.edition || c.dataset.edition === state.edition);
+      c.style.display = ok ? '' : 'none';
+      if (ok) n++;
+    });
+    if (out) out.textContent = n;
+  }
+  bar.addEventListener('click', function (e) {
+    var b = e.target.closest('.chip');
+    if (!b) return;
+    var f = b.dataset.filter;
+    state[f] = b.dataset.value;
+    [].forEach.call(bar.querySelectorAll('.chip[data-filter="' + f + '"]'), function (x) {
+      x.classList.toggle('is-active', x === b);
+    });
+    apply();
+  });
+})();
+</script>
+{{- end }}
+{{- end }}
+{{ end }}

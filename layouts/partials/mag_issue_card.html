@@ -1,0 +1,22 @@
+{{- /* 单期卡片：首页与列表页共用 */ -}}
+{{- $cover := "" -}}
+{{- with .Params.cover -}}
+  {{- if .thumb }}{{ $cover = .thumb }}{{ else }}{{ with .image }}{{ $cover = . }}{{ end }}{{ end -}}
+{{- end -}}
+{{- /* 若该封面检出敏感区域，列表页一律使用打码版 */ -}}
+{{- $safe := $cover -}}
+{{- with $cover }}{{ $safe = index (site.Data.censored_previews | default dict) . | default . }}{{ end -}}
+<a class="mg-card{{ if .Params.adult }} is-adult{{ end }}" href="{{ .RelPermalink }}"
+   data-year="{{ .Date.Format "2006" }}" data-edition="{{ .Params.edition | default "" }}">
+  <div class="mg-cover">
+    {{- with $safe }}
+    <img src="{{ . | relURL }}" alt="{{ $.Params.cover.alt | default $.Title }}" loading="lazy" decoding="async">
+    {{- end }}
+    {{- with .Params.pages }}<span class="mg-pages">{{ . }}P</span>{{ end }}
+    {{- if .Params.adult }}<span class="mg-adult">18+</span>{{ end }}
+  </div>
+  <div class="mg-body">
+    <div class="mg-title">{{ .Title }}</div>
+    <div class="mg-sub">{{ .Params.magazine }}{{ with .Params.edition }} · {{ . }}{{ end }}</div>
+  </div>
+</a>

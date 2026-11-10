@@ -1,0 +1,263 @@
+# ============================================================
+# 刊物注册表 —— 本站所有杂志的唯一数据源
+# ============================================================
+# 新增刊物的三种方式（任选其一）：
+#   1) 在下面 magazines: 里加一条（推荐，可自定义分类/简介/主题色）
+#   2) 直接把 PDF 目录丢进 E:\迅雷下载\英文杂志\原文档\<新目录>，
+#      脚本会自动登记为「其他」分类，并提示你来这里补分类
+#   3) 个别期次手工创建 md（见底部“手动补一期”说明），不影响批量生成
+#
+# 字段说明：
+#   slug       URL 用的英文标识，同时是 content/magazines/<slug>/ 目录名
+#   name       显示名称（卡片和标题上用的）
+#   category   分类，决定 /categories/ 下的归属，同名自动聚合
+#   folders    对应的 PDF 目录名（可多个，用于同一刊物的不同来源目录）
+#   cadence    weekly / monthly / bimonthly / quarterly，仅作展示
+#   color      卡片顶部标签的主题色
+#   adult      成人内容，true 时封面默认打码，点击/悬停才显示
+#   desc       一句话简介，显示在刊物页顶部
+# ============================================================
+
+defaults:
+  category: "其他"
+  language: "English"
+  adult: false
+  cadence: "monthly"
+
+# ------------------------------------------------------------
+# 国家 / 地区版本关键词表
+# ------------------------------------------------------------
+# 脚本会拿文件名和所在目录去匹配这些关键词（忽略空格与大小写），
+# 命中后作为「国家分类」；同一刊物的不同版本会自动分开归类。
+# 新增国家只需在此加一行，键是匹配词，值是显示名。
+editions:
+  middle east: "Middle East"
+  middleeast: "Middle East"
+  usa: "USA"
+  uk: "UK"
+  asia: "Asia"
+  africa: "Africa"
+  india: "India"
+  australia: "Australia"
+  europe: "Europe"
+  china: "China"
+  japan: "Japan"
+  korea: "Korea"
+  germany: "Germany"
+  france: "France"
+  italy: "Italy"
+  spain: "Spain"
+  brazil: "Brazil"
+  mexico: "Mexico"
+  latam: "Latin America"
+  # —— 长键在前，避免 south africa 先被 africa 吃掉 ——
+  south africa: "South Africa"
+  new zealand: "New Zealand"
+  netherlands: "Netherlands"
+  switzerland: "Switzerland"
+  philippines: "Philippines"
+  indonesia: "Indonesia"
+  singapore: "Singapore"
+  argentina: "Argentina"
+  colombia: "Colombia"
+  venezuela: "Venezuela"
+  portugal: "Portugal"
+  denmark: "Denmark"
+  finland: "Finland"
+  norway: "Norway"
+  sweden: "Sweden"
+  poland: "Poland"
+  croatia: "Croatia"
+  serbia: "Serbia"
+  czech: "Czechia"
+  slovakia: "Slovakia"
+  hungary: "Hungary"
+  romania: "Romania"
+  bulgaria: "Bulgaria"
+  greece: "Greece"
+  russia: "Russia"
+  ukraine: "Ukraine"
+  canada: "Canada"
+  ireland: "Ireland"
+  belgium: "Belgium"
+  austria: "Austria"
+  turkey: "Turkey"
+  israel: "Israel"
+  chile: "Chile"
+  peru: "Peru"
+  thailand: "Thailand"
+  vietnam: "Vietnam"
+  malaysia: "Malaysia"
+
+magazines:
+  - slug: economist
+    name: "The Economist"
+    category: "时事新闻"
+    folders: ["ECO"]
+    cadence: "weekly"
+    color: "#c8102e"
+    desc: "英国老牌政经周刊，以全球视角解析政治、商业与科技。"
+
+  - slug: new-yorker
+    name: "The New Yorker"
+    category: "文化生活"
+    folders: ["NYK"]
+    cadence: "weekly"
+    color: "#1a1a1a"
+    desc: "纽约客，深度报道、文学评论与漫画的代名词。"
+
+  - slug: forbes
+    name: "Forbes"
+    category: "商业财经"
+    folders: ["FOR"]
+    cadence: "bimonthly"
+    color: "#0b3d91"
+    desc: "福布斯，企业家、富豪榜与商业趋势观察。"
+
+  - slug: time
+    name: "TIME"
+    category: "时事新闻"
+    folders: ["TIM", "TIME"]
+    cadence: "biweekly"
+    color: "#e2231a"
+    desc: "时代周刊，封面人物即时代切片。"
+
+  - slug: science
+    name: "Science"
+    category: "科学"
+    folders: ["SCI", "Science"]
+    cadence: "weekly"
+    color: "#0b6e4f"
+    desc: "美国科学促进会旗舰刊，全球顶级科研进展。"
+
+  - slug: the-atlantic
+    name: "The Atlantic"
+    category: "文化生活"
+    folders: ["ATL", "TheAtlantic"]
+    cadence: "monthly"
+    color: "#b31b1b"
+    desc: "大西洋月刊，长文与思想评论的重镇。"
+
+  - slug: readers-digest
+    name: "Reader's Digest"
+    category: "文化生活"
+    folders: ["RDG", "ReadersDigest"]
+    cadence: "monthly"
+    color: "#d62b1f"
+    desc: "读者文摘，全世界发行量最大的生活类杂志。"
+
+  - slug: guardian-weekly
+    name: "The Guardian Weekly"
+    category: "时事新闻"
+    folders: ["GUW", "GuardianWeekly"]
+    cadence: "weekly"
+    color: "#052962"
+    desc: "卫报周刊，一周国际要闻的深度汇编。"
+
+  # ---------- 男士 / 时尚类 ----------
+  # folders 用「刊名开头」即可，脚本按前缀识别目录：
+  # Playboy、Playboy 2025、Playboy 2026 都会归到同一刊；
+  # Pent-house 2018年 这种带连字符的写法也能命中 Penthouse。
+
+  - slug: playboy
+    name: "Playboy"
+    category: "时尚成人"
+    folders: ["PLB", "Playboy"]
+    cadence: "monthly"
+    color: "#111111"
+    adult: false
+    desc: "花花公子，成人向生活方式、人物访谈与经典摄影。"
+
+  - slug: penthouse
+    name: "Penthouse"
+    category: "时尚成人"
+    folders: ["PNT", "Penthouse"]
+    cadence: "monthly"
+    color: "#7b1e3b"
+    adult: false
+    desc: "阁楼，成人向摄影与专题报道，另有 Letters 副刊。"
+
+  - slug: maxim
+    name: "Maxim"
+    category: "时尚成人"
+    folders: ["MAX", "Maxim"]
+    cadence: "monthly"
+    color: "#b0202a"
+    adult: false
+    desc: "马克西姆，男性生活方式、时尚与封面女郎。"
+
+  - slug: fhm
+    name: "FHM"
+    category: "时尚成人"
+    folders: ["FHM"]
+    cadence: "monthly"
+    color: "#0057b8"
+    adult: false
+    desc: "男人装（For Him Magazine），全球多国版本的男性月刊。"
+
+  - slug: kandy
+    name: "Kandy"
+    category: "时尚成人"
+    folders: ["KDY", "Kandy"]
+    cadence: "monthly"
+    color: "#d81b60"
+    adult: false
+    desc: "Kandy 杂志，时尚人像与写真专题。"
+
+  - slug: boudoir-inspiration
+    name: "Boudoir Inspiration"
+    category: "时尚成人"
+    folders: ["BOU", "Boudoir"]
+    cadence: "monthly"
+    color: "#8e5a6b"
+    adult: false
+    desc: "闺房摄影专刊，按期分 Boudoir / Lingerie / Artistic Nude 三个专题。"
+
+  - slug: tempting-photo
+    name: "Tempting Photo Magazine"
+    category: "时尚成人"
+    folders: ["TMP", "Tempting"]
+    cadence: "monthly"
+    color: "#e06c00"
+    adult: false
+    desc: "Tempting Photo，人像摄影作品集。"
+
+  # ---------- 预留位 ----------
+  # 若要新增刊种，照抄一段改字段即可；PDF 目录不存在时脚本会跳过，不会报错。
+
+  # - slug: ladybug
+  #   name: "Ladybug"
+  #   category: "儿童教育"
+  #   folders: ["LADYBUG"]
+  #   cadence: "monthly"
+  #   color: "#f2a900"
+  #   desc: "瓢虫，Cricket Media 出品的幼儿文学杂志。"
+
+# ============================================================
+# 手动补一期（不依赖 PDF 批量生成）
+# ============================================================
+# 在 content/magazines/<slug>/ 下手写一个 md，建议命名为 <YYYY-MM-DD>-<edition>.md：
+#
+#   ---
+#   title: "2026 年 11 月刊"
+#   date: 2026-11-01
+#   draft: false
+#   magazine: "Playboy"
+#   magazine_slug: "playboy"
+#   edition: ""
+#   issue: "2026-11"
+#   pages: 120
+#   adult: true
+#   cover:
+#     image: "/thumbs/magazines/playboy/2026-11/cover.jpg"
+#     thumb: "/thumbs/magazines/playboy/2026-11/thumb.jpg"
+#     alt: "Playboy 2026 年 11 月刊"
+#   preview1: "/thumbs/magazines/playboy/2026-11/p1.jpg"
+#   preview2: "/thumbs/magazines/playboy/2026-11/p2.jpg"
+#   preview3: "/thumbs/magazines/playboy/2026-11/p3.jpg"
+#   preview4: "/thumbs/magazines/playboy/2026-11/p4.jpg"
+#   download_url: ""
+#   download_pwd: ""
+#   ---
+#
+#   正文随便写简介；图片按上面路径自己放好即可。

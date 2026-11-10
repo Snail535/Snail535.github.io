@@ -1,0 +1,37 @@
+---
+title: "2026 年 5 月 · SouthAfrica"
+date: 2026-05-01T00:00:00+08:00
+draft: false
+magazine: "Playboy"
+magazine_slug: "playboy"
+edition: "South Africa"
+issue: "2026-05"
+issue_label: "2026 年 5 月 · SouthAfrica"
+pages: 100
+file_size: "86.9 MB"
+adult: false
+cadence: "monthly"
+file_name: "Playboy_SouthAfrica_-_May_2026.pdf"
+categories: ["时尚成人"]
+years: [2026]
+editions: ["South Africa"]
+cover:
+  image: "/thumbs/magazines/playboy/2026-05-south-africa-southafrica/cover.webp"
+  thumb: "/thumbs/magazines/playboy/2026-05-south-africa-southafrica/thumb.webp"
+  alt: "Playboy South Africa 2026 年 5 月 · SouthAfrica"
+  hidden: false
+preview1: "/thumbs/magazines/playboy/2026-05-south-africa-southafrica/p1.webp"
+preview2: "/thumbs/magazines/playboy/2026-05-south-africa-southafrica/p2.webp"
+preview3: "/thumbs/magazines/playboy/2026-05-south-africa-southafrica/p3.webp"
+preview4: "/thumbs/magazines/playboy/2026-05-south-africa-southafrica/p4.webp"
+download_url: "https://pan.quark.cn/s/9ef0f4d3a8c3"
+download_pwd: ""
+netdisk_file: "PLBZA2605.jpg"
+---
+## 本期信息
+
+- 刊物：Playboy（South Africa 版）
+- 期次：2026 年 5 月 · SouthAfrica
+- 页数：100 页
+- 文件：86.9 MB
+- 分类：时尚成人

@@ -1,0 +1,14 @@
+{{ define "main" }}
+{{- $label := dict "categories" "分类" "editions" "国家 / 地区" "years" "年份" }}
+<header class="list-head">
+  <h1>{{ index $label .Data.Plural | default .Title }}</h1>
+  <div class="list-stat">{{ len .Data.Terms }} 项</div>
+</header>
+<div class="term-cloud">
+  {{- range .Data.Terms.Alphabetical }}
+  <a class="term-pill" href="{{ .Page.RelPermalink }}">
+    {{ .Page.Title }}<span>{{ .Count }}</span>
+  </a>
+  {{- end }}
+</div>
+{{ end }}

@@ -1,0 +1,11 @@
+{{ define "main" }}
+<header class="list-head">
+  <h1>{{ .Title }}</h1>
+  <div class="list-stat">{{ len .Pages }} 项</div>
+</header>
+<div class="mg-grid">
+  {{- range .Pages.ByDate.Reverse }}
+  {{ partial "mag_issue_card.html" . }}
+  {{- end }}
+</div>
+{{ end }}

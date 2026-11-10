@@ -1,0 +1,35 @@
+{{ define "main" }}
+{{- $root := site.GetPage "/magazines" }}
+{{- $sections := $root.Sections }}
+{{- $issues := where site.RegularPages "Section" "magazines" }}
+{{- $latest := $issues.ByDate.Reverse }}
+
+<section class="home-hero">
+  <h1>{{ site.Title }}</h1>
+  <p>{{ site.Params.description }} · 收录 {{ len $sections }} 种刊物 / {{ len $issues }} 期</p>
+</section>
+
+<section class="cat-block">
+  <div class="block-head">
+    <h2 class="cat-title">按刊物浏览</h2>
+    <a class="more" href="{{ "/magazines/" | relURL }}">全部刊物 →</a>
+  </div>
+  <div class="mz-grid">
+    {{- range $sections.ByWeight }}
+    {{ partial "mag_title_card.html" . }}
+    {{- end }}
+  </div>
+</section>
+
+<section class="cat-block">
+  <div class="block-head">
+    <h2 class="cat-title">最新上架</h2>
+    <a class="more" href="{{ "/magazines/" | relURL }}">全部期次 →</a>
+  </div>
+  <div class="mg-grid">
+    {{- range first 24 $latest }}
+    {{ partial "mag_issue_card.html" . }}
+    {{- end }}
+  </div>
+</section>
+{{ end }}

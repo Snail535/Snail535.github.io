@@ -1,0 +1,16 @@
+{{- /* 刊物卡片：/magazines/ 用，封面取该刊最新一期 */ -}}
+{{- $cad := dict "weekly" "周刊" "monthly" "月刊" "bimonthly" "双月刊" "biweekly" "双周刊" "quarterly" "季刊" }}
+<a class="mz-card{{ if .Params.adult }} is-adult{{ end }}" href="{{ .RelPermalink }}">
+  <div class="mz-cover">
+    {{- with .Params.cover.thumb }}
+    {{- $safe := index (site.Data.censored_previews | default dict) . | default . }}
+    <img src="{{ $safe | relURL }}" alt="{{ $.Title }}" loading="lazy" decoding="async">
+    {{- end }}
+  </div>
+  <div class="mz-body">
+    <h3 class="mz-name" {{ with .Params.color }}style="color:{{ . }}"{{ end }}>{{ .Title }}</h3>
+    {{- $n := len .RegularPages }}
+    <div class="mz-count">{{ $n }} 期 · {{ index $cad .Params.cadence | default "不定期" }}</div>
+    <p class="mz-desc">{{ .Params.description }}</p>
+  </div>
+</a>

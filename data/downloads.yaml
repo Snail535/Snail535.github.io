@@ -1,0 +1,30 @@
+# ============================================================
+# 网盘下载信息 —— 刊物级分享链接
+# ============================================================
+# 一个刊物建一个夸克文件夹分享，这里填一次，该刊所有期的详情页自动带出。
+# 单期要单独链接时，在该期 md 的 download_url / download_pwd 里写，优先级更高。
+#
+# url   夸克分享链接，如 https://pan.quark.cn/s/xxxxxxxx
+# pwd   提取码（没有就留空）
+# note  展示给读者的提示语
+# ============================================================
+
+defaults:
+  note: "整刊文件夹，按文件名中的月份找到对应期次"
+
+magazines:
+  economist:   {url: "", pwd: ""}
+  new-yorker:  {url: "", pwd: ""}
+  forbes:      {url: "", pwd: ""}
+  time:        {url: "", pwd: ""}
+  science:     {url: "", pwd: ""}
+  the-atlantic: {url: "", pwd: ""}
+  readers-digest: {url: "", pwd: ""}
+  guardian-weekly: {url: "", pwd: ""}
+  playboy:     {url: "", pwd: ""}
+  penthouse:   {url: "", pwd: ""}
+  maxim:       {url: "", pwd: ""}
+  fhm:         {url: "", pwd: ""}
+  kandy:       {url: "", pwd: ""}
+  boudoir-inspiration: {url: "", pwd: ""}
+  tempting-photo: {url: "", pwd: ""}

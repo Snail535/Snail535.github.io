@@ -1,0 +1,23 @@
+/*首页卡片4列 大屏4，平板3，小屏2，手机1*/
+.home-cards {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1.4rem !important;
+}
+@media (max-width:1024px){
+  .home-cards{grid-template-columns: repeat(3,1fr)!important;}
+}
+@media (max-width:768px){
+  .home-cards{grid-template-columns: repeat(2,1fr)!important;}
+}
+@media (max-width:480px){
+  .home-cards{grid-template-columns: repeat(1,1fr)!important;}
+}
+
+/*详情页标题下方手动海报，居中限制宽度*/
+.single-post-content > p > img:first-of-type {
+    max-width: 520px !important;
+    max-height: 620px;
+    display: block;
+    margin:1rem auto;
+}

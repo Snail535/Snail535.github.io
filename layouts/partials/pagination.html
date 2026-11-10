@@ -1,0 +1,10 @@
+{{- $p := .p }}
+{{- if gt $p.TotalPages 1 }}
+<footer class="page-footer">
+  <nav class="pagination">
+    {{- if $p.HasPrev }}<a class="prev" href="{{ $p.Prev.URL }}">« 上一页</a>{{ end }}
+    <span class="pager-info">{{ $p.PageNumber }} / {{ $p.TotalPages }}</span>
+    {{- if $p.HasNext }}<a class="next" href="{{ $p.Next.URL }}">下一页 »</a>{{ end }}
+  </nav>
+</footer>
+{{- end }}

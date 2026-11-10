@@ -1,0 +1,11 @@
+{{ define "main" }}
+<article class="post-single">
+  <header class="post-header">
+    {{- partial "breadcrumbs.html" . }}
+    <h1 class="post-title">{{ .Title }}</h1>
+  </header>
+  {{- with .Content }}
+  <div class="post-content">{{ . }}</div>
+  {{- end }}
+</article>
+{{ end }}

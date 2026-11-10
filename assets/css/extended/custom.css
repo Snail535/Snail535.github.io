@@ -1,0 +1,445 @@
+/* ==========================================================
+   杂志站样式（覆盖 PaperMod 默认列表）
+   依赖主题变量：--theme / --primary / --secondary / --border / --entry
+   ========================================================== */
+
+/* ---------- 加宽主栏，卡片墙需要横向空间 ---------- */
+.main {
+  max-width: 1360px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.post-content {
+  max-width: 100%;
+}
+
+/* ---------- 通用标题区 ---------- */
+.home-hero {
+  margin: 1rem 0 2rem;
+}
+.home-hero h1 {
+  font-size: 2rem;
+  margin: 0 0 .4rem;
+}
+.home-hero p {
+  color: var(--secondary);
+  margin: 0;
+  font-size: .95rem;
+}
+.list-head {
+  margin: .5rem 0 1.6rem;
+}
+.list-head h1 {
+  margin: 0 0 .3rem;
+  font-size: 1.9rem;
+}
+.list-stat {
+  color: var(--secondary);
+  font-size: .9rem;
+}
+.list-intro {
+  color: var(--secondary);
+  font-size: .95rem;
+  margin-top: .5rem;
+}
+.block-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.cat-block {
+  margin-bottom: 2.6rem;
+}
+.cat-title {
+  font-size: 1.15rem;
+  margin: 0 0 1rem;
+  padding-left: .6rem;
+  border-left: 3px solid var(--primary);
+  line-height: 1.3;
+}
+.block-head .cat-title {
+  margin-bottom: .8rem;
+}
+.more {
+  font-size: .85rem;
+  color: var(--secondary);
+  white-space: nowrap;
+}
+.more:hover {
+  color: var(--primary);
+}
+
+/* ---------- 刊物卡片 ---------- */
+.mz-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+.mz-card {
+  display: flex;
+  gap: .9rem;
+  padding: .7rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--primary);
+  background: var(--entry);
+  transition: border-color .18s, transform .18s;
+}
+.mz-card:hover {
+  border-color: var(--secondary);
+  transform: translateY(-2px);
+}
+.mz-cover {
+  flex: 0 0 74px;
+  width: 74px;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--tertiary);
+}
+.mz-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.mz-body {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.mz-name {
+  font-size: .98rem;
+  margin: 0 0 .15rem;
+  line-height: 1.25;
+}
+.mz-count {
+  font-size: .75rem;
+  color: var(--secondary);
+  white-space: nowrap;
+}
+.mz-desc {
+  font-size: .78rem;
+  color: var(--secondary);
+  margin: .35rem 0 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ---------- 期次卡片 ---------- */
+.mg-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.3rem;
+}
+.mg-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--primary);
+  background: var(--entry);
+  transition: border-color .18s, transform .18s;
+}
+.mg-card:hover {
+  border-color: var(--secondary);
+  transform: translateY(-2px);
+}
+.mg-cover {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--tertiary);
+}
+.mg-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter .25s;
+}
+.mg-pages {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  color: #fff;
+  background: rgba(0, 0, 0, .55);
+  letter-spacing: .02em;
+}
+.mg-adult {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  color: #fff;
+  background: #b3261e;
+}
+.is-adult .mg-cover img,
+.is-adult .mg-hero-cover img,
+.is-adult .mg-preview-grid img {
+  filter: blur(14px);
+}
+.is-adult:hover .mg-cover img,
+.is-adult:hover .mg-hero-cover img,
+.is-adult:hover .mg-preview-grid img {
+  filter: none;
+}
+.mg-body {
+  padding: .6rem .7rem .75rem;
+  flex: 1;
+}
+.mg-title {
+  font-size: .88rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+.mg-sub {
+  font-size: .74rem;
+  color: var(--secondary);
+  margin-top: .18rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------- 分页 ---------- */
+.page-footer .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 2.4rem 0 1rem;
+  font-size: .9rem;
+}
+.pager-info {
+  color: var(--secondary);
+}
+
+/* ---------- 详情页 ---------- */
+.mg-single-sub {
+  color: var(--secondary);
+  font-size: .95rem;
+  margin-top: .3rem;
+}
+.mg-single-sub a {
+  color: var(--primary);
+}
+.mg-hero {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin: 1.6rem 0 2rem;
+  flex-wrap: wrap;
+}
+.mg-hero-cover {
+  position: relative;
+  flex: 0 0 260px;
+  max-width: 260px;
+}
+.mg-hero-cover img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  border: 1px solid var(--border);
+}
+.mg-facts {
+  flex: 1;
+  min-width: 260px;
+  margin: 0;
+  font-size: .92rem;
+  line-height: 1.9;
+}
+.mg-facts > div {
+  display: flex;
+  gap: .8rem;
+  border-bottom: 1px dashed var(--border);
+  padding: .15rem 0;
+}
+.mg-facts dt {
+  flex: 0 0 62px;
+  color: var(--secondary);
+  font-size: .86rem;
+}
+.mg-facts dd {
+  margin: 0;
+}
+.mg-previews {
+  margin: 2rem 0;
+}
+.mg-previews h3,
+.mg-download h3 {
+  font-size: 1.05rem;
+  margin: 0 0 .8rem;
+}
+.mg-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.mg-preview-grid img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  display: block;
+}
+.mg-download {
+  margin: 2rem 0;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--entry);
+  font-size: .92rem;
+  word-break: break-all;
+}
+.mg-muted {
+  color: var(--secondary);
+  margin: 0;
+}
+.mg-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2.4rem 0 1rem;
+  font-size: .9rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+/* ---------- 筛选条（年份 / 国家） ---------- */
+.filter-bar {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: .8rem 1rem;
+  margin: 0 0 1.4rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--entry);
+}
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  flex-wrap: wrap;
+}
+.filter-label {
+  font-size: .8rem;
+  color: var(--secondary);
+  flex: 0 0 34px;
+}
+.chip {
+  font: inherit;
+  font-size: .82rem;
+  padding: .22rem .7rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--primary);
+  cursor: pointer;
+  transition: background .15s, border-color .15s, color .15s;
+}
+.chip:hover {
+  border-color: var(--secondary);
+}
+.chip.is-active {
+  background: var(--primary);
+  color: var(--theme);
+  border-color: var(--primary);
+}
+
+/* ---------- 分类页 ---------- */
+.term-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+.term-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .35rem .8rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: .9rem;
+  text-decoration: none;
+  color: var(--primary);
+}
+.term-pill span {
+  font-size: .75rem;
+  color: var(--secondary);
+}
+.term-pill:hover {
+  border-color: var(--secondary);
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 1200px) {
+  .mg-grid { grid-template-columns: repeat(4, 1fr); }
+  .mz-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 900px) {
+  .mg-grid { grid-template-columns: repeat(3, 1fr); }
+  .mz-grid { grid-template-columns: repeat(2, 1fr); }
+  .mg-preview-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .mg-grid { grid-template-columns: repeat(2, 1fr); gap: .8rem; }
+  .mz-grid { grid-template-columns: 1fr; }
+  .mg-title { font-size: .82rem; }
+  .mg-hero-cover { flex: 0 0 100%; max-width: 220px; }
+  .home-hero h1 { font-size: 1.5rem; }
+}
+@media (max-width: 380px) {
+  .mg-grid { gap: .5rem; }
+}
+
+/* ---------- 下载区块 ---------- */
+.mg-download { border-top: 1px solid var(--border); padding-top: 1rem; margin-top: 1.5rem; }
+.mg-dl-row { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; margin: .5rem 0; }
+.mg-dl-label { flex: 0 0 3.2rem; color: var(--secondary); font-size: .85rem; }
+.mg-dl-link { font-weight: 600; }
+.mg-pwd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  background: var(--code-bg); padding: .15rem .45rem; border-radius: 5px;
+  letter-spacing: .08em;
+}
+.mg-copy {
+  font-size: .78rem; padding: .15rem .55rem; cursor: pointer;
+  border: 1px solid var(--border); border-radius: 6px;
+  background: var(--entry); color: var(--primary);
+}
+.mg-copy:hover { border-color: var(--secondary); }
+.mg-dl-note { font-size: .8rem; color: var(--secondary); margin: .4rem 0 0; }
+
+/* ---------- 内容识别打码（原图保留，点击查看才显示） ---------- */
+.mg-censored,
+.mg-preview-item { position: relative; }
+.mg-censor-tag {
+  position: absolute; top: 6px; left: 6px; z-index: 2;
+  font-size: 10px; line-height: 1.4; padding: 2px 6px;
+  border-radius: 4px; background: #b3261e; color: #fff;
+  pointer-events: none;
+}
+.mg-reveal {
+  position: absolute; right: 6px; bottom: 6px; z-index: 2;
+  font-size: 11px; padding: 3px 8px; cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, .55); border-radius: 5px;
+  background: rgba(20, 20, 20, .74); color: #fff;
+}
+.mg-reveal:hover { background: rgba(20, 20, 20, .92); }
+.mg-reveal:disabled { opacity: .6; cursor: default; }
+.mg-censored.is-revealed .mg-censor-tag { display: none; }

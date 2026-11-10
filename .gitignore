@@ -1,0 +1,29 @@
+# Hugo 构建产物与缓存
+public/
+resources/
+.hugo_build.lock
+
+# 生成脚本产出的盘点清单（可用 --scan 重新生成）
+.magazines.json
+
+# 系统杂物
+.DS_Store
+Thumbs.db
+
+# 网盘链接清单（本地维护，含真实链接，不提交）
+links.csv
+_test_links.csv
+links_table.csv
+links_table.xlsx
+links.xlsx
+
+# 批处理中间数据（期次映射 / 网盘 fid / 分享清单，含真实链接，不提交）
+scripts/.*
+
+# 本地内容检测模型（体积较大，不进仓库）
+scripts/models/
+
+# 图片瘦身时保留的旧目录，确认后可删
+.thumbs-old/
+static/thumbs.new/
+.build-old/

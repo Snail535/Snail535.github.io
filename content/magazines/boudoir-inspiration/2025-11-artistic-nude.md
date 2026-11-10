@@ -1,0 +1,37 @@
+---
+title: "2025 年 11 月 · Artistic Nude"
+date: 2025-11-01T00:00:00+08:00
+draft: false
+magazine: "Boudoir Inspiration"
+magazine_slug: "boudoir-inspiration"
+edition: ""
+issue: "2025-11"
+issue_label: "2025 年 11 月 · Artistic Nude"
+pages: 84
+file_size: "56.3 MB"
+adult: false
+cadence: "monthly"
+file_name: "Boudoir_Inspiration_-_November_2025_Artistic_Nude_Issue.pdf"
+categories: ["时尚成人"]
+years: [2025]
+cover:
+  image: "/thumbs/magazines/boudoir-inspiration/2025-11-artistic-nude/cover.webp"
+  thumb: "/thumbs/magazines/boudoir-inspiration/2025-11-artistic-nude/thumb.webp"
+  alt: "Boudoir Inspiration 2025 年 11 月 · Artistic Nude"
+  hidden: false
+preview1: "/thumbs/magazines/boudoir-inspiration/2025-11-artistic-nude/p1.webp"
+preview2: "/thumbs/magazines/boudoir-inspiration/2025-11-artistic-nude/p2.webp"
+preview3: "/thumbs/magazines/boudoir-inspiration/2025-11-artistic-nude/p3.webp"
+preview4: "/thumbs/magazines/boudoir-inspiration/2025-11-artistic-nude/p4.webp"
+download_url: "https://pan.quark.cn/s/8a0e59a5e0d4"
+download_pwd: ""
+netdisk_file: "BOUAN2511.jpg"
+---
+## 本期信息
+
+- 刊物：Boudoir Inspiration
+- 期次：2025 年 11 月 · Artistic Nude
+- 页数：84 页
+- 文件：56.3 MB
+- 分类：时尚成人
+
