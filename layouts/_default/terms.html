@@ -1,9 +1,46 @@
 {{ define "main" }}
 {{- $label := dict "categories" "分类" "editions" "国家 / 地区" "years" "年份" }}
+{{- $plural := .Data.Plural }}
+{{- $isCat := eq $plural "categories" }}
+{{- $total := 0 }}{{ range .Data.Terms }}{{ $total = add $total .Count }}{{ end }}
+
 <header class="list-head">
-  <h1>{{ index $label .Data.Plural | default .Title }}</h1>
-  <div class="list-stat">{{ len .Data.Terms }} 项</div>
+  <h1>{{ index $label $plural | default .Title }}</h1>
+  <div class="list-stat">
+    {{ len .Data.Terms }} 项{{ if $isCat }} · 共 {{ $total }} 期{{ end }}
+  </div>
 </header>
+
+{{- if $isCat }}
+{{- $all := (site.GetPage "/magazines").Sections }}
+<div class="mc-grid">
+  {{- range .Data.Terms.ByCount }}
+  {{- $term := .Page }}
+  {{- $mags := (where $all "Params.category" $term.Title).ByWeight }}
+  {{- $first := index $mags 0 }}
+  {{- $termTitle := $term.Title }}
+  <a class="mc-card" href="{{ $term.RelPermalink }}"
+    {{- with $first }}{{ with .Params.color }} style="--mc-accent:{{ . }}"{{ end }}{{ end }}>
+    <div class="mc-band">
+      {{- range first 3 $mags }}
+      {{- with .Params.cover.thumb }}
+      {{- $safe := index (site.Data.censored_previews | default dict) . | default . }}
+      <img src="{{ $safe | relURL }}" alt="{{ $termTitle }} 封面" loading="lazy" decoding="async">
+      {{- end }}
+      {{- end }}
+    </div>
+    <div class="mc-body">
+      <h2 class="mc-name">{{ $term.Title }}</h2>
+      <div class="mc-meta">{{ len $mags }} 种刊物 · {{ .Count }} 期</div>
+      <div class="mc-tags">
+        {{- range first 4 $mags }}<span>{{ .Title }}</span>{{ end }}
+        {{- if gt (len $mags) 4 }}<span>+{{ sub (len $mags) 4 }}</span>{{ end }}
+      </div>
+    </div>
+  </a>
+  {{- end }}
+</div>
+{{- else }}
 <div class="term-cloud">
   {{- range .Data.Terms.Alphabetical }}
   <a class="term-pill" href="{{ .Page.RelPermalink }}">
@@ -11,4 +48,5 @@
   </a>
   {{- end }}
 </div>
+{{- end }}
 {{ end }}

@@ -1,0 +1,54 @@
+{{ define "main" }}
+{{- $issues := where site.RegularPages "Section" "magazines" }}
+{{- $mags := site.GetPage "/magazines" }}
+{{- $sections := $mags.Sections }}
+{{- $latest := index ($issues.ByDate.Reverse) 0 }}
+{{- $clean := (where $issues "Params.adult" "!=" true).ByDate.Reverse }}
+<article class="about">
+  <header class="about-hero">
+    <div class="about-hero-main">
+      <h1>{{ .Title }}</h1>
+      {{- with .Params.tagline }}<p class="about-tagline">{{ . }}</p>{{ end }}
+      <div class="about-stats">
+        <div><b>{{ len $sections }}</b><span>种刊物</span></div>
+        <div><b>{{ len $issues }}</b><span>期杂志</span></div>
+        <div><b>{{ len site.Taxonomies.categories }}</b><span>个分类</span></div>
+        {{- with $latest }}<div><b>{{ .Date.Format "2006-01-02" }}</b><span>最新一期</span></div>{{ end }}
+      </div>
+    </div>
+    <div class="about-hero-covers" aria-hidden="true">
+      {{- range first 3 $clean }}
+      {{- with .Params.cover.thumb }}
+      <img src="{{ . | relURL }}" alt="" loading="lazy" decoding="async">
+      {{- end }}
+      {{- end }}
+    </div>
+  </header>
+
+  {{- with .Params.steps }}
+  <div class="about-steps">
+    {{- range . }}
+    <a class="about-step" href="{{ .url | relURL }}">
+      <h3>{{ .title }}</h3>
+      <p>{{ .desc }}</p>
+      <span class="about-step-link">{{ .label | default "进入" }} →</span>
+    </a>
+    {{- end }}
+  </div>
+  {{- end }}
+
+  <div class="about-prose post-content">{{ .Content }}</div>
+
+  {{- with .Params.contact }}
+  <div class="about-contact">
+    <div class="about-contact-text">
+      <h3>{{ .title }}</h3>
+      <p>{{ .desc }}</p>
+    </div>
+    {{- with .url }}
+    <a class="about-btn" href="{{ . }}" target="_blank" rel="noopener">{{ $.Params.contact.label | default "前往" }} ↗</a>
+    {{- end }}
+  </div>
+  {{- end }}
+</article>
+{{ end }}

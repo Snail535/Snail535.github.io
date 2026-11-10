@@ -1,10 +1,34 @@
 {{ define "main" }}
+{{- $label := dict "categories" "分类" "editions" "国家 / 地区" "years" "年份" }}
+{{- $plural := .Data.Plural }}
+{{- $issues := where .Pages "Kind" "page" }}
+{{- $seen := dict }}
+{{- $sections := slice }}
+{{- range $issues }}
+{{- $s := .CurrentSection }}
+{{- if and $s (not (index $seen $s.RelPermalink)) }}
+{{- $seen = merge $seen (dict $s.RelPermalink true) }}
+{{- $sections = $sections | append $s }}
+{{- end }}
+{{- end }}
 <header class="list-head">
+  {{- with $plural }}
+  <a class="crumb" href="{{ (printf "/%s/" .) | relURL }}">← {{ index $label . | default . }}</a>
+  {{- end }}
   <h1>{{ .Title }}</h1>
-  <div class="list-stat">{{ len .Pages }} 项</div>
+  <div class="list-stat">
+    {{- if $sections }}{{ len $sections }} 种刊物 · {{ end }}{{ len $issues }} 期
+  </div>
 </header>
+{{- with $sections }}
+<div class="term-mags">
+  {{- range .ByWeight }}
+  <a class="term-mag" href="{{ .RelPermalink }}"{{ with .Params.color }} style="--tm-accent:{{ . }}"{{ end }}>{{ .Title }}</a>
+  {{- end }}
+</div>
+{{- end }}
 <div class="mg-grid">
-  {{- range .Pages.ByDate.Reverse }}
+  {{- range $issues.ByDate.Reverse }}
   {{ partial "mag_issue_card.html" . }}
   {{- end }}
 </div>
