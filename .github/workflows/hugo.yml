@@ -49,10 +49,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+    # 站点约 243MB / 近 6000 个静态文件，Pages 侧偶发排队，给足余量
+    timeout-minutes: 30
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          # 站点含大量预览图（约 470MB），默认 10 分钟会超时
-          timeout: 1200000
+          timeout: 1500000
