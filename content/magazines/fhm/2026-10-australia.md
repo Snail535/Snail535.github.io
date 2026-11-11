@@ -24,7 +24,7 @@ preview1: "/thumbs/magazines/fhm/2026-10-australia/p1.webp"
 preview2: "/thumbs/magazines/fhm/2026-10-australia/p2.webp"
 preview3: "/thumbs/magazines/fhm/2026-10-australia/p3.webp"
 preview4: "/thumbs/magazines/fhm/2026-10-australia/p4.webp"
-download_url: "https://pan.quark.cn/s/8759679f8cc1"
+has_download: true
 download_pwd: ""
 netdisk_file: "FHMAU2610.jpg"
 ---

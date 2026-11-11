@@ -24,7 +24,7 @@ preview1: "/thumbs/magazines/fhm/2026-09-new-zealand-newzealand/p1.webp"
 preview2: "/thumbs/magazines/fhm/2026-09-new-zealand-newzealand/p2.webp"
 preview3: "/thumbs/magazines/fhm/2026-09-new-zealand-newzealand/p3.webp"
 preview4: "/thumbs/magazines/fhm/2026-09-new-zealand-newzealand/p4.webp"
-download_url: "https://pan.quark.cn/s/8fd7c5c857b5"
+has_download: true
 download_pwd: ""
 netdisk_file: "FHMNZ2609.jpg"
 ---

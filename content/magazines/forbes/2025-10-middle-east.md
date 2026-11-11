@@ -24,7 +24,7 @@ preview1: "/thumbs/magazines/forbes/2025-10-middle-east/p1.webp"
 preview2: "/thumbs/magazines/forbes/2025-10-middle-east/p2.webp"
 preview3: "/thumbs/magazines/forbes/2025-10-middle-east/p3.webp"
 preview4: "/thumbs/magazines/forbes/2025-10-middle-east/p4.webp"
-download_url: "https://pan.quark.cn/s/c1c4dde362df"
+has_download: true
 download_pwd: ""
 netdisk_file: "FORME2510.jpg"
 ---

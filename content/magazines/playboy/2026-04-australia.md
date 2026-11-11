@@ -24,7 +24,7 @@ preview1: "/thumbs/magazines/playboy/2026-04-australia/p1.webp"
 preview2: "/thumbs/magazines/playboy/2026-04-australia/p2.webp"
 preview3: "/thumbs/magazines/playboy/2026-04-australia/p3.webp"
 preview4: "/thumbs/magazines/playboy/2026-04-australia/p4.webp"
-download_url: "https://pan.quark.cn/s/22a3c4da5b19"
+has_download: true
 download_pwd: ""
 netdisk_file: "PLBAU2604.jpg"
 ---

@@ -24,7 +24,7 @@ preview1: "/thumbs/magazines/playboy/2025-12-australia/p1.webp"
 preview2: "/thumbs/magazines/playboy/2025-12-australia/p2.webp"
 preview3: "/thumbs/magazines/playboy/2025-12-australia/p3.webp"
 preview4: "/thumbs/magazines/playboy/2025-12-australia/p4.webp"
-download_url: "https://pan.quark.cn/s/ecbf8af81b81"
+has_download: true
 download_pwd: ""
 netdisk_file: "PLBAU2512.jpg"
 ---

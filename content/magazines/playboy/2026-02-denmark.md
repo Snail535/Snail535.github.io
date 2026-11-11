@@ -24,7 +24,7 @@ preview1: "/thumbs/magazines/playboy/2026-02-denmark/p1.webp"
 preview2: "/thumbs/magazines/playboy/2026-02-denmark/p2.webp"
 preview3: "/thumbs/magazines/playboy/2026-02-denmark/p3.webp"
 preview4: "/thumbs/magazines/playboy/2026-02-denmark/p4.webp"
-download_url: "https://pan.quark.cn/s/3053513687a2"
+has_download: true
 download_pwd: ""
 netdisk_file: "PLBDK2602.jpg"
 ---

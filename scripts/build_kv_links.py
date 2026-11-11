@@ -86,7 +86,9 @@ def main() -> int:
     print(f"已写出 {OUT.relative_to(ROOT)}（{OUT.stat().st_size / 1024:.0f} KB）")
 
     if args.bulk:
-        bulk = [{"key": k, "value": json.dumps(v, ensure_ascii=False)} for k, v in payload.items()]
+        # 必须带 i: 前缀，与 worker/handler.js 的 `i:${key}` 读取规则保持一致，
+        # 否则 bulk 导入后接口一律返回 404 not_found。
+        bulk = [{"key": f"i:{k}", "value": json.dumps(v, ensure_ascii=False)} for k, v in payload.items()]
         OUT_BULK.write_text(json.dumps(bulk, ensure_ascii=False), encoding="utf-8")
         print(f"已写出 {OUT_BULK.relative_to(ROOT)}（{OUT_BULK.stat().st_size / 1024:.0f} KB）")
 

@@ -24,7 +24,7 @@ preview1: "/thumbs/magazines/playboy/2025-08-south-africa/p1.webp"
 preview2: "/thumbs/magazines/playboy/2025-08-south-africa/p2.webp"
 preview3: "/thumbs/magazines/playboy/2025-08-south-africa/p3.webp"
 preview4: "/thumbs/magazines/playboy/2025-08-south-africa/p4.webp"
-download_url: "https://pan.quark.cn/s/f8890769df12"
+has_download: true
 download_pwd: ""
 netdisk_file: "PLBZA2508.jpg"
 ---

@@ -24,7 +24,7 @@ preview1: "/thumbs/magazines/playboy/2025-04-new-zealand-newzealand/p1.webp"
 preview2: "/thumbs/magazines/playboy/2025-04-new-zealand-newzealand/p2.webp"
 preview3: "/thumbs/magazines/playboy/2025-04-new-zealand-newzealand/p3.webp"
 preview4: "/thumbs/magazines/playboy/2025-04-new-zealand-newzealand/p4.webp"
-download_url: "https://pan.quark.cn/s/3ff5b2c4aa48"
+has_download: true
 download_pwd: ""
 netdisk_file: "PLBNZ2504.jpg"
 ---

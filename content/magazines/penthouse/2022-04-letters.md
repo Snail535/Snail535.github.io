@@ -23,7 +23,7 @@ preview1: "/thumbs/magazines/penthouse/2022-04-letters/p1.webp"
 preview2: "/thumbs/magazines/penthouse/2022-04-letters/p2.webp"
 preview3: "/thumbs/magazines/penthouse/2022-04-letters/p3.webp"
 preview4: "/thumbs/magazines/penthouse/2022-04-letters/p4.webp"
-download_url: "https://pan.quark.cn/s/ade0c53f77a8"
+has_download: true
 download_pwd: ""
 netdisk_file: "PNTLT2204.jpg"
 ---

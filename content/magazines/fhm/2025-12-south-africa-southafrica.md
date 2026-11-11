@@ -24,7 +24,7 @@ preview1: "/thumbs/magazines/fhm/2025-12-south-africa-southafrica/p1.webp"
 preview2: "/thumbs/magazines/fhm/2025-12-south-africa-southafrica/p2.webp"
 preview3: "/thumbs/magazines/fhm/2025-12-south-africa-southafrica/p3.webp"
 preview4: "/thumbs/magazines/fhm/2025-12-south-africa-southafrica/p4.webp"
-download_url: "https://pan.quark.cn/s/10831535fda0"
+has_download: true
 download_pwd: ""
 netdisk_file: "FHMZA2512.jpg"
 ---

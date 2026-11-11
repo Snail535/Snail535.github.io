@@ -23,7 +23,7 @@ preview1: "/thumbs/magazines/penthouse/2020-02-letters/p1.webp"
 preview2: "/thumbs/magazines/penthouse/2020-02-letters/p2.webp"
 preview3: "/thumbs/magazines/penthouse/2020-02-letters/p3.webp"
 preview4: "/thumbs/magazines/penthouse/2020-02-letters/p4.webp"
-download_url: "https://pan.quark.cn/s/7ca9f65c94d1"
+has_download: true
 download_pwd: ""
 netdisk_file: "PNTLT2002.jpg"
 ---

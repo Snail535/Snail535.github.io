@@ -24,7 +24,7 @@ preview1: "/thumbs/magazines/playboy/2026-01-new-zealand/p1.webp"
 preview2: "/thumbs/magazines/playboy/2026-01-new-zealand/p2.webp"
 preview3: "/thumbs/magazines/playboy/2026-01-new-zealand/p3.webp"
 preview4: "/thumbs/magazines/playboy/2026-01-new-zealand/p4.webp"
-download_url: "https://pan.quark.cn/s/0c9107f2f0ba"
+has_download: true
 download_pwd: ""
 netdisk_file: "PLBNZ2601.jpg"
 ---

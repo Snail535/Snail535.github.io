@@ -15,8 +15,8 @@ buildExpired = true
   search = true
   mainSections = ["magazines"]
   # 下载入口配额：留空 = 浏览器本地计数（挡不住爬虫）；
-  # 填 Worker 地址（如 "https://dl.example.com"）= 服务端按 IP 计数，超限不返回链接
-  linkApi = ""
+  # 填 Worker 地址 = 服务端按 IP 计数，超限不返回链接
+  linkApi = "https://dl.xinyesucai.top"
   linkDailyLimit = 5
 
 [menu]

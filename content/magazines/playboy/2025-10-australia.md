@@ -24,7 +24,7 @@ preview1: "/thumbs/magazines/playboy/2025-10-australia/p1.webp"
 preview2: "/thumbs/magazines/playboy/2025-10-australia/p2.webp"
 preview3: "/thumbs/magazines/playboy/2025-10-australia/p3.webp"
 preview4: "/thumbs/magazines/playboy/2025-10-australia/p4.webp"
-download_url: "https://pan.quark.cn/s/1835cf3227ab"
+has_download: true
 download_pwd: ""
 netdisk_file: "PLBAU2510.jpg"
 ---

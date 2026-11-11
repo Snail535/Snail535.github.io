@@ -24,7 +24,7 @@ preview1: "/thumbs/magazines/maxim/2025-10-new-zealand-newzealand/p1.webp"
 preview2: "/thumbs/magazines/maxim/2025-10-new-zealand-newzealand/p2.webp"
 preview3: "/thumbs/magazines/maxim/2025-10-new-zealand-newzealand/p3.webp"
 preview4: "/thumbs/magazines/maxim/2025-10-new-zealand-newzealand/p4.webp"
-download_url: "https://pan.quark.cn/s/6a7fee5c78ce"
+has_download: true
 download_pwd: ""
 netdisk_file: "MAXNZ2510.jpg"
 ---

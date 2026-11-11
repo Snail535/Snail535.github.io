@@ -23,7 +23,7 @@ preview1: "/thumbs/magazines/boudoir-inspiration/2026-01-lingerie-inspiration/p1
 preview2: "/thumbs/magazines/boudoir-inspiration/2026-01-lingerie-inspiration/p2.webp"
 preview3: "/thumbs/magazines/boudoir-inspiration/2026-01-lingerie-inspiration/p3.webp"
 preview4: "/thumbs/magazines/boudoir-inspiration/2026-01-lingerie-inspiration/p4.webp"
-download_url: "https://pan.quark.cn/s/0c47868d30b5"
+has_download: true
 download_pwd: ""
 netdisk_file: "BOULI2601.jpg"
 ---

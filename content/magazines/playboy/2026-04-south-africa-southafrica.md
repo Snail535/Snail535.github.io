@@ -24,7 +24,7 @@ preview1: "/thumbs/magazines/playboy/2026-04-south-africa-southafrica/p1.webp"
 preview2: "/thumbs/magazines/playboy/2026-04-south-africa-southafrica/p2.webp"
 preview3: "/thumbs/magazines/playboy/2026-04-south-africa-southafrica/p3.webp"
 preview4: "/thumbs/magazines/playboy/2026-04-south-africa-southafrica/p4.webp"
-download_url: "https://pan.quark.cn/s/ad15e30b8c97"
+has_download: true
 download_pwd: ""
 netdisk_file: "PLBZA2604.jpg"
 ---

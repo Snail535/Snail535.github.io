@@ -24,7 +24,7 @@ preview1: "/thumbs/magazines/maxim/2025-09-australia/p1.webp"
 preview2: "/thumbs/magazines/maxim/2025-09-australia/p2.webp"
 preview3: "/thumbs/magazines/maxim/2025-09-australia/p3.webp"
 preview4: "/thumbs/magazines/maxim/2025-09-australia/p4.webp"
-download_url: "https://pan.quark.cn/s/7726cc6074b4"
+has_download: true
 download_pwd: ""
 netdisk_file: "MAXAU2509.jpg"
 ---

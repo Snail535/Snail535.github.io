@@ -24,7 +24,7 @@ preview1: "/thumbs/magazines/playboy/2025-10-denmark/p1.webp"
 preview2: "/thumbs/magazines/playboy/2025-10-denmark/p2.webp"
 preview3: "/thumbs/magazines/playboy/2025-10-denmark/p3.webp"
 preview4: "/thumbs/magazines/playboy/2025-10-denmark/p4.webp"
-download_url: "https://pan.quark.cn/s/b084f67e7967"
+has_download: true
 download_pwd: ""
 netdisk_file: "PLBDK2510.jpg"
 ---

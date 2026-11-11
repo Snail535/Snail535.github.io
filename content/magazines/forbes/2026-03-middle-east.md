@@ -24,7 +24,7 @@ preview1: "/thumbs/magazines/forbes/2026-03-middle-east/p1.webp"
 preview2: "/thumbs/magazines/forbes/2026-03-middle-east/p2.webp"
 preview3: "/thumbs/magazines/forbes/2026-03-middle-east/p3.webp"
 preview4: "/thumbs/magazines/forbes/2026-03-middle-east/p4.webp"
-download_url: "https://pan.quark.cn/s/ac6d07a16bbd"
+has_download: true
 download_pwd: ""
 netdisk_file: "FORME2603.jpg"
 ---

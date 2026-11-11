@@ -24,7 +24,7 @@ preview1: "/thumbs/magazines/playboy/2026-01-finland/p1.webp"
 preview2: "/thumbs/magazines/playboy/2026-01-finland/p2.webp"
 preview3: "/thumbs/magazines/playboy/2026-01-finland/p3.webp"
 preview4: "/thumbs/magazines/playboy/2026-01-finland/p4.webp"
-download_url: "https://pan.quark.cn/s/d04e8656df48"
+has_download: true
 download_pwd: ""
 netdisk_file: "PLBFI2601.jpg"
 ---

@@ -23,7 +23,6 @@ preview1: "/thumbs/magazines/kandy/2026-01-anniversary/p1.webp"
 preview2: "/thumbs/magazines/kandy/2026-01-anniversary/p2.webp"
 preview3: "/thumbs/magazines/kandy/2026-01-anniversary/p3.webp"
 preview4: "/thumbs/magazines/kandy/2026-01-anniversary/p4.webp"
-download_url: ""
 download_pwd: ""
 netdisk_file: ""
 ---

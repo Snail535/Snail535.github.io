@@ -23,7 +23,7 @@ preview1: "/thumbs/magazines/boudoir-inspiration/2025-03-black-and-white/p1.webp
 preview2: "/thumbs/magazines/boudoir-inspiration/2025-03-black-and-white/p2.webp"
 preview3: "/thumbs/magazines/boudoir-inspiration/2025-03-black-and-white/p3.webp"
 preview4: "/thumbs/magazines/boudoir-inspiration/2025-03-black-and-white/p4.webp"
-download_url: "https://pan.quark.cn/s/bed49cc86dca"
+has_download: true
 download_pwd: ""
 netdisk_file: "BOUBW2503.jpg"
 ---

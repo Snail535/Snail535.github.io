@@ -24,7 +24,7 @@ preview1: "/thumbs/magazines/fhm/2025-11-new-zealand-newzealand/p1.webp"
 preview2: "/thumbs/magazines/fhm/2025-11-new-zealand-newzealand/p2.webp"
 preview3: "/thumbs/magazines/fhm/2025-11-new-zealand-newzealand/p3.webp"
 preview4: "/thumbs/magazines/fhm/2025-11-new-zealand-newzealand/p4.webp"
-download_url: "https://pan.quark.cn/s/f96d60eaba0a"
+has_download: true
 download_pwd: ""
 netdisk_file: "FHMNZ2511.jpg"
 ---

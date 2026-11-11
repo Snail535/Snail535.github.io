@@ -24,7 +24,7 @@ preview1: "/thumbs/magazines/readers-digest/2026-05-australia/p1.webp"
 preview2: "/thumbs/magazines/readers-digest/2026-05-australia/p2.webp"
 preview3: "/thumbs/magazines/readers-digest/2026-05-australia/p3.webp"
 preview4: "/thumbs/magazines/readers-digest/2026-05-australia/p4.webp"
-download_url: "https://pan.quark.cn/s/7787a62839fb"
+has_download: true
 download_pwd: ""
 netdisk_file: "RDGAU2605.jpg"
 ---

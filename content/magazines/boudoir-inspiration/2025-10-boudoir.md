@@ -23,7 +23,7 @@ preview1: "/thumbs/magazines/boudoir-inspiration/2025-10-boudoir/p1.webp"
 preview2: "/thumbs/magazines/boudoir-inspiration/2025-10-boudoir/p2.webp"
 preview3: "/thumbs/magazines/boudoir-inspiration/2025-10-boudoir/p3.webp"
 preview4: "/thumbs/magazines/boudoir-inspiration/2025-10-boudoir/p4.webp"
-download_url: "https://pan.quark.cn/s/add904ac808e"
+has_download: true
 download_pwd: ""
 netdisk_file: "BOUBI2510.jpg"
 ---

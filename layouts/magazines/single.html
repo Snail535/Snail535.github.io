@@ -68,6 +68,8 @@
   {{- $dlMag := index (site.Data.downloads.magazines | default dict) .Params.magazine_slug | default dict }}
   {{- $dlUrl := .Params.download_url | default ($dlMag.url | default "") }}
   {{- $dlPwd := .Params.download_pwd | default ($dlMag.pwd | default "") }}
+  {{- $dlHas := or .Params.has_download $dlUrl }}
+  {{- $dlIsMagLevel := and (not .Params.has_download) $dlMag.url }}
   {{- $dlNote := $dlMag.note | default (site.Data.downloads.defaults.note | default "") }}
   {{- $dlKey := printf "%s-%s" .Params.magazine_slug .File.TranslationBaseName }}
   {{- $api := site.Params.linkApi | default "" }}
@@ -77,9 +79,9 @@
        data-limit="{{ site.Params.linkDailyLimit | default 5 }}"
        {{- with $dlUrl }} data-dl="{{ . | base64Encode }}"{{ end }}>
     <h3>下载</h3>
-    {{- if $dlUrl }}
+    {{- if $dlHas }}
     <p class="mg-dl-row">
-      <button type="button" class="mg-dl-btn" data-act="open">打开夸克网盘 {{ if not .Params.download_url }}（{{ .Params.magazine }} 整刊）{{ end }}</button>
+      <button type="button" class="mg-dl-btn" data-act="open">打开夸克网盘 {{ if $dlIsMagLevel }}（{{ .Params.magazine }} 整刊）{{ end }}</button>
       <button type="button" class="mg-copy" data-act="copy">复制链接</button>
     </p>
     <p class="mg-dl-status" data-role="status"></p>
@@ -91,7 +93,7 @@
     </p>
     {{- end }}
     <p class="mg-dl-note">
-      {{- if not .Params.download_url }}{{ $dlNote }}：{{ end -}}
+      {{- if $dlIsMagLevel }}{{ $dlNote }}：{{ end -}}
       本期文件 <code>{{ .Params.netdisk_file | default (.Params.file_name | default (printf "%s_%s" .Params.magazine (.Date.Format "2006-01"))) }}</code>
     </p>
     {{- else }}

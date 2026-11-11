@@ -23,7 +23,7 @@ preview1: "/thumbs/magazines/boudoir-inspiration/2025-06-artistic-nude/p1.webp"
 preview2: "/thumbs/magazines/boudoir-inspiration/2025-06-artistic-nude/p2.webp"
 preview3: "/thumbs/magazines/boudoir-inspiration/2025-06-artistic-nude/p3.webp"
 preview4: "/thumbs/magazines/boudoir-inspiration/2025-06-artistic-nude/p4.webp"
-download_url: "https://pan.quark.cn/s/ffd43b0ca00d"
+has_download: true
 download_pwd: ""
 netdisk_file: "BOUAN2506.jpg"
 ---

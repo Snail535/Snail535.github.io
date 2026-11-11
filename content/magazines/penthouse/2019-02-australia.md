@@ -24,7 +24,7 @@ preview1: "/thumbs/magazines/penthouse/2019-02-australia/p1.webp"
 preview2: "/thumbs/magazines/penthouse/2019-02-australia/p2.webp"
 preview3: "/thumbs/magazines/penthouse/2019-02-australia/p3.webp"
 preview4: "/thumbs/magazines/penthouse/2019-02-australia/p4.webp"
-download_url: "https://pan.quark.cn/s/57f4eecf34f1"
+has_download: true
 download_pwd: ""
 netdisk_file: "PNTAU1902.jpg"
 ---

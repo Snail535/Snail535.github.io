@@ -23,7 +23,7 @@ preview1: "/thumbs/magazines/penthouse/2018-01-letters/p1.webp"
 preview2: "/thumbs/magazines/penthouse/2018-01-letters/p2.webp"
 preview3: "/thumbs/magazines/penthouse/2018-01-letters/p3.webp"
 preview4: "/thumbs/magazines/penthouse/2018-01-letters/p4.webp"
-download_url: "https://pan.quark.cn/s/f425114da875"
+has_download: true
 download_pwd: ""
 netdisk_file: "PNTLT1801.jpg"
 ---
