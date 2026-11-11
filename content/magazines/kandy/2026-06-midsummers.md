@@ -24,6 +24,7 @@ preview2: "/thumbs/magazines/kandy/2026-06-midsummers/p2.webp"
 preview3: "/thumbs/magazines/kandy/2026-06-midsummers/p3.webp"
 preview4: "/thumbs/magazines/kandy/2026-06-midsummers/p4.webp"
 download_pwd: ""
+has_download: true
 netdisk_file: ""
 ---
 

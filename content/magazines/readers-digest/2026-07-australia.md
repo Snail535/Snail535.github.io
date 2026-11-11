@@ -25,6 +25,7 @@ preview2: "/thumbs/magazines/readers-digest/2026-07-australia/p2.webp"
 preview3: "/thumbs/magazines/readers-digest/2026-07-australia/p3.webp"
 preview4: "/thumbs/magazines/readers-digest/2026-07-australia/p4.webp"
 download_pwd: ""
+has_download: true
 ---
 ## 本期信息
 
