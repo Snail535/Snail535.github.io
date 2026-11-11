@@ -94,5 +94,31 @@ check("无 Origin 的直接请求放行（curl 调试用）", noOrigin.status ==
 const health = await handle(req("/"), env, T0);
 check("根路径自检可用", health.status === 200);
 
+console.log("\n站长白名单");
+const KEY = "k3J9xQ2mT7pR5vW8";
+const envAdmin = { ...env, ADMIN_KEY: KEY, BYPASS_IPS: "8.8.8.8" }; // 复用同一份 KV
+const w0 = env.LINKS.writes;
+const withT = await handle(req(K + "&t=" + KEY, { ip: "5.5.5.5" }), envAdmin, T0);
+check("带密钥取链成功", withT.status === 200 && (await withT.json()).bypass === true);
+check("密钥调用不写计数", env.LINKS.writes === w0, `writes=${env.LINKS.writes}`);
+
+const withCookie = await handle(
+  new Request(`https://dl.example.com${K}`, {
+    headers: { "CF-Connecting-IP": "5.5.5.5", Origin: ORIGIN, Cookie: `mg_admin=${KEY}` },
+  }),
+  envAdmin,
+  T0
+);
+check("cookie 方式同样豁免", withCookie.status === 200);
+
+const wrongT = await handle(req(K + "&t=nope", { ip: "6.6.6.6" }), envAdmin, T0);
+check("错误密钥按普通访客计数", wrongT.status === 200 && env.LINKS.writes === w0 + 1, `writes=${env.LINKS.writes}`);
+
+const byIp = await handle(req(K, { ip: "8.8.8.8" }), envAdmin, T0);
+check("白名单 IP 豁免", byIp.status === 200 && (await byIp.json()).bypass === true);
+
+const noSecret = await handle(req(K + "&t=", { ip: "7.7.7.7" }), env, T0);
+check("未配置密钥时不影响普通计数", noSecret.status === 200);
+
 console.log(`\n结果：${pass} 通过，${fail} 失败`);
 if (fail) process.exit(1);

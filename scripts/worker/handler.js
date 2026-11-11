@@ -58,6 +58,21 @@ function clientIp(request) {
   return "0.0.0.0";
 }
 
+// 站长白名单：密钥（?t= 或 cookie mg_admin）或固定 IP，都不计数、不受 5 次限制。
+export function isExempt(request, env, url) {
+  const ips = (env.BYPASS_IPS || "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+  if (ips.includes(clientIp(request))) return true;
+
+  const admin = (env.ADMIN_KEY || "").trim();
+  if (!admin) return false;
+  if (url.searchParams.get("t") === admin) return true;
+  const cookie = request.headers.get("Cookie") || "";
+  return cookie.split(";").some((c) => c.trim() === `mg_admin=${admin}`);
+}
+
 export async function handle(request, env, now = Date.now()) {
   const url = new URL(request.url);
   const origin = request.headers.get("Origin");
@@ -84,6 +99,19 @@ export async function handle(request, env, now = Date.now()) {
   const ip = clientIp(request);
   const counterKey = `c:${shanghaiDay(now)}:${ip}`;
   const reset = resetAt(now);
+
+  // 站长自己：不计数、直接发链接，方便随时验证网盘是否有效
+  if (isExempt(request, env, url)) {
+    const rec = await env.LINKS.get(`i:${key}`, { type: "json" });
+    if (!rec || !rec.url) {
+      return json({ ok: false, reason: "not_found" }, 404, cors);
+    }
+    return json(
+      { ok: true, url: rec.url, pwd: rec.pwd || "", used: 0, limit, remaining: limit, bypass: true, resetAt: reset },
+      200,
+      cors
+    );
+  }
 
   const usedRaw = await env.LINKS.get(counterKey);
   const used = Number(usedRaw) || 0;

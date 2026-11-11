@@ -8,6 +8,10 @@ account_id = "f5309cc14e54f70864c5b1405751ddb8"
 DAILY_LIMIT = "5"
 # 允许调用的站点来源，逗号分隔
 ALLOWED_ORIGINS = "https://snail535.github.io,https://www.snail535.github.io"
+# 站长白名单 IP（逗号分隔，可留空）。家里宽带 IP 变了就在这里改，或者干脆用 ADMIN_KEY 方式
+BYPASS_IPS = ""
+
+# 站长白名单密钥用 `wrangler secret put ADMIN_KEY` 写入，不写在这里（会进仓库）
 
 # 链接数据与计数器都存这里；id 由 `wrangler kv namespace create LINKS` 生成
 [[kv_namespaces]]

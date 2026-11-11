@@ -69,6 +69,7 @@
   {{- $dlUrl := .Params.download_url | default ($dlMag.url | default "") }}
   {{- $dlPwd := .Params.download_pwd | default ($dlMag.pwd | default "") }}
   {{- $dlHas := or .Params.has_download $dlUrl }}
+  {{- $arcPwd := .Params.archive_pwd | default (site.Params.archivePwd | default "") }}
   {{- $dlIsMagLevel := and (not .Params.has_download) $dlMag.url }}
   {{- $dlNote := $dlMag.note | default (site.Data.downloads.defaults.note | default "") }}
   {{- $dlKey := printf "%s-%s" .Params.magazine_slug .File.TranslationBaseName }}
@@ -85,6 +86,13 @@
       <button type="button" class="mg-copy" data-act="copy">复制链接</button>
     </p>
     <p class="mg-dl-status" data-role="status"></p>
+    {{- with $arcPwd }}
+    <p class="mg-arc-note">
+      网盘里是<b>图种文件</b>（<code>.jpg</code>）：下载后把后缀改成 <code>.rar</code> 再解压。解压密码
+      <code class="mg-pwd">{{ . }}</code>
+      <button class="mg-copy" type="button" data-copy="{{ . }}">复制密码</button>
+    </p>
+    {{- end }}
     {{- with $dlPwd }}
     <p class="mg-dl-row">
       <span class="mg-dl-label">提取码</span>
@@ -144,6 +152,22 @@
     var btns = Array.prototype.slice.call(box.querySelectorAll('[data-act]'));
     var remaining = total;
     var known = false; // 接口模式下，服务端返回过余量没有
+    var adminMode = false;
+
+    // 站长密钥：访问任意详情页时带一次 ?admin=密钥，之后本机不再受次数限制
+    var adminKey = '';
+    try { adminKey = localStorage.getItem('mgAdmin') || ''; } catch (e) {}
+    try {
+      var qs = new URLSearchParams(location.search);
+      var ak = qs.get('admin');
+      if (ak) {
+        adminKey = ak;
+        try { localStorage.setItem('mgAdmin', ak); } catch (e) {}
+        qs.delete('admin');
+        var rest = qs.toString();
+        history.replaceState(null, '', location.pathname + (rest ? '?' + rest : '') + location.hash);
+      }
+    } catch (e) {}
 
     function shanghaiNow() { return new Date(Date.now() + 8 * 3600 * 1000); }
     function todayKey() { return 'mgdl:' + shanghaiNow().toISOString().slice(0, 10); }
@@ -162,7 +186,9 @@
     function paint() {
       btns.forEach(function (b) { b.disabled = remaining <= 0; });
       box.classList.toggle('is-locked', remaining <= 0);
-      if (remaining <= 0) {
+      if (adminMode) {
+        statusEl.textContent = '管理密钥已启用，不限次数';
+      } else if (remaining <= 0) {
         statusEl.textContent = '今日 ' + total + ' 次下载入口已用完，' + resetLabel() + '（北京时间）恢复';
       } else if (api && !known) {
         statusEl.textContent = '每天最多 ' + total + ' 次，' + resetLabel() + '（北京时间）重置';
@@ -197,7 +223,7 @@
 
     function viaApi(act) {
       var win = act === 'open' ? window.open('', '_blank') : null;
-      fetch(api + '/link?k=' + encodeURIComponent(key), { credentials: 'omit' })
+      fetch(api + '/link?k=' + encodeURIComponent(key) + (adminKey ? '&t=' + encodeURIComponent(adminKey) : ''), { credentials: 'omit' })
         .then(function (r) { return r.json().then(function (b) { return { status: r.status, body: b }; }); })
         .then(function (res) {
           var b = res.body || {};
@@ -213,9 +239,12 @@
             }
             return;
           }
-          remaining = typeof b.remaining === 'number' ? b.remaining : remaining - 1;
-          known = true;
-          paint();
+          if (b.bypass) { adminMode = true; remaining = total; known = true; paint(); }
+          else {
+            remaining = typeof b.remaining === 'number' ? b.remaining : remaining - 1;
+            known = true;
+            paint();
+          }
           if (act === 'open') {
             if (win) win.location.href = b.url;
             else window.open(b.url, '_blank', 'noopener');

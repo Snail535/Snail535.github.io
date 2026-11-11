@@ -424,6 +424,14 @@
 }
 .mg-copy:hover { border-color: var(--secondary); }
 .mg-dl-note { font-size: .8rem; color: var(--secondary); margin: .4rem 0 0; }
+.mg-arc-note {
+  font-size: .82rem; line-height: 1.7; margin: .6rem 0 0;
+  padding: .55rem .7rem; border-radius: 8px;
+  background: var(--code-bg); color: var(--secondary);
+  border-left: 3px solid var(--primary);
+}
+.mg-arc-note b { color: var(--primary); font-weight: 600; }
+.mg-arc-note code { font-size: .8rem; }
 .mg-dl-btn {
   font: inherit; font-weight: 600; font-size: .92rem;
   padding: .45rem 1.05rem; cursor: pointer; border-radius: 8px;
