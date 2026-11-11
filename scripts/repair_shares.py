@@ -178,15 +178,23 @@ def load_inputs() -> list[dict]:
     for f in files:
         by_name[f["name"]].append(f)
 
+    # 后补批次（.cloud_shares2.json: key -> {url, name, ...}）里也记了文件名
+    extra: dict[str, str] = {}
+    p2 = HERE / ".cloud_shares2.json"
+    if p2.exists():
+        for k, v in json.loads(p2.read_text(encoding="utf-8")).items():
+            if isinstance(v, dict) and v.get("name"):
+                extra[k] = v["name"]
+
     todo = []
     for item in bad:
         key = item["key"]
         pwd_id = links[key]["url"].split("/")[-1]
         rec = by_pwd.get(pwd_id)
-        if not rec:
-            print(f"  [跳过] {key} 无分享快照")
+        name = rec["title"] if rec else extra.get(key)
+        if not name:
+            print(f"  [跳过] {key} 查不到对应文件名")
             continue
-        name = rec["title"]
         cands = by_name.get(name) or []
         if not cands:
             print(f"  [跳过] {key} 云端找不到同名文件 {name}")

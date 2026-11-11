@@ -18,7 +18,7 @@ HERE = Path(__file__).resolve().parent
 LINKS = HERE / ".links_kv.json"
 CHECK = HERE / ".share_check.json"
 SHARES_SNAP = HERE / ".cloud_shares.json"
-SINCE = 1794404600000  # 本轮重建开始的时间戳（毫秒，21:43 左右），用于挑出新分享
+SINCE = 1794407347908  # 本轮重建开始的时间戳（毫秒，21:43 左右），用于挑出新分享
 
 
 def main() -> None:
@@ -32,11 +32,19 @@ def main() -> None:
     by_pwd = {s["pwd_id"]: s for s in snap}
 
     # key -> 云端文件名
+    p2 = HERE / ".cloud_shares2.json"
+    extra = {}
+    if p2.exists():
+        for k, v in json.loads(p2.read_text(encoding="utf-8")).items():
+            if isinstance(v, dict) and v.get("name"):
+                extra[k] = v["name"]
     name_of = {}
     for k in bad_keys:
         rec = by_pwd.get(links[k]["url"].split("/")[-1])
         if rec:
             name_of[k] = rec["title"]
+        elif k in extra:
+            name_of[k] = extra[k]
 
     q = rs.Quark()
     idx = q.share_index()
