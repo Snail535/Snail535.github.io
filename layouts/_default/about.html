@@ -37,6 +37,33 @@
   </div>
   {{- end }}
 
+  {{- $arcPwd := site.Params.archivePwd | default "" }}
+  <section class="about-guide">
+    <h2>怎么下载、怎么解压</h2>
+    <ol class="about-guide-list">
+      <li>
+        <h3>点「打开夸克网盘」</h3>
+        <p>详情页底部那个按钮，点一次会在新标签页打开网盘。同一天打开 5 次后按钮会暂停，第二天自动恢复。</p>
+      </li>
+      <li>
+        <h3>下载那张 <code>.jpg</code></h3>
+        <p>网盘里存的是一张图片，它其实是「图种」——压缩包被接在图片后面。可以直接下载，也可以先转存到自己网盘再下。</p>
+      </li>
+      <li>
+        <h3>把后缀改成 <code>.rar</code> 再解压</h3>
+        <p>下载后重命名，把文件名末尾的 <code>.jpg</code> 换成 <code>.rar</code>，用任意解压软件打开，就能得到 PDF 原刊。</p>
+      </li>
+    </ol>
+    {{- with $arcPwd }}
+    <div class="about-guide-pwd">
+      <span>统一解压密码</span>
+      <code>{{ . }}</code>
+      <button type="button" class="mg-copy" data-copy="{{ . }}">复制密码</button>
+    </div>
+    {{- end }}
+    <p class="about-guide-tip">图种图片本身也印了这段说明，忘了可以打开那张图看一眼。</p>
+  </section>
+
   <div class="about-prose post-content">{{ .Content }}</div>
 
   {{- with .Params.contact }}
@@ -51,4 +78,27 @@
   </div>
   {{- end }}
 </article>
+
+<script>
+document.querySelectorAll('.mg-copy[data-copy]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var t = b.dataset.copy || '';
+    var old = b.textContent;
+    var ta = document.createElement('textarea');
+    ta.value = t;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand('copy');
+      b.textContent = '已复制';
+    } catch (e) {
+      b.textContent = '复制失败';
+    }
+    document.body.removeChild(ta);
+    setTimeout(function () { b.textContent = old; }, 1500);
+  });
+});
+</script>
 {{ end }}

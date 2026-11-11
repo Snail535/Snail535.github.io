@@ -763,6 +763,95 @@
   line-height: 1.85;
   color: var(--content);
 }
+.about-guide {
+  margin: 0 0 2.4rem;
+  padding: 1.5rem 1.7rem 1.4rem;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: linear-gradient(180deg, var(--entry), var(--code-bg));
+}
+.about-guide > h2 {
+  margin: 0 0 1.15rem;
+  padding-left: .65rem;
+  border-left: 3px solid var(--primary);
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+.about-guide-list {
+  counter-reset: gstep;
+  display: grid;
+  gap: .95rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.about-guide-list li {
+  counter-increment: gstep;
+  position: relative;
+  padding-left: 2.15rem;
+}
+.about-guide-list li::before {
+  content: counter(gstep);
+  position: absolute;
+  top: .1rem;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--theme);
+  border: 1px solid var(--border);
+  color: var(--secondary);
+  font-size: .74rem;
+  font-weight: 600;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.about-guide-list h3 {
+  margin: 0 0 .25rem;
+  font-size: .96rem;
+  line-height: 1.5;
+}
+.about-guide-list p {
+  margin: 0;
+  font-size: .87rem;
+  line-height: 1.75;
+  color: var(--secondary);
+}
+.about-guide-list code,
+.about-guide-tip code {
+  padding: .08rem .3rem;
+  border-radius: 4px;
+  background: var(--code-bg);
+  font-size: .82rem;
+}
+.about-guide-pwd {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .55rem;
+  margin-top: 1.15rem;
+  padding-top: 1.05rem;
+  border-top: 1px dashed var(--border);
+  font-size: .85rem;
+  color: var(--secondary);
+}
+.about-guide-pwd code {
+  padding: .18rem .5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--entry);
+  font-size: .92rem;
+  color: var(--primary);
+  letter-spacing: .02em;
+}
+.about-guide-tip {
+  margin: .85rem 0 0;
+  font-size: .79rem;
+  line-height: 1.6;
+  color: var(--secondary);
+}
 .about-contact {
   display: flex;
   flex-wrap: wrap;
@@ -774,8 +863,7 @@
   border: 1px solid var(--border);
   border-radius: 14px;
   background: var(--code-bg);
-}
-.about-contact h3 {
+}.about-contact h3 {
   margin: 0 0 .35rem;
   font-size: 1rem;
 }
@@ -810,6 +898,8 @@
   .mc-band { height: 150px; }
   .about-hero { padding: 1.4rem 1.3rem; }
   .about-hero h1 { font-size: 1.6rem; }
+  .about-guide { padding: 1.2rem 1.15rem 1.1rem; }
+  .about-guide-pwd code { font-size: .88rem; }
   .about-stats { gap: 1.5rem; }
   .about-stats b { font-size: 1.25rem; }
 }

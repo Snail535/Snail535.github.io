@@ -20,7 +20,7 @@ buildExpired = true
   linkDailyLimit = 5
   # 网盘里是图种（.jpg 改 .rar），这里是全站统一的解压密码；
   # 某一期密码不同时，在该期 md 的 front matter 写 archive_pwd: "xxx" 覆盖
-  archivePwd = ""
+  archivePwd = "xinyesucai"
 
 [menu]
 [[menu.main]]
