@@ -180,6 +180,26 @@ def main():
     print(f"\n完成：重做 {done} 期，封面换页 {moved} 期，跳过 {skipped} 期，"
           f"耗时 {time.time() - t0:.0f}s")
 
+    # 「时尚成人」分类的图会另存一份打码版（coverc/thumbc/p*c.webp），模板按
+    # data/censored_previews.json 替换。底图换了而打码版没重跑，页面会继续显示旧图。
+    touched = {s for s, _, _ in items if not only or s in only}
+    adult = [s for s in touched if s in ADULT_SLUGS]
+    if adult and done:
+        print("注意：以下分类含打码版本，需再跑一遍 "
+              "`python scripts/censor_previews.py --force`，否则页面上仍是旧图："
+              f"\n  {', '.join(sorted(adult))}")
+
+
+def adult_slugs():
+    out = set()
+    for md in CONTENT.glob("*/_index.md"):
+        if "时尚成人" in md.read_text(encoding="utf-8"):
+            out.add(md.parent.name)
+    return out
+
+
+ADULT_SLUGS = adult_slugs()
+
 
 if __name__ == "__main__":
     main()
