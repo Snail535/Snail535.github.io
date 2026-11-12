@@ -37,14 +37,24 @@ IMG_EXT = "webp"
 RE_AD = re.compile(
     r"advertis|advertorial|to advertise|subscribe now|subscription offer|"
     r"scan (this|the) qr|order now|call \d|visit us at|find us on|"
-    r"follow us on|download the app", re.I)
+    r"follow us on|download the app|"
+    # 邮购 / 订购单 / 订阅插页：整页都是价格表和回执栏，做预览很难看
+    r"ordering is easy|enclose (a |my )?(cheque|check)|card ?number|reply paid|"
+    r"magshop|subscription (form|rate|card)|postage[- ]free|offer ends|"
+    r"residents only|please allow \d+ (weeks|days)|back issues|order form|"
+    r"subscribe (today|now|and save|& save)", re.I)
+
+# 整页摄影/时装大图页：文字很少，但正是好看的预览，不该被当成广告排掉
+RE_PHOTO = re.compile(
+    r"in focus|photograph(y|er|ers)?[: ]|photos?[: ]|shutterstock|getty|"
+    r"@[a-z0-9_.]{3,}|credit[: ]", re.I)
 
 
 def page_stats(page):
     t = page.get_text()
     flat = " ".join(t.split())
     chars = len(re.sub(r"\s", "", t))
-    return chars, bool(RE_AD.search(flat))
+    return chars, bool(RE_AD.search(flat)), flat
 
 
 def render(doc, idx, out: Path, box, quality):
@@ -69,7 +79,7 @@ def pick_previews(doc, cover_idx, n, count=4):
     sample = sorted({lo + int(span * i / 24) for i in range(24)})
     vals = []
     for i in sample:
-        c, _ = page_stats(doc[i])
+        c, _, _ = page_stats(doc[i])
         vals.append(c)
     p75 = sorted(vals)[int(len(vals) * 0.75)] if vals else 500
     target = max(400, min(p75, 3000))
@@ -82,12 +92,14 @@ def pick_previews(doc, cover_idx, n, count=4):
             for cand in ((base + d, base - d) if d else (base,)):
                 if not (lo <= cand <= hi) or cand in picks or cand >= n:
                     continue
-                chars, ad = page_stats(doc[cand])
+                chars, ad, flat = page_stats(doc[cand])
                 if ad:
                     continue
                 s = 1 - abs(chars - target) / (target + 1)
-                if chars < 120 and target >= 600:
-                    s -= 2.0                      # 几乎无文字：多半是广告或纯图
+                # 文字很少的页：多半是整页品牌广告或纯图。
+                # 但「整页摄影大片」文字也少，那类恰恰适合当预览，别排掉。
+                if chars < 300 and target >= 600 and not RE_PHOTO.search(flat):
+                    s -= 2.0
                 s += 0.3 * (1 - d / 11)           # 尽量贴近目标位置，保证四张分散
                 if s > best_s:
                     best, best_s = cand, s
