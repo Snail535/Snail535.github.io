@@ -222,6 +222,69 @@ magazines:
     adult: false
     desc: "Tempting Photo，人像摄影作品集。"
 
+  - slug: bossing
+    name: "Bossing"
+    category: "时尚成人"
+    folders: ["BOS"]
+    cadence: "monthly"
+    color: "#8b1e3f"
+    adult: false
+    desc: "Bossing Magazine，女性权力与魅力的时尚写真月刊。"
+
+  - slug: exotic
+    name: "Exotic"
+    category: "时尚成人"
+    folders: ["EXO"]
+    cadence: "monthly"
+    color: "#6b2fa0"
+    adult: false
+    desc: "Exotic，异域风情的人像与写真专题。"
+
+  - slug: inciter
+    name: "Inciter"
+    category: "时尚成人"
+    folders: ["INC"]
+    cadence: "monthly"
+    color: "#c2185b"
+    adult: false
+    desc: "Inciter Magazine，写真摄影与模特专题月刊。"
+
+  - slug: inside-out-babes
+    name: "Inside Out Babes"
+    category: "时尚成人"
+    folders: ["IOB"]
+    cadence: "monthly"
+    color: "#a31545"
+    adult: false
+    desc: "Inside Out Babes，人像写真月刊，另有 Extreme 特辑。"
+
+  - slug: lingerie-plus
+    name: "Lingerie Plus"
+    category: "时尚成人"
+    folders: ["LGP"]
+    cadence: "monthly"
+    color: "#7d2b4b"
+    adult: false
+    desc: "Lingerie Plus，内衣时尚与人像摄影专刊。"
+
+  - slug: mancave-playbabes
+    name: "Mancave Playbabes"
+    category: "时尚成人"
+    folders: ["MPB"]
+    cadence: "bimonthly"
+    color: "#4a1c2b"
+    adult: false
+    desc: "Mancave Playbabes，双月刊写真合集。"
+
+  - slug: playbabes
+    name: "Playbabes Special Edition"
+    category: "时尚成人"
+    folders: ["PBS"]
+    cadence: "quarterly"
+    color: "#9c27b0"
+    adult: false
+    desc: "Playbabes 特刊，按春夏秋冬与泳装季出刊。"
+
   # ---------- 预留位 ----------
   # 若要新增刊种，照抄一段改字段即可；PDF 目录不存在时脚本会跳过，不会报错。
 
