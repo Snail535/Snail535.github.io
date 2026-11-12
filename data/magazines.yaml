@@ -285,6 +285,24 @@ magazines:
     adult: false
     desc: "Playbabes 特刊，按春夏秋冬与泳装季出刊。"
 
+  - slug: rhk
+    name: "RHK Magazine"
+    category: "时尚成人"
+    folders: ["RHK"]
+    cadence: "monthly"
+    color: "#5a3d7a"
+    adult: false
+    desc: "RHK Magazine，人像写真月刊，按期号连续出版，另有 Holiday 特辑。"
+
+  - slug: ric
+    name: "Riche Magazine"
+    category: "时尚成人"
+    folders: ["RIC"]
+    cadence: "monthly"
+    color: "#b8860b"
+    adult: false
+    desc: "Riche Magazine，时尚人像与模特专访月刊。"
+
   # ---------- 预留位 ----------
   # 若要新增刊种，照抄一段改字段即可；PDF 目录不存在时脚本会跳过，不会报错。
 

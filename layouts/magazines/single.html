@@ -86,12 +86,19 @@
       <button type="button" class="mg-copy" data-act="copy">复制链接</button>
     </p>
     <p class="mg-dl-status" data-role="status"></p>
+    {{- if hasSuffix (.Params.netdisk_file | default "") ".sssEFs" }}
+    <p class="mg-arc-note">
+      网盘里是<b>PDF 原文件</b>（<code>.pdf.sssEFs</code>）：下载后把文件名末尾的 <code>.sssEFs</code> 去掉，
+      还原成 <code>.pdf</code> 即可直接打开，无需解压。
+    </p>
+    {{- else }}
     {{- with $arcPwd }}
     <p class="mg-arc-note">
       网盘里是<b>图种文件</b>（<code>.jpg</code>）：下载后把后缀改成 <code>.7z</code> 再解压。解压密码
       <code class="mg-pwd">{{ . }}</code>
       <button class="mg-copy" type="button" data-copy="{{ . }}">复制密码</button>
     </p>
+    {{- end }}
     {{- end }}
     {{- with $dlPwd }}
     <p class="mg-dl-row">

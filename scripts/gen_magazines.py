@@ -73,6 +73,12 @@ MONTHS = {
     "july": 7, "august": 8, "september": 9, "october": 10, "november": 11,
     "december": 12, "jan": 1, "feb": 2, "mar": 3, "apr": 4, "jun": 6, "jul": 7,
     "aug": 8, "sep": 9, "sept": 9, "oct": 10, "nov": 11, "dec": 12,
+    # 非英语刊名里的月份（德/西），以及少量拼写错误（Ostober）
+    "februar": 2, "märz": 3, "mai": 5, "juni": 6, "juli": 7, "oktober": 10,
+    "dezember": 12, "ostober": 10,
+    "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
+    "julio": 7, "agosto": 8, "septiembre": 9, "setiembre": 9,
+    "octubre": 10, "noviembre": 11, "diciembre": 12,
     # 季刊/特刊用词，映射到代表性月份（只影响期次排序与归档，不改变刊名）
     "spring": 3, "summer": 6, "fall": 9, "autumn": 9, "winter": 12,
     "holiday": 12, "holidays": 12, "midsummer": 6, "annual": 12,
@@ -186,8 +192,8 @@ def parse_date_part(part: str):
             for s in segs:
                 if s["y"] is None:
                     s["y"] = cur_year
-        elif re.fullmatch(r"\d{1,2}", tk):
-            # 11 April 2026 这种“日在前”的写法
+        elif re.fullmatch(r"\d{1,2}", tk) and 1 <= int(tk) <= 31:
+            # 11 April 2026 这种“日在前”的写法；>31 的是期号，交给 variant 处理
             if cur_month is None and nxt in MONTHS:
                 segs.append({"m": MONTHS[nxt], "d": int(tk), "y": None})
             elif cur_month:
@@ -243,6 +249,14 @@ def detect_variant(pub_part: str, date_part: str, mag: dict, edition: str) -> st
     drop = {_norm(t) for t in tokenize(mag.get("name", ""))}
     drop |= {_norm(t) for t in tokenize(edition)}
     drop.discard("")
+
+    # 「Issue 195」这类期号：必须写进 key，否则同月多期会互撞
+    # 只认 1-3 位，避开 "Fall Issue 2024" 这种把年份写进 Issue 的写法
+    all_tok = tokenize(pub_part) + tokenize(date_part)
+    for i, tk in enumerate(all_tok):
+        if (tk.lower() == "issue" and i + 1 < len(all_tok)
+                and re.fullmatch(r"\d{1,3}", all_tok[i + 1])):
+            return f"Issue {all_tok[i + 1]}"
 
     words = []
     for tk in tokenize(pub_part):

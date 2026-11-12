@@ -28,16 +28,23 @@ OUT = HERE / ".new_shares.json"
 sys.path.insert(0, str(HERE))
 import repair_shares as rs  # noqa: E402
 
-# 本站 slug -> 云盘目录代码
+# 本站 slug -> 云盘目录代码（画册类，文件在 月刊/<CODE>/）
 NEW_MAGS = {
     "bossing": "BOS",
     "exotic": "EXO",
     "inciter": "INC",
     "inside-out-babes": "IOB",
+    "kandy": "KDY",
     "lingerie-plus": "LGP",
+    "maxim": "MAX",
     "mancave-playbabes": "MPB",
     "playbabes": "PBS",
+    "rhk": "RHK",
+    "ric": "RIC",
 }
+
+# 老档（2019-2024）在云盘是按刊分目录存的 PDF 原文件，文件名 = 本地 PDF 名 + ".sssEFs"
+OLD_SUFFIX = ".sssEFs"
 
 # PBS 特刊后缀 -> md 的 key 修饰
 PBS_SUF = {
@@ -108,11 +115,16 @@ def parse_name(name: str, code: str):
 
 
 def match_all() -> list[dict]:
+    rows = json.loads(TREE.read_text(encoding="utf-8"))
+    by_name: dict[str, list[dict]] = {}
+    for r in rows:
+        by_name.setdefault(r["name"], []).append(r)
+
     files = cloud_files()
     pairs, problems = [], []
 
     for slug, code in NEW_MAGS.items():
-        items = load_md(slug)
+        items = [x for x in load_md(slug) if not x["has_dl"]]
         pool = []
         for f in files.get(code, []):
             pn = parse_name(f["name"], code)
@@ -121,6 +133,15 @@ def match_all() -> list[dict]:
         used = set()
 
         for it in items:
+            # 1) 老档（2019-2024）：云盘存的是 PDF 原文件，名字只多了 .sssEFs
+            hit = by_name.get(it["file"] + OLD_SUFFIX) or by_name.get(it["file"])
+            if hit and hit[0]["name"] not in used:
+                pick = hit[0]
+                used.add(pick["name"])
+                it.update({"cloud_name": pick["name"], "cloud_dir": pick["dir"]})
+                pairs.append(it)
+                continue
+
             if not it["start"]:
                 problems.append((it, "无法解析期次"))
                 continue
