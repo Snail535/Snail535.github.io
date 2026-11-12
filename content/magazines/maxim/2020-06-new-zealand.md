@@ -26,7 +26,7 @@ preview3: "/thumbs/magazines/maxim/2020-06-new-zealand/p3.webp"
 preview4: "/thumbs/magazines/maxim/2020-06-new-zealand/p4.webp"
 has_download: true
 download_pwd: ""
-netdisk_file: "Maxim_New_Zealand_-_June_2020.pdf.sssEFs"
+netdisk_file: "MAXNZ2006.jpg"
 ---
 ## 本期信息
 

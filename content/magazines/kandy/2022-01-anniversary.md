@@ -25,7 +25,7 @@ preview3: "/thumbs/magazines/kandy/2022-01-anniversary/p3.webp"
 preview4: "/thumbs/magazines/kandy/2022-01-anniversary/p4.webp"
 has_download: true
 download_pwd: ""
-netdisk_file: "Kandy_-_11_Year_Anniversary_Issue_2022.pdf.sssEFs"
+netdisk_file: "KDYAN22.jpg"
 ---
 ## 本期信息
 

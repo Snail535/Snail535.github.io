@@ -26,7 +26,7 @@ preview3: "/thumbs/magazines/maxim/2023-06-australia/p3.webp"
 preview4: "/thumbs/magazines/maxim/2023-06-australia/p4.webp"
 has_download: true
 download_pwd: ""
-netdisk_file: "Maxim_Australia_-_June_2023.pdf.sssEFs"
+netdisk_file: "MAXAU2306.jpg"
 ---
 ## 本期信息
 

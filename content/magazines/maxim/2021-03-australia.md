@@ -26,7 +26,7 @@ preview3: "/thumbs/magazines/maxim/2021-03-australia/p3.webp"
 preview4: "/thumbs/magazines/maxim/2021-03-australia/p4.webp"
 has_download: true
 download_pwd: ""
-netdisk_file: "Maxim_Australia_-_March_2021.pdf.sssEFs"
+netdisk_file: "MAXAU2103.jpg"
 ---
 ## 本期信息
 

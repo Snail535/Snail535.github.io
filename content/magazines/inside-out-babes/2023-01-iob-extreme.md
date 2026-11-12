@@ -25,7 +25,7 @@ preview3: "/thumbs/magazines/inside-out-babes/2023-01-iob-extreme/p3.webp"
 preview4: "/thumbs/magazines/inside-out-babes/2023-01-iob-extreme/p4.webp"
 has_download: true
 download_pwd: ""
-netdisk_file: "IOB_Inside_Out_Babes_-_Extreme_Edition_January_2023.pdf.sssEFs"
+netdisk_file: "IOBE2301.jpg"
 ---
 ## 本期信息
 

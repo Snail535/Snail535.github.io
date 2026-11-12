@@ -26,7 +26,7 @@ preview3: "/thumbs/magazines/maxim/2019-02-new-zealand/p3.webp"
 preview4: "/thumbs/magazines/maxim/2019-02-new-zealand/p4.webp"
 has_download: true
 download_pwd: ""
-netdisk_file: "Maxim_New_Zealand__February_2019.pdf.sssEFs"
+netdisk_file: "MAXNZ1902.jpg"
 ---
 ## 本期信息
 

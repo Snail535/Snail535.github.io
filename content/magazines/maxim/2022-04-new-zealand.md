@@ -26,7 +26,7 @@ preview3: "/thumbs/magazines/maxim/2022-04-new-zealand/p3.webp"
 preview4: "/thumbs/magazines/maxim/2022-04-new-zealand/p4.webp"
 has_download: true
 download_pwd: ""
-netdisk_file: "MAXIM_New_Zealand__April_2022.pdf.sssEFs"
+netdisk_file: "MAXNZ2204.jpg"
 ---
 ## 本期信息
 

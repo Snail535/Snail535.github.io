@@ -26,7 +26,7 @@ preview3: "/thumbs/magazines/maxim/2019-11-new-zealand/p3.webp"
 preview4: "/thumbs/magazines/maxim/2019-11-new-zealand/p4.webp"
 has_download: true
 download_pwd: ""
-netdisk_file: "Maxim_New_Zealand_-_November_2019.pdf.sssEFs"
+netdisk_file: "MAXNZ1911.jpg"
 ---
 ## 本期信息
 

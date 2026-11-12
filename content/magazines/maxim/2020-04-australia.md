@@ -26,7 +26,7 @@ preview3: "/thumbs/magazines/maxim/2020-04-australia/p3.webp"
 preview4: "/thumbs/magazines/maxim/2020-04-australia/p4.webp"
 has_download: true
 download_pwd: ""
-netdisk_file: "Maxim_Australia_-_April_2020.pdf.sssEFs"
+netdisk_file: "MAXAU2004.jpg"
 ---
 ## 本期信息
 

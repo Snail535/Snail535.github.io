@@ -25,7 +25,7 @@ preview3: "/thumbs/magazines/kandy/2026-01-anniversary/p3.webp"
 preview4: "/thumbs/magazines/kandy/2026-01-anniversary/p4.webp"
 download_pwd: ""
 has_download: true
-netdisk_file: ""
+netdisk_file: "KDYAN26.jpg"
 ---
 
 ## 本期信息

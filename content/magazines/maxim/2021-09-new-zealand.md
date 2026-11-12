@@ -26,7 +26,7 @@ preview3: "/thumbs/magazines/maxim/2021-09-new-zealand/p3.webp"
 preview4: "/thumbs/magazines/maxim/2021-09-new-zealand/p4.webp"
 has_download: true
 download_pwd: ""
-netdisk_file: "MAXIM_New_Zealand__September_2021.pdf.sssEFs"
+netdisk_file: "MAXNZ2109.jpg"
 ---
 ## 本期信息
 

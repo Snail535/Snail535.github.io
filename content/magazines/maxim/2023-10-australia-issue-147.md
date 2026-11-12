@@ -26,7 +26,7 @@ preview3: "/thumbs/magazines/maxim/2023-10-australia-issue-147/p3.webp"
 preview4: "/thumbs/magazines/maxim/2023-10-australia-issue-147/p4.webp"
 has_download: true
 download_pwd: ""
-netdisk_file: "Maxim_Australia_-_Issue_147_-_October_2023.pdf.sssEFs"
+netdisk_file: "MAXAU2310.jpg"
 ---
 ## 本期信息
 

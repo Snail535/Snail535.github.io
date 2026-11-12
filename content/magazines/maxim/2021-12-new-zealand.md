@@ -26,7 +26,7 @@ preview3: "/thumbs/magazines/maxim/2021-12-new-zealand/p3.webp"
 preview4: "/thumbs/magazines/maxim/2021-12-new-zealand/p4.webp"
 has_download: true
 download_pwd: ""
-netdisk_file: "MAXIM_New_Zealand__December_2021.pdf.sssEFs"
+netdisk_file: "MAXNZ2112.jpg"
 ---
 ## 本期信息
 

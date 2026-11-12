@@ -26,7 +26,7 @@ preview3: "/thumbs/magazines/maxim/2020-07-australia/p3.webp"
 preview4: "/thumbs/magazines/maxim/2020-07-australia/p4.webp"
 has_download: true
 download_pwd: ""
-netdisk_file: "Maxim_Australia_-_July_2020.pdf.sssEFs"
+netdisk_file: "MAXAU2007.jpg"
 ---
 ## 本期信息
 
