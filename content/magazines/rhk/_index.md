@@ -1,7 +1,7 @@
 ---
 title: "RHK Magazine"
 weight: 230
-category: "时尚成人"
+category: "男士杂志"
 cadence: "monthly"
 color: "#5a3d7a"
 adult: false

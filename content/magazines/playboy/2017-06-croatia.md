@@ -13,7 +13,7 @@ file_size: "32.6 MB"
 adult: false
 cadence: "monthly"
 file_name: "Playboy_Croatia__June_2017.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2017]
 editions: ["Croatia"]
 cover:

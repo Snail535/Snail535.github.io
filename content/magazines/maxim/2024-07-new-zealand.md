@@ -13,7 +13,7 @@ file_size: "110.0 MB"
 adult: false
 cadence: "monthly"
 file_name: "Maxim_New_Zealand_-_July_2024.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2024]
 editions: ["New Zealand"]
 cover:

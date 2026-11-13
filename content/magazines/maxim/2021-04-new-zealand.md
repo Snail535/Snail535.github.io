@@ -13,7 +13,7 @@ file_size: "75.2 MB"
 adult: false
 cadence: "monthly"
 file_name: "Maxim_New_Zealand_-_April_2021.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2021]
 editions: ["New Zealand"]
 cover:

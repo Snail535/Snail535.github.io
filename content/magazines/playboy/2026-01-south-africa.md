@@ -13,7 +13,7 @@ file_size: "44.2 MB"
 adult: false
 cadence: "monthly"
 file_name: "Playboy_South_Africa_-_January_2026.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2026]
 editions: ["South Africa"]
 cover:

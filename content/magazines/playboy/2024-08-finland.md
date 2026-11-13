@@ -13,7 +13,7 @@ file_size: "50.9 MB"
 adult: false
 cadence: "monthly"
 file_name: "Playboy_Finland_-_August_2024.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2024]
 editions: ["Finland"]
 cover:

@@ -13,7 +13,7 @@ file_size: "15.8 MB"
 adult: false
 cadence: "monthly"
 file_name: "IOB_Inside_Out_Babes_Extreme_Edition_-_November-December_2025.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2025]
 cover:
   image: "/thumbs/magazines/inside-out-babes/2025-12-iob-extreme/cover.webp"

@@ -13,7 +13,7 @@ file_size: "28.2 MB"
 adult: false
 cadence: "monthly"
 file_name: "Boudoir_Inspiration__Black_amp_White_Issue_February_2021.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2021]
 cover:
   image: "/thumbs/magazines/boudoir-inspiration/2021-02-black-and-white/cover.webp"

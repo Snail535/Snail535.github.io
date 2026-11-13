@@ -13,7 +13,7 @@ file_size: "85.0 MB"
 adult: false
 cadence: "monthly"
 file_name: "MAXIM_New_Zealand__December_2022.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2022]
 editions: ["New Zealand"]
 cover:

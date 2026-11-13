@@ -13,7 +13,7 @@ file_size: "31.1 MB"
 adult: false
 cadence: "monthly"
 file_name: "Playboy_Australia__January_2021.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2021]
 editions: ["Australia"]
 cover:

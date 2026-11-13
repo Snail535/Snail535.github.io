@@ -13,7 +13,7 @@ file_size: "31.7 MB"
 adult: false
 cadence: "monthly"
 file_name: "Kandy_-_11_Year_Anniversary_Issue_2022.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2022]
 cover:
   image: "/thumbs/magazines/kandy/2022-01-anniversary/cover.webp"

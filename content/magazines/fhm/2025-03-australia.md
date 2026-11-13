@@ -13,7 +13,7 @@ file_size: "47.3 MB"
 adult: false
 cadence: "monthly"
 file_name: "FHM_Australia_-_March_2025.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2025]
 editions: ["Australia"]
 cover:

@@ -13,7 +13,7 @@ file_size: "51.8 MB"
 adult: false
 cadence: "monthly"
 file_name: "FHM_Australia_-_September_2023.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2023]
 editions: ["Australia"]
 cover:

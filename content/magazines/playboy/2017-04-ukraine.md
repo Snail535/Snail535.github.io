@@ -13,7 +13,7 @@ file_size: "22.6 MB"
 adult: false
 cadence: "monthly"
 file_name: "Playboy_Ukraine__April_2017.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2017]
 editions: ["Ukraine"]
 cover:

@@ -13,7 +13,7 @@ file_size: "47.7 MB"
 adult: false
 cadence: "monthly"
 file_name: "FHM_Australia__August_2019.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2019]
 editions: ["Australia"]
 cover:

@@ -13,7 +13,7 @@ file_size: "53.3 MB"
 adult: false
 cadence: "monthly"
 file_name: "Boudoir_Inspiration_-_November_2023_Boudoir_Issue_Volume_2.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2023]
 cover:
   image: "/thumbs/magazines/boudoir-inspiration/2023-11-02-boudoir-volume/cover.webp"

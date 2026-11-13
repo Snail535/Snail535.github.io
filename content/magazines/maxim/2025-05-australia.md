@@ -13,7 +13,7 @@ file_size: "97.4 MB"
 adult: false
 cadence: "monthly"
 file_name: "Maxim_Australia_-_May_2025.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2025]
 editions: ["Australia"]
 cover:

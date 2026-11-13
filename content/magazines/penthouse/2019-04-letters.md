@@ -13,7 +13,7 @@ file_size: "39.6 MB"
 adult: false
 cadence: "monthly"
 file_name: "Penthouse_Letters_-_April_2019.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2019]
 cover:
   image: "/thumbs/magazines/penthouse/2019-04-letters/cover.webp"

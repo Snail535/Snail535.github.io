@@ -13,7 +13,7 @@ file_size: "51.0 MB"
 adult: false
 cadence: "monthly"
 file_name: "Playboy_Finland_-_February_2025.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2025]
 editions: ["Finland"]
 cover:

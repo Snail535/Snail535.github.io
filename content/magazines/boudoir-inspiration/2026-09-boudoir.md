@@ -13,7 +13,7 @@ file_size: "45.2 MB"
 adult: false
 cadence: "monthly"
 file_name: "Boudoir_Inspiration_-_September_2026_Boudoir_Issue.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2026]
 cover:
   image: "/thumbs/magazines/boudoir-inspiration/2026-09-boudoir/cover.webp"

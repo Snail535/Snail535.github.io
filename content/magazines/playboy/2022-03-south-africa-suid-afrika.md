@@ -1,25 +1,25 @@
 ---
-title: "Playboy（South Africa 版） · 2022 年 3 月 · Suid Afrika"
-description: "Playboy（South Africa 版） · 2022 年 3 月 · Suid Afrika，51 页。英文原版杂志在线试读，含封面与内页预览、期次信息与网盘下载入口；新叶素材杂志库按期更新，可按刊物与年份浏览全部期次。"
+title: "Playboy（South Africa 版） · 2022 年 3 月"
+description: "Playboy（South Africa 版） · 2022 年 3 月，51 页。英文原版杂志在线试读，含封面与内页预览、期次信息与网盘下载入口；新叶素材杂志库按期更新，可按刊物与年份浏览全部期次。"
 date: 2022-03-01T00:00:00+08:00
 draft: false
 magazine: "Playboy"
 magazine_slug: "playboy"
 edition: "South Africa"
 issue: "2022-03"
-issue_label: "2022 年 3 月 · Suid Afrika"
+issue_label: "2022 年 3 月"
 pages: 51
 file_size: "79.7 MB"
 adult: false
 cadence: "monthly"
 file_name: "Playboy_Suid_Afrika_-_March_2022.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2022]
 editions: ["South Africa"]
 cover:
   image: "/thumbs/magazines/playboy/2022-03-south-africa-suid-afrika/cover.webp"
   thumb: "/thumbs/magazines/playboy/2022-03-south-africa-suid-afrika/thumb.webp"
-  alt: "Playboy South Africa 2022 年 3 月 · Suid Afrika"
+  alt: "Playboy South Africa 2022 年 3 月"
   hidden: false
 preview1: "/thumbs/magazines/playboy/2022-03-south-africa-suid-afrika/p1.webp"
 preview2: "/thumbs/magazines/playboy/2022-03-south-africa-suid-afrika/p2.webp"

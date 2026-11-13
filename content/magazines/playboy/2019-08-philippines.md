@@ -13,7 +13,7 @@ file_size: "105.9 MB"
 adult: false
 cadence: "monthly"
 file_name: "Playboy_Philippines_-_July-August_2019.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2019]
 editions: ["Philippines"]
 cover:

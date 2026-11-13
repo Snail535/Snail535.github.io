@@ -13,7 +13,7 @@ file_size: "42.3 MB"
 adult: false
 cadence: "monthly"
 file_name: "Playboy_New_Zealand__April_2023.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2023]
 editions: ["New Zealand"]
 cover:

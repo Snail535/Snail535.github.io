@@ -13,7 +13,7 @@ file_size: "104.3 MB"
 adult: false
 cadence: "monthly"
 file_name: "Maxim_Australia_-_October_2024.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2024]
 editions: ["Australia"]
 cover:

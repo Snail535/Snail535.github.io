@@ -6,7 +6,7 @@
 模型随 nudenet 安装包自带（320n.onnx），不联网下载。
 
 做法：
-- 只扫描「时尚成人」分类的期次（其他刊物完全不动）
+- 只扫描「男士杂志」分类的期次（其他刊物完全不动）
 - 用模型找出裸露部位的框，只对这些框做像素化，画面其余部分保持清晰
 - 打码版另存为 <原文件名>c.webp，原图保留
 - 输出 data/censored_previews.json：原图 URL → 打码版 URL，模板据此替换
@@ -53,7 +53,7 @@ def adult_issues():
     for md in sorted(CONTENT.glob("*/*.md")):
         if md.name == "_index.md":
             continue
-        if "时尚成人" not in md.read_text(encoding="utf-8"):
+        if "男士杂志" not in md.read_text(encoding="utf-8"):
             continue
         out.append((md.parent.name, md.stem))
     return out

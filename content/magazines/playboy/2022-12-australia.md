@@ -13,7 +13,7 @@ file_size: "42.0 MB"
 adult: false
 cadence: "monthly"
 file_name: "Playboy_Australia__December_2022.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2022]
 editions: ["Australia"]
 cover:

@@ -13,7 +13,7 @@ file_size: "29.9 MB"
 adult: false
 cadence: "monthly"
 file_name: "IOB_Inside_Out_Babes_-_Extreme_Edition_January_2023.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2023]
 cover:
   image: "/thumbs/magazines/inside-out-babes/2023-01-iob-extreme/cover.webp"

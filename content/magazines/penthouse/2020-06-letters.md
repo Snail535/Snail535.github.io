@@ -13,7 +13,7 @@ file_size: "47.2 MB"
 adult: false
 cadence: "monthly"
 file_name: "Penthouse_Letters_-_June_2020.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2020]
 cover:
   image: "/thumbs/magazines/penthouse/2020-06-letters/cover.webp"

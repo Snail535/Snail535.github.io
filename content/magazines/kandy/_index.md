@@ -1,7 +1,7 @@
 ---
 title: "Kandy"
 weight: 130
-category: "时尚成人"
+category: "男士杂志"
 cadence: "monthly"
 color: "#d81b60"
 adult: false

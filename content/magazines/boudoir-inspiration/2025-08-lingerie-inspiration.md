@@ -13,7 +13,7 @@ file_size: "43.5 MB"
 adult: false
 cadence: "monthly"
 file_name: "Boudoir_Inspiration_-_August_2025_Lingerie_Inspiration_Issue.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2025]
 cover:
   image: "/thumbs/magazines/boudoir-inspiration/2025-08-lingerie-inspiration/cover.webp"

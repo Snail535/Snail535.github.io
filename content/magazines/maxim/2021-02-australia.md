@@ -13,7 +13,7 @@ file_size: "30.4 MB"
 adult: false
 cadence: "monthly"
 file_name: "Maxim_Australia_-_February_2021.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2021]
 editions: ["Australia"]
 cover:

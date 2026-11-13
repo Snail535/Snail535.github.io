@@ -13,7 +13,7 @@ file_size: "47.2 MB"
 adult: false
 cadence: "monthly"
 file_name: "Playboy_Australia_-_December_2023.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2023]
 editions: ["Australia"]
 cover:

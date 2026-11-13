@@ -13,7 +13,7 @@ file_size: "115.3 MB"
 adult: false
 cadence: "monthly"
 file_name: "Penthouse_Letters_-_October_2022.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2022]
 cover:
   image: "/thumbs/magazines/penthouse/2022-10-letters/cover.webp"

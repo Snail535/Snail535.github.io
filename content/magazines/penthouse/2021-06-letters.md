@@ -13,7 +13,7 @@ file_size: "54.1 MB"
 adult: false
 cadence: "monthly"
 file_name: "Penthouse_Letters_-_June_2021.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2021]
 cover:
   image: "/thumbs/magazines/penthouse/2021-06-letters/cover.webp"

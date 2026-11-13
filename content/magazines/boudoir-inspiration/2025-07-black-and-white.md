@@ -13,7 +13,7 @@ file_size: "51.6 MB"
 adult: false
 cadence: "monthly"
 file_name: "Boudoir_Inspiration_-_July_2025_Black_and_White_Issue.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2025]
 cover:
   image: "/thumbs/magazines/boudoir-inspiration/2025-07-black-and-white/cover.webp"

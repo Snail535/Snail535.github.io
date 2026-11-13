@@ -13,7 +13,7 @@ file_size: "68.6 MB"
 adult: false
 cadence: "monthly"
 file_name: "Boudoir_Inspiration_-_June_2023_Boudoir_Issue.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2023]
 cover:
   image: "/thumbs/magazines/boudoir-inspiration/2023-06-boudoir/cover.webp"

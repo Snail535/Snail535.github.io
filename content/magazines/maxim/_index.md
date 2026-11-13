@@ -1,7 +1,7 @@
 ---
 title: "Maxim"
 weight: 110
-category: "时尚成人"
+category: "男士杂志"
 cadence: "monthly"
 color: "#b0202a"
 adult: false

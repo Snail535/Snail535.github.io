@@ -1,7 +1,7 @@
 ---
 title: "Boudoir Inspiration"
 weight: 140
-category: "时尚成人"
+category: "男士杂志"
 cadence: "monthly"
 color: "#8e5a6b"
 adult: false

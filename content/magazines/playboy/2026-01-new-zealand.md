@@ -13,7 +13,7 @@ file_size: "45.9 MB"
 adult: false
 cadence: "monthly"
 file_name: "Playboy_New_Zealand_-_January_2026.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2026]
 editions: ["New Zealand"]
 cover:

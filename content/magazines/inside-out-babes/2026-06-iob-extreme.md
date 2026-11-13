@@ -13,7 +13,7 @@ file_size: "24.9 MB"
 adult: false
 cadence: "monthly"
 file_name: "IOB_Inside_Out_Babes_-_July-August_2026_Extreme_Summer_Edition.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2026]
 cover:
   image: "/thumbs/magazines/inside-out-babes/2026-06-iob-extreme/cover.webp"

@@ -1,7 +1,7 @@
 ---
 title: "Mancave Playbabes"
 weight: 210
-category: "时尚成人"
+category: "男士杂志"
 cadence: "bimonthly"
 color: "#4a1c2b"
 adult: false

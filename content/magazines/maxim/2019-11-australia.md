@@ -13,7 +13,7 @@ file_size: "41.8 MB"
 adult: false
 cadence: "monthly"
 file_name: "Maxim_Australia_-_November_2019.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2019]
 editions: ["Australia"]
 cover:

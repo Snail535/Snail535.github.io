@@ -13,7 +13,7 @@ file_size: "45.2 MB"
 adult: false
 cadence: "monthly"
 file_name: "Maxim_Australia_-_November_2021.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2021]
 editions: ["Australia"]
 cover:

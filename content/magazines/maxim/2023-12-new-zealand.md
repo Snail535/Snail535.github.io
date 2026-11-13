@@ -13,7 +13,7 @@ file_size: "108.4 MB"
 adult: false
 cadence: "monthly"
 file_name: "Maxim_New_Zealand_-_December_2023.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2023]
 editions: ["New Zealand"]
 cover:

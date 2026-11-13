@@ -13,7 +13,7 @@ file_size: "49.0 MB"
 adult: false
 cadence: "monthly"
 file_name: "Maxim_New_Zealand_-_January_2020.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2020]
 editions: ["New Zealand"]
 cover:

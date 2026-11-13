@@ -1,7 +1,7 @@
 ---
 title: "Inside Out Babes"
 weight: 190
-category: "时尚成人"
+category: "男士杂志"
 cadence: "monthly"
 color: "#a31545"
 adult: false

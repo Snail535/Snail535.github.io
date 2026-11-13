@@ -1,7 +1,7 @@
 ---
 title: "Riche Magazine"
 weight: 240
-category: "时尚成人"
+category: "男士杂志"
 cadence: "monthly"
 color: "#b8860b"
 adult: false

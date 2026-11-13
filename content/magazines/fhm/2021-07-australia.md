@@ -13,7 +13,7 @@ file_size: "55.3 MB"
 adult: false
 cadence: "monthly"
 file_name: "FHM_Australia__July_2021.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2021]
 editions: ["Australia"]
 cover:

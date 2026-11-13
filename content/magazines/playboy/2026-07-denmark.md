@@ -13,7 +13,7 @@ file_size: "88.5 MB"
 adult: false
 cadence: "monthly"
 file_name: "Playboy_Denmark_-_July_2026.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2026]
 editions: ["Denmark"]
 cover:

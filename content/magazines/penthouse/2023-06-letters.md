@@ -13,7 +13,7 @@ file_size: "53.7 MB"
 adult: false
 cadence: "monthly"
 file_name: "Penthouse_Letters_-_June_2023.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2023]
 cover:
   image: "/thumbs/magazines/penthouse/2023-06-letters/cover.webp"

@@ -13,7 +13,7 @@ file_size: "12.2 MB"
 adult: false
 cadence: "monthly"
 file_name: "Penthouse_Letters_-_September_2018.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2018]
 cover:
   image: "/thumbs/magazines/penthouse/2018-09-letters/cover.webp"

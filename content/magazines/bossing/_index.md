@@ -1,7 +1,7 @@
 ---
 title: "Bossing"
 weight: 160
-category: "时尚成人"
+category: "男士杂志"
 cadence: "monthly"
 color: "#8b1e3f"
 adult: false

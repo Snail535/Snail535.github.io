@@ -13,7 +13,7 @@ file_size: "18.2 MB"
 adult: false
 cadence: "monthly"
 file_name: "Playboy_Argentina_N_137__Junio_2017.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2017]
 editions: ["Argentina"]
 cover:

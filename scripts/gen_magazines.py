@@ -363,14 +363,39 @@ def make_thumbs(pdf: Path, out_dir: Path):
         return False
 
 
+# 文件名里出现过的国家/地区型变体（归一化后比较）
+GEO_VARIANTS = {
+    "us", "usa", "uk", "nz", "australia", "newzealand",
+    "southafrica", "suidafrika", "africa",
+}
+
+
+def display_label(label: str, edition: str) -> str:
+    """期次里不再重复写地区：刊物名已由 edition 标明「Playboy（South Africa）」。
+
+    key / 文件名仍保留变体，URL 与缩略图路径不变；
+    子系列、特刊、期号后缀（Lingerie Inspiration、IOB、Issue 147 …）一律保留，
+    它们是同月多期的唯一区分。与 scripts/normalize_issue_label.py 规则一致。
+    """
+    if not edition or " · " not in label:
+        return label
+    base, variant = label.rsplit(" · ", 1)
+    v = re.sub(r"[^a-z0-9]", "", variant.lower())
+    e = re.sub(r"[^a-z0-9]", "", edition.lower())
+    if v in GEO_VARIANTS or v == e or (len(v) >= 2 and (e.startswith(v) or v.startswith(e))):
+        return base
+    return label
+
+
 # ---------------------------------------------------------------- output
 def write_md(rec, mag):
     slug, ed_slug = mag["slug"], rec["edition_slug"]
     rel_img = f"/thumbs/magazines/{slug}/{rec['key']}"
+    lab = display_label(rec["label"], rec["edition"])
     # SEO：标题带刊名，避免几千个页面都叫「2023 年 1 月」被搜索引擎判为重复低质页。
     # 这段要和 scripts/seo_frontmatter.py 的 make_title / make_description 保持一致。
     seo_name = mag["name"] + (f'（{rec["edition"]} 版）' if rec["edition"] else "")
-    seo_title = f'{seo_name} · {rec["label"]}'
+    seo_title = f'{seo_name} · {lab}'
     seo_desc = (
         f'{seo_title}，{rec["pages"]} 页。'
         "英文原版杂志在线试读，含封面与内页预览、期次信息与网盘下载入口；"
@@ -386,7 +411,7 @@ def write_md(rec, mag):
         f'magazine_slug: "{slug}"',
         f'edition: "{rec["edition"]}"',
         f'issue: "{rec["issue"]}"',
-        f'issue_label: "{rec["label"]}"',
+        f'issue_label: "{lab}"',
         f'pages: {rec["pages"]}',
         f'file_size: "{rec["size"]}"',
         f'adult: {"true" if mag.get("adult") else "false"}',
@@ -401,8 +426,8 @@ def write_md(rec, mag):
         "cover:",
         f'  image: "{rel_img}/cover.{IMG_EXT}"',
         f'  thumb: "{rel_img}/thumb.{IMG_EXT}"',
-        f'  alt: "{mag["name"]}{" " + rec["edition"] if rec["edition"] else ""} {rec["label"]}"',
-        # 只有标记为成人内容的刊物才默认遮罩封面
+        f'  alt: "{mag["name"]}{" " + rec["edition"] if rec["edition"] else ""} {lab}"',
+        # 只有标记了 adult 的刊物才默认遮罩封面
         f'  hidden: {"true" if mag.get("adult") else "false"}',
     ]
     for k in range(1, 5):

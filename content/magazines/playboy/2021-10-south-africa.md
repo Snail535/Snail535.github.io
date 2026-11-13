@@ -13,7 +13,7 @@ file_size: "58.1 MB"
 adult: false
 cadence: "monthly"
 file_name: "Playboy_South_Africa_-_October_2021.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2021]
 editions: ["South Africa"]
 cover:

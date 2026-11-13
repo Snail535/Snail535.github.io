@@ -13,7 +13,7 @@ file_size: "47.2 MB"
 adult: false
 cadence: "monthly"
 file_name: "Boudoir_Inspiration_-_May_2026_Artistic_Nude_Issue.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2026]
 cover:
   image: "/thumbs/magazines/boudoir-inspiration/2026-05-artistic-nude/cover.webp"

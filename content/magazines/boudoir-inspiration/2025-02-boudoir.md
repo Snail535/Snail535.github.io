@@ -13,7 +13,7 @@ file_size: "52.8 MB"
 adult: false
 cadence: "monthly"
 file_name: "Boudoir_Inspiration_-_February_2025_Boudoir_Issue.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2025]
 cover:
   image: "/thumbs/magazines/boudoir-inspiration/2025-02-boudoir/cover.webp"

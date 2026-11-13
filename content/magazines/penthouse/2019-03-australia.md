@@ -13,7 +13,7 @@ file_size: "63.2 MB"
 adult: false
 cadence: "monthly"
 file_name: "Penthouse_Australia_-_Spring_2019.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2019]
 editions: ["Australia"]
 cover:

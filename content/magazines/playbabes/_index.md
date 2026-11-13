@@ -1,7 +1,7 @@
 ---
 title: "Playbabes Special Edition"
 weight: 220
-category: "时尚成人"
+category: "男士杂志"
 cadence: "quarterly"
 color: "#9c27b0"
 adult: false

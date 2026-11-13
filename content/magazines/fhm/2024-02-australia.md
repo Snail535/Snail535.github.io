@@ -13,7 +13,7 @@ file_size: "45.6 MB"
 adult: false
 cadence: "monthly"
 file_name: "FHM_Australia_-_February_2024.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2024]
 editions: ["Australia"]
 cover:

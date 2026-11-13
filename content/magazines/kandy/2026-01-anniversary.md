@@ -13,7 +13,7 @@ file_size: "50.4 MB"
 adult: false
 cadence: "monthly"
 file_name: "Kandy_Magazine_-_15_Year_Anniversary_Issue_2026.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2026]
 cover:
   image: "/thumbs/magazines/kandy/2026-01-anniversary/cover.webp"

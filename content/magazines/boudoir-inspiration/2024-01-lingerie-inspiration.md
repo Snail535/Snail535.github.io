@@ -13,7 +13,7 @@ file_size: "59.2 MB"
 adult: false
 cadence: "monthly"
 file_name: "Boudoir_Inspiration_-_January_2024_Lingerie_Inspiration_Issue.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2024]
 cover:
   image: "/thumbs/magazines/boudoir-inspiration/2024-01-lingerie-inspiration/cover.webp"

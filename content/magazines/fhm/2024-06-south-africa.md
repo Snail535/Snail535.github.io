@@ -13,7 +13,7 @@ file_size: "44.5 MB"
 adult: false
 cadence: "monthly"
 file_name: "FHM_South_Africa_-_June_2024.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2024]
 editions: ["South Africa"]
 cover:

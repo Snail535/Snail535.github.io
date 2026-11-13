@@ -13,7 +13,7 @@ file_size: "48.2 MB"
 adult: false
 cadence: "monthly"
 file_name: "Playboy_Denmark_-_October_2025.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2025]
 editions: ["Denmark"]
 cover:

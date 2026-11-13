@@ -13,7 +13,7 @@ file_size: "104.9 MB"
 adult: false
 cadence: "monthly"
 file_name: "Playboy_Finland_-_August_2022.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2022]
 editions: ["Finland"]
 cover:

@@ -1,7 +1,7 @@
 ---
 title: "Inciter"
 weight: 180
-category: "时尚成人"
+category: "男士杂志"
 cadence: "monthly"
 color: "#c2185b"
 adult: false

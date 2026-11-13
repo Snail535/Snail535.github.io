@@ -13,7 +13,7 @@ file_size: "33.4 MB"
 adult: false
 cadence: "monthly"
 file_name: "Boudoir_Inspiration_-_October_2026_Lingerie_Inspiration_Issue.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2026]
 cover:
   image: "/thumbs/magazines/boudoir-inspiration/2026-10-lingerie-inspiration/cover.webp"

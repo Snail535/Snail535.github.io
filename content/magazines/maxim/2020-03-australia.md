@@ -13,7 +13,7 @@ file_size: "41.9 MB"
 adult: false
 cadence: "monthly"
 file_name: "Maxim_Australia_-_March_2020.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2020]
 editions: ["Australia"]
 cover:

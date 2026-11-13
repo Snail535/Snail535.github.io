@@ -1,7 +1,7 @@
 ---
 title: "Exotic"
 weight: 170
-category: "时尚成人"
+category: "男士杂志"
 cadence: "monthly"
 color: "#6b2fa0"
 adult: false

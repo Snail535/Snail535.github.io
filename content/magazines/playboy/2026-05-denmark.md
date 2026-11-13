@@ -13,7 +13,7 @@ file_size: "29.2 MB"
 adult: false
 cadence: "monthly"
 file_name: "Playboy_Denmark_-_May_2026.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2026]
 editions: ["Denmark"]
 cover:

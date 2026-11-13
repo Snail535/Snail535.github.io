@@ -13,7 +13,7 @@ file_size: "39.7 MB"
 adult: false
 cadence: "monthly"
 file_name: "FHM_South_Africa_-_December_2020.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2020]
 editions: ["South Africa"]
 cover:

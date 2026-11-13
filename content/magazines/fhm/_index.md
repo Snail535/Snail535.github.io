@@ -1,7 +1,7 @@
 ---
 title: "FHM"
 weight: 120
-category: "时尚成人"
+category: "男士杂志"
 cadence: "monthly"
 color: "#0057b8"
 adult: false

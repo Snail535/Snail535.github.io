@@ -8,7 +8,7 @@
 
 改成：
   title: "Bossing · 2023 年 1 月"        （HTML <title> 会再拼上「| 新叶素材」）
-  description: "Bossing · 2023 年 1 月，82 页。时尚成人类英文原版杂志，…"
+  description: "Bossing · 2023 年 1 月，82 页。英文原版杂志在线试读，…"
 
 特点：
   * 幂等，可反复运行，不会把刊名越叠越长

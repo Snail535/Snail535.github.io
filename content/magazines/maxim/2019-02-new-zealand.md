@@ -13,7 +13,7 @@ file_size: "34.9 MB"
 adult: false
 cadence: "monthly"
 file_name: "Maxim_New_Zealand__February_2019.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2019]
 editions: ["New Zealand"]
 cover:

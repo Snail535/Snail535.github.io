@@ -13,7 +13,7 @@ file_size: "96.5 MB"
 adult: false
 cadence: "monthly"
 file_name: "Playboy_South_Africa_-_October_2019.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2019]
 editions: ["South Africa"]
 cover:

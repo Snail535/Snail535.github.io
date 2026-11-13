@@ -13,7 +13,7 @@ file_size: "85.4 MB"
 adult: false
 cadence: "monthly"
 file_name: "Playboy_South_Africa_-_July_2019.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2019]
 editions: ["South Africa"]
 cover:

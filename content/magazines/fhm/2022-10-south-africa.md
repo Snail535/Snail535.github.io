@@ -13,7 +13,7 @@ file_size: "96.8 MB"
 adult: false
 cadence: "monthly"
 file_name: "FHM_South_Africa__October_2022.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2022]
 editions: ["South Africa"]
 cover:

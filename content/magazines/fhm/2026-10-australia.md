@@ -13,7 +13,7 @@ file_size: "31.9 MB"
 adult: false
 cadence: "monthly"
 file_name: "FHM_Australia_-_October_2026.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2026]
 editions: ["Australia"]
 cover:

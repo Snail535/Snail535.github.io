@@ -13,7 +13,7 @@ file_size: "49.5 MB"
 adult: false
 cadence: "monthly"
 file_name: "FHM_South_Africa__August_2021.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2021]
 editions: ["South Africa"]
 cover:

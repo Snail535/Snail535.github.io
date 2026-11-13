@@ -13,7 +13,7 @@ file_size: "55.9 MB"
 adult: false
 cadence: "monthly"
 file_name: "Boudoir_Inspiration_-_November_2024_Boudoir_Issue.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2024]
 cover:
   image: "/thumbs/magazines/boudoir-inspiration/2024-11-boudoir/cover.webp"

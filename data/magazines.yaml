@@ -14,7 +14,7 @@
 #   folders    对应的 PDF 目录名（可多个，用于同一刊物的不同来源目录）
 #   cadence    weekly / monthly / bimonthly / quarterly，仅作展示
 #   color      卡片顶部标签的主题色
-#   adult      成人内容，true 时封面默认打码，点击/悬停才显示
+#   adult      需要默认遮罩的标记，true 时封面默认打码，点击/悬停才显示
 #   desc       一句话简介，显示在刊物页顶部
 # ============================================================
 
@@ -161,25 +161,25 @@ magazines:
 
   - slug: playboy
     name: "Playboy"
-    category: "时尚成人"
+    category: "男士杂志"
     folders: ["PLB", "Playboy"]
     cadence: "monthly"
     color: "#111111"
     adult: false
-    desc: "花花公子，成人向生活方式、人物访谈与经典摄影。"
+    desc: "花花公子，男士生活方式、人物访谈与经典摄影。"
 
   - slug: penthouse
     name: "Penthouse"
-    category: "时尚成人"
+    category: "男士杂志"
     folders: ["PNT", "Penthouse"]
     cadence: "monthly"
     color: "#7b1e3b"
     adult: false
-    desc: "阁楼，成人向摄影与专题报道，另有 Letters 副刊。"
+    desc: "阁楼，男士摄影与专题报道，另有 Letters 副刊。"
 
   - slug: maxim
     name: "Maxim"
-    category: "时尚成人"
+    category: "男士杂志"
     folders: ["MAX", "Maxim"]
     cadence: "monthly"
     color: "#b0202a"
@@ -188,7 +188,7 @@ magazines:
 
   - slug: fhm
     name: "FHM"
-    category: "时尚成人"
+    category: "男士杂志"
     folders: ["FHM"]
     cadence: "monthly"
     color: "#0057b8"
@@ -197,7 +197,7 @@ magazines:
 
   - slug: kandy
     name: "Kandy"
-    category: "时尚成人"
+    category: "男士杂志"
     folders: ["KDY", "Kandy"]
     cadence: "monthly"
     color: "#d81b60"
@@ -206,7 +206,7 @@ magazines:
 
   - slug: boudoir-inspiration
     name: "Boudoir Inspiration"
-    category: "时尚成人"
+    category: "男士杂志"
     folders: ["BOU", "Boudoir"]
     cadence: "monthly"
     color: "#8e5a6b"
@@ -215,7 +215,7 @@ magazines:
 
   - slug: tempting-photo
     name: "Tempting Photo Magazine"
-    category: "时尚成人"
+    category: "男士杂志"
     folders: ["TMP", "Tempting"]
     cadence: "monthly"
     color: "#e06c00"
@@ -224,7 +224,7 @@ magazines:
 
   - slug: bossing
     name: "Bossing"
-    category: "时尚成人"
+    category: "男士杂志"
     folders: ["BOS"]
     cadence: "monthly"
     color: "#8b1e3f"
@@ -233,7 +233,7 @@ magazines:
 
   - slug: exotic
     name: "Exotic"
-    category: "时尚成人"
+    category: "男士杂志"
     folders: ["EXO"]
     cadence: "monthly"
     color: "#6b2fa0"
@@ -242,7 +242,7 @@ magazines:
 
   - slug: inciter
     name: "Inciter"
-    category: "时尚成人"
+    category: "男士杂志"
     folders: ["INC"]
     cadence: "monthly"
     color: "#c2185b"
@@ -251,7 +251,7 @@ magazines:
 
   - slug: inside-out-babes
     name: "Inside Out Babes"
-    category: "时尚成人"
+    category: "男士杂志"
     folders: ["IOB"]
     cadence: "monthly"
     color: "#a31545"
@@ -260,7 +260,7 @@ magazines:
 
   - slug: lingerie-plus
     name: "Lingerie Plus"
-    category: "时尚成人"
+    category: "男士杂志"
     folders: ["LGP"]
     cadence: "monthly"
     color: "#7d2b4b"
@@ -269,7 +269,7 @@ magazines:
 
   - slug: mancave-playbabes
     name: "Mancave Playbabes"
-    category: "时尚成人"
+    category: "男士杂志"
     folders: ["MPB"]
     cadence: "bimonthly"
     color: "#4a1c2b"
@@ -278,7 +278,7 @@ magazines:
 
   - slug: playbabes
     name: "Playbabes Special Edition"
-    category: "时尚成人"
+    category: "男士杂志"
     folders: ["PBS"]
     cadence: "quarterly"
     color: "#9c27b0"
@@ -287,7 +287,7 @@ magazines:
 
   - slug: rhk
     name: "RHK Magazine"
-    category: "时尚成人"
+    category: "男士杂志"
     folders: ["RHK"]
     cadence: "monthly"
     color: "#5a3d7a"
@@ -296,7 +296,7 @@ magazines:
 
   - slug: ric
     name: "Riche Magazine"
-    category: "时尚成人"
+    category: "男士杂志"
     folders: ["RIC"]
     cadence: "monthly"
     color: "#b8860b"

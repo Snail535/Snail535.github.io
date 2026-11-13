@@ -13,7 +13,7 @@ file_size: "90.5 MB"
 adult: false
 cadence: "quarterly"
 file_name: "Playbabes_Special_Edition_-_Swimsuit_2026.pdf"
-categories: ["时尚成人"]
+categories: ["男士杂志"]
 years: [2026]
 cover:
   image: "/thumbs/magazines/playbabes/2026-05-swimsuit/cover.webp"

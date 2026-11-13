@@ -1,7 +1,7 @@
 ---
 title: "Tempting Photo Magazine"
 weight: 150
-category: "时尚成人"
+category: "男士杂志"
 cadence: "monthly"
 color: "#e06c00"
 adult: false

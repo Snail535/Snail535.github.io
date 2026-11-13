@@ -241,7 +241,8 @@
 .mg-hero {
   display: flex;
   gap: 2rem;
-  align-items: flex-start;
+  /* 参数表与封面竖向居中，避免七行信息全挤在顶部、下方留一大片空 */
+  align-items: center;
   margin: 1.6rem 0 2rem;
   flex-wrap: wrap;
 }
