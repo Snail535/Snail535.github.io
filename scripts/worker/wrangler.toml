@@ -23,7 +23,7 @@ id = "26591befb8e2488f8fb68a19cf8a4239"
 [[d1_databases]]
 binding = "DB"
 database_name = "magazine_stats"
-database_id = "TO_BE_FILLED"
+database_id = "7f125caa-7d1a-4994-9ae3-4fb33fd03777"
 
 # 自定义域名：workers.dev 在国内直连不通，必须走自己的域名
 [[routes]]

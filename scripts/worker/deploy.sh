@@ -11,8 +11,15 @@
 #   3. 部署 Worker
 #   4. 打一下 /hot 看是否通
 #
-# 需要的 token 权限：Workers Scripts:Edit、Workers KV Storage:Edit、Zone:Edit、
-#                    Account → D1 → Edit
+# 需要的 token 权限（2026 年新版 Policies 界面）：
+#   Developer Platform 分组下 Workers / Workers KV Storage / D1 都是
+#   「Read / Edit」二选一，选 Edit；D1 选了 Edit 才有建库建表权限。
+#   另有 Zone 相关编辑权限（DNS / Workers Routes 等）。
+# 控制台路径：My Profile → API Tokens → 编辑现有 token → Policies →
+#   Search for permission groups 输入 D1 → 在 D1 行点 Edit →
+#   Continue to summary → 保存。旧版「Account / D1 / Edit 三下拉」已失效。
+# 注意：本站统计明细还需要 secret ADMIN_KEY（见 scripts/.admin_key，不进仓库），
+#   用 `wrangler secret put ADMIN_KEY` 写入，否则 /stats 一律 403。
 
 set -euo pipefail
 cd "$(dirname "$0")"
