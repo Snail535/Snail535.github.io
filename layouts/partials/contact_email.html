@@ -1,0 +1,20 @@
+{{- /*
+  联系邮箱由两段「反转后的片段」在浏览器里拼出，页面源码和仓库里都不会出现
+  完整地址，可减少垃圾邮件采集。
+  换邮箱时：把新邮箱按 @ 拆成前后两段，各自反转后替换下面 $u / $d 两行。
+  例：abc@163.com → $u="cba"，$d="moc.361"。
+  参数：mode = button / inline / text，label、subject、copy、fallback 可选。
+*/ -}}
+{{- $u := "naw011249728" -}}
+{{- $d := "moc.361" -}}
+{{- $mode := .mode | default "inline" -}}
+{{- $label := .label | default "写邮件" -}}
+{{- $copy := .copy | default "1" -}}
+{{- $subject := .subject | default "杂志库反馈" -}}
+<span class="mg-mail mg-mail-{{ $mode }}"
+      data-mu="{{ $u }}" data-md="{{ $d }}"
+      data-label="{{ $label }}" data-subject="{{ $subject }}" data-copy="{{ $copy }}"
+      style="display:none"></span>
+{{- if (index . "fallback" | default false) }}
+<noscript><span class="mg-mail-ns">邮箱需要启用 JavaScript 才能显示，也可以<a href="https://github.com/Snail535/Snail535.github.io/issues" target="_blank" rel="noopener">去提 issue</a>。</span></noscript>
+{{- end }}

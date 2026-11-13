@@ -72,9 +72,12 @@
       <h3>{{ .title }}</h3>
       <p>{{ .desc }}</p>
     </div>
-    {{- with .url }}
-    <a class="about-btn" href="{{ . }}" target="_blank" rel="noopener">{{ $.Params.contact.label | default "前往" }} ↗</a>
-    {{- end }}
+    <div class="about-contact-actions">
+      {{- partial "contact_email.html" (dict "mode" "button" "label" "写邮件" "copy" "1" "fallback" true) }}
+      {{- with .url }}
+      <a class="about-btn about-btn-ghost" href="{{ . }}" target="_blank" rel="noopener">{{ $.Params.contact.label | default "前往" }} ↗</a>
+      {{- end }}
+    </div>
   </div>
   {{- end }}
 </article>

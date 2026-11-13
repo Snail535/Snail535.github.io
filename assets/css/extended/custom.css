@@ -1061,3 +1061,54 @@
   .hot-view-grid { grid-template-columns: 1fr; gap: .7rem; }
   .hot-title { font-size: .84rem; }
 }
+
+/* ---------- 联系邮箱（关于页 / 页脚 / 详情页） ---------- */
+.about-contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .6rem;
+}
+.about-btn-ghost {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--secondary);
+}
+.about-btn-ghost:hover { opacity: 1; border-color: var(--primary); }
+.mg-mail {
+  align-items: center;
+  gap: .45rem;
+  flex-wrap: wrap;
+}
+.mg-mail-link { white-space: nowrap; }
+.mg-mail-copy { flex: 0 0 auto; }
+.mg-mail-ns { font-size: .82rem; color: var(--secondary); }
+.mg-footer-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  margin: .45rem 0 0;
+  padding: 0;
+  font-size: .78rem;
+  line-height: 1.8;
+  color: var(--secondary);
+  text-align: center;
+}
+.mg-footer-contact a { color: var(--secondary); text-decoration: underline; text-underline-offset: 2px; }
+.mg-footer-contact .mg-mail-link { color: var(--primary); }
+.mg-footer-sep { opacity: .55; }
+.mg-feedback {
+  margin: .9rem 0 0;
+  padding: .6rem .8rem;
+  font-size: .82rem;
+  line-height: 1.8;
+  color: var(--secondary);
+  background: var(--code-bg);
+  border-radius: 8px;
+}
+.mg-feedback .mg-mail-link { color: var(--primary); }
+@media (max-width: 560px) {
+  .about-contact-actions { width: 100%; }
+}

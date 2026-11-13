@@ -119,6 +119,10 @@
     {{- end }}
   </div>
 
+  <p class="mg-feedback">
+    链接失效、缺期或内容有误？{{ partial "contact_email.html" (dict "mode" "inline" "copy" "1") }} 告诉我们，也可以到仓库提 issue。
+  </p>
+
   <script>
   document.querySelectorAll('.mg-copy[data-copy]').forEach(function (b) {
     b.addEventListener('click', function () {

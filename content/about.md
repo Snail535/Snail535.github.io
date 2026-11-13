@@ -19,7 +19,7 @@ steps:
     label: "开始搜索"
 contact:
   title: "缺期、链接失效，或者想推荐一本"
-  desc: "都可以在站点仓库提 issue，看到会补。"
+  desc: "发邮件最快，也可以到站点仓库提 issue，看到会补。"
   url: "https://github.com/Snail535/Snail535.github.io/issues"
   label: "去提 issue"
 ---

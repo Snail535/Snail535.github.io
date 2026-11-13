@@ -1,0 +1,15 @@
+{{- /* 全站页脚的反馈入口：PaperMod 把扩展点放在 </footer> 之后，
+       这里用一小段脚本把它搬进 footer，和版权行排在同一块里 */ -}}
+<div id="mg-footer-contact" class="mg-footer-contact">
+  <span>缺期、链接失效或内容有误：</span>
+  {{- partial "contact_email.html" (dict "mode" "inline" "copy" "1") }}
+  <span class="mg-footer-sep">·</span>
+  <a href="https://github.com/Snail535/Snail535.github.io/issues" target="_blank" rel="noopener">去提 issue</a>
+</div>
+<script>
+(function () {
+  var f = document.querySelector('footer.footer');
+  var c = document.getElementById('mg-footer-contact');
+  if (f && c) f.insertBefore(c, f.firstChild);
+})();
+</script>
