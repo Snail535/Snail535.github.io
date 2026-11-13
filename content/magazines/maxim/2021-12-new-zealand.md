@@ -29,10 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "MAXNZ2112.jpg"
 ---
-## 本期信息
-
-- 刊物：Maxim（New Zealand 版）
-- 期次：2021 年 12 月
-- 页数：102 页
-- 文件：61.6 MB
-- 分类：时尚成人

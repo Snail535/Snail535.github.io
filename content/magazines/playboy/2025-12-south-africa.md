@@ -29,11 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "PLBZA2512.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（South Africa 版）
-- 期次：2025 年 12 月
-- 页数：100 页
-- 文件：38.5 MB
-- 分类：时尚成人
-

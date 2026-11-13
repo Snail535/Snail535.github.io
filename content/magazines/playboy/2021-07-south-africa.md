@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "PLBZA2107.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（South Africa 版）
-- 期次：2021 年 7 月
-- 页数：100 页
-- 文件：57.4 MB
-- 分类：时尚成人

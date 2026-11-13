@@ -29,11 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "FORME2502.jpg"
 ---
-## 本期信息
-
-- 刊物：Forbes（Middle East 版）
-- 期次：2025 年 2 月
-- 页数：96 页
-- 文件：74.1 MB
-- 分类：商业财经
-

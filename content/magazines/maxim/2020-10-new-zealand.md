@@ -29,10 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "MAXNZ2010.jpg"
 ---
-## 本期信息
-
-- 刊物：Maxim（New Zealand 版）
-- 期次：2020 年 10 月
-- 页数：51 页
-- 文件：60.1 MB
-- 分类：时尚成人

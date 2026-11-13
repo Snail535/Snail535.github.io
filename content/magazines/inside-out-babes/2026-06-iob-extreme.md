@@ -28,10 +28,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "IOBE2607.jpg"
 ---
-## 本期信息
-
-- 刊物：Inside Out Babes
-- 期次：2026 年 7 月 – 2026 年 6 月 · IOB Extreme
-- 页数：72 页
-- 文件：24.9 MB
-- 分类：时尚成人

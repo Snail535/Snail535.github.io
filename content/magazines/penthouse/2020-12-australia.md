@@ -29,10 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "PNTAU2012.jpg"
 ---
-## 本期信息
-
-- 刊物：Penthouse（Australia 版）
-- 期次：2020 年 12 月
-- 页数：150 页
-- 文件：45.1 MB
-- 分类：时尚成人

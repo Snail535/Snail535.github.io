@@ -28,11 +28,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "BOUAN2504.jpg"
 ---
-## 本期信息
-
-- 刊物：Boudoir Inspiration
-- 期次：2025 年 4 月 · Artistic Nude
-- 页数：90 页
-- 文件：75.6 MB
-- 分类：时尚成人
-

@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "PLBAU2404.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（Australia 版）
-- 期次：2024 年 4 月
-- 页数：104 页
-- 文件：51.2 MB
-- 分类：时尚成人

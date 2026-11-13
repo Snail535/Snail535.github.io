@@ -28,10 +28,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "IOBE2511.jpg"
 ---
-## 本期信息
-
-- 刊物：Inside Out Babes
-- 期次：2025 年 11 月 – 2025 年 12 月 · IOB Extreme
-- 页数：37 页
-- 文件：15.8 MB
-- 分类：时尚成人

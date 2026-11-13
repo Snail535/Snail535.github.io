@@ -28,11 +28,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "PNTLT2012.jpg"
 ---
-## 本期信息
-
-- 刊物：Penthouse
-- 期次：2020 年 12 月 · Letters
-- 页数：150 页
-- 文件：56.4 MB
-- 分类：时尚成人
-

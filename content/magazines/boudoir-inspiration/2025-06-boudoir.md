@@ -28,11 +28,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "BOUBD2506.jpg"
 ---
-## 本期信息
-
-- 刊物：Boudoir Inspiration
-- 期次：2025 年 6 月 · Boudoir
-- 页数：82 页
-- 文件：76.9 MB
-- 分类：时尚成人
-

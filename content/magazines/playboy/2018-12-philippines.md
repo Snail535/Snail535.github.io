@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "PLBTT1811.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（Philippines 版）
-- 期次：2018 年 11 月 – 2018 年 12 月
-- 页数：123 页
-- 文件：14.4 MB
-- 分类：时尚成人

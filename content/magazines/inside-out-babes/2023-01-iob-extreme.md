@@ -28,10 +28,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "IOBE2301.jpg"
 ---
-## 本期信息
-
-- 刊物：Inside Out Babes
-- 期次：2023 年 1 月 · IOB Extreme
-- 页数：72 页
-- 文件：29.9 MB
-- 分类：时尚成人

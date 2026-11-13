@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "PLBNZ2010.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（New Zealand 版）
-- 期次：2020 年 10 月
-- 页数：51 页
-- 文件：41.1 MB
-- 分类：时尚成人

@@ -28,10 +28,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "BOULI2607.jpg"
 ---
-## 本期信息
-
-- 刊物：Boudoir Inspiration
-- 期次：2026 年 7 月 · Lingerie Inspiration
-- 页数：76 页
-- 文件：46.9 MB
-- 分类：时尚成人

@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "FHMAU2307.jpg"
 ---
-## 本期信息
-
-- 刊物：FHM（Australia 版）
-- 期次：2023 年 7 月
-- 页数：102 页
-- 文件：42.2 MB
-- 分类：时尚成人

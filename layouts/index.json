@@ -1,0 +1,21 @@
+{{- /* 覆盖 PaperMod 的 index.json：期次 md 去掉「本期信息」正文后，
+       .Plain / .Summary 会变空，这里补上刊名、期次、分类与 description，
+       保证站内搜索仍能按刊名、期次、分类命中；magazine 字段对应
+       hugo.toml 里 fuseOpts.keys 已声明但主题模板从未输出的那个 key。 */ -}}
+{{- $.Scratch.Add "index" slice -}}
+{{- range site.RegularPages -}}
+    {{- if and (not .Params.searchHidden) (ne .Layout `archives`) (ne .Layout `search`) }}
+    {{- $content := .Plain }}
+    {{- if not $content }}
+        {{- $content = printf "%s %s %s" (.Params.magazine | default "") (.Params.issue_label | default "") (delimit (.Params.categories | default slice) " ") }}
+    {{- end }}
+    {{- $.Scratch.Add "index" (dict
+        "title" .Title
+        "content" $content
+        "permalink" .Permalink
+        "summary" (.Params.description | default .Summary)
+        "magazine" (.Params.magazine | default "")
+    ) -}}
+    {{- end }}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}

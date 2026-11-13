@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "PLBNZ2302.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（New Zealand 版）
-- 期次：2023 年 2 月
-- 页数：102 页
-- 文件：40.6 MB
-- 分类：时尚成人

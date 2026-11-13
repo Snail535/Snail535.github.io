@@ -28,11 +28,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "PNTLT2006.jpg"
 ---
-## 本期信息
-
-- 刊物：Penthouse
-- 期次：2020 年 6 月 · Letters
-- 页数：166 页
-- 文件：47.2 MB
-- 分类：时尚成人
-

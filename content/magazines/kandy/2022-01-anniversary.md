@@ -28,10 +28,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "KDYAN22.jpg"
 ---
-## 本期信息
-
-- 刊物：Kandy
-- 期次：2022 年 11 周年特刊
-- 页数：98 页
-- 文件：31.7 MB
-- 分类：时尚成人

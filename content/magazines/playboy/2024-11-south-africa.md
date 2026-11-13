@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "PLBZA2411.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（South Africa 版）
-- 期次：2024 年 11 月
-- 页数：104 页
-- 文件：50.7 MB
-- 分类：时尚成人

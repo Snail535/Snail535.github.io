@@ -28,11 +28,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "BOUBW2501.jpg"
 ---
-## 本期信息
-
-- 刊物：Boudoir Inspiration
-- 期次：2025 年 1 月 · Black and White
-- 页数：74 页
-- 文件：56.7 MB
-- 分类：时尚成人
-

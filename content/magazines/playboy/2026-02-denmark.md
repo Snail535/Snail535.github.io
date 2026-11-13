@@ -29,11 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "PLBDK2602.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（Denmark 版）
-- 期次：2026 年 2 月
-- 页数：102 页
-- 文件：41.2 MB
-- 分类：时尚成人
-

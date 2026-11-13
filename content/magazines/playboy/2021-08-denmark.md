@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "PLBDK2108.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（Denmark 版）
-- 期次：2021 年 8 月
-- 页数：102 页
-- 文件：43.7 MB
-- 分类：时尚成人

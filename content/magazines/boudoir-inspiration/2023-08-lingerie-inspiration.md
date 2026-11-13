@@ -29,10 +29,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "BOULI2308.jpg"
 ---
-## 本期信息
-
-- 刊物：Boudoir Inspiration
-- 期次：2023 年 8 月 · Lingerie Inspiration
-- 页数：80 页
-- 文件：62.0 MB
-- 分类：时尚成人

@@ -28,12 +28,3 @@ preview4: "/thumbs/magazines/readers-digest/2026-01-australia/p4.webp"
 download_pwd: ""
 has_download: true
 ---
-## 本期信息
-
-- 刊物：Reader's Digest（Australia 版）
-- 期次：2025 年 12 月 – 2026 年 1 月
-- 页数：154 页
-- 文件：29.7 MB
-- 分类：文化生活
-
-> 下载地址整理中，可在此行下方补充。

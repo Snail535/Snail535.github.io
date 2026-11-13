@@ -28,12 +28,3 @@ preview4: "/thumbs/magazines/readers-digest/2026-07-australia/p4.webp"
 download_pwd: ""
 has_download: true
 ---
-## 本期信息
-
-- 刊物：Reader's Digest（Australia 版）
-- 期次：2026 年 6 月 – 2026 年 7 月
-- 页数：126 页
-- 文件：25.4 MB
-- 分类：文化生活
-
-> 下载地址整理中，可在此行下方补充。

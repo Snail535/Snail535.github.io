@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "FHMAU2104.jpg"
 ---
-## 本期信息
-
-- 刊物：FHM（Australia 版）
-- 期次：2021 年 4 月
-- 页数：101 页
-- 文件：44.0 MB
-- 分类：时尚成人

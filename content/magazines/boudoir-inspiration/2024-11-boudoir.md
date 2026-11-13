@@ -29,10 +29,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "BOUBI2411.jpg"
 ---
-## 本期信息
-
-- 刊物：Boudoir Inspiration
-- 期次：2024 年 11 月 · Boudoir
-- 页数：58 页
-- 文件：55.9 MB
-- 分类：时尚成人

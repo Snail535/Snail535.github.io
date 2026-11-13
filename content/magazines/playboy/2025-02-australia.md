@@ -29,11 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "PLBAU2502.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（Australia 版）
-- 期次：2025 年 2 月
-- 页数：104 页
-- 文件：51.4 MB
-- 分类：时尚成人
-

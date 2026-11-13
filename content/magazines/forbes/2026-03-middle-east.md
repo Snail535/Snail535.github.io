@@ -29,11 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "FORME2603.jpg"
 ---
-## 本期信息
-
-- 刊物：Forbes（Middle East 版）
-- 期次：2026 年 3 月
-- 页数：76 页
-- 文件：59.8 MB
-- 分类：商业财经
-

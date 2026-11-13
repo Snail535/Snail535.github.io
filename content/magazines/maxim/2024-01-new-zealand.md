@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "MAXNZ2401.jpg"
 ---
-## 本期信息
-
-- 刊物：Maxim（New Zealand 版）
-- 期次：2024 年 1 月
-- 页数：104 页
-- 文件：106.7 MB
-- 分类：时尚成人

@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "PLBDK2311.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（Denmark 版）
-- 期次：2023 年 11 月
-- 页数：104 页
-- 文件：50.9 MB
-- 分类：时尚成人

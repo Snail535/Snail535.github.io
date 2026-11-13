@@ -28,10 +28,3 @@ preview4: "/thumbs/magazines/playboy/2017-04-ukraine/p4.webp"
 download_url: ""
 download_pwd: ""
 ---
-## 本期信息
-
-- 刊物：Playboy（Ukraine 版）
-- 期次：2017 年 4 月
-- 页数：101 页
-- 文件：22.6 MB
-- 分类：时尚成人

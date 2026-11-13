@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "FHMAU1902.jpg"
 ---
-## 本期信息
-
-- 刊物：FHM（Australia 版）
-- 期次：2019 年 2 月
-- 页数：99 页
-- 文件：41.8 MB
-- 分类：时尚成人

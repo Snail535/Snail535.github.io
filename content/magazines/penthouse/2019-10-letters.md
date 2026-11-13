@@ -28,11 +28,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "PNTLT1910.jpg"
 ---
-## 本期信息
-
-- 刊物：Penthouse
-- 期次：2019 年 10 月 · Letters
-- 页数：150 页
-- 文件：45.9 MB
-- 分类：时尚成人
-

@@ -419,16 +419,11 @@ def write_md(rec, mag):
                 fm = [repl if ln.startswith(f"{field}:") else ln for ln in fm]
                 if not any(ln.startswith(f"{field}:") for ln in fm):
                     fm.insert(-2, repl)
-    body = (
-        f"## 本期信息\n\n"
-        f"- 刊物：{mag['name']}"
-        + (f"（{rec['edition']} 版）" if rec["edition"] else "")
-        + f"\n- 期次：{rec['label']}\n- 页数：{rec['pages']} 页\n"
-        f"- 文件：{rec['size']}\n- 分类：{mag.get('category', '其他')}\n"
-    )
+    # 不再写「## 本期信息」正文：详情页的 .mg-facts 参数表已经展示同样的
+    # 刊物/期次/页数/文件/分类，重复输出会让访客看到两遍。只保留 front matter。
     out = OUT_CONTENT / slug / f"{rec['key']}.md"
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text("\n".join(fm) + body, encoding="utf-8")
+    out.write_text("\n".join(fm), encoding="utf-8")
     return out
 
 

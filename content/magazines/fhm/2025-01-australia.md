@@ -29,10 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "FHMAU2501.jpg"
 ---
-## 本期信息
-
-- 刊物：FHM（Australia 版）
-- 期次：2025 年 1 月
-- 页数：100 页
-- 文件：37.2 MB
-- 分类：时尚成人

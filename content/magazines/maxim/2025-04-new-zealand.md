@@ -29,10 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "MAXNZ2504.jpg"
 ---
-## 本期信息
-
-- 刊物：Maxim（New Zealand 版）
-- 期次：2025 年 4 月
-- 页数：88 页
-- 文件：103.0 MB
-- 分类：时尚成人

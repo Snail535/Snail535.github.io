@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "PLBNZ2411.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（New Zealand 版）
-- 期次：2024 年 11 月
-- 页数：104 页
-- 文件：50.0 MB
-- 分类：时尚成人

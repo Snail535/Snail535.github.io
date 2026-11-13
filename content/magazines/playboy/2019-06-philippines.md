@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "PLBTT1905.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（Philippines 版）
-- 期次：2019 年 5 月 – 2019 年 6 月
-- 页数：125 页
-- 文件：103.9 MB
-- 分类：时尚成人

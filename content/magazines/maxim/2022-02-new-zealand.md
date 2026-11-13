@@ -29,10 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "MAXNZ2202.jpg"
 ---
-## 本期信息
-
-- 刊物：Maxim（New Zealand 版）
-- 期次：2022 年 2 月
-- 页数：102 页
-- 文件：62.0 MB
-- 分类：时尚成人

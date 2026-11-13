@@ -29,10 +29,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "BOULI2404.jpg"
 ---
-## 本期信息
-
-- 刊物：Boudoir Inspiration
-- 期次：2024 年 4 月 · Lingerie Inspiration
-- 页数：72 页
-- 文件：57.6 MB
-- 分类：时尚成人

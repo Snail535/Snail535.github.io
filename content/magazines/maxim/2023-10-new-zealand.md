@@ -29,10 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "MAXNZ2310.jpg"
 ---
-## 本期信息
-
-- 刊物：Maxim（New Zealand 版）
-- 期次：2023 年 10 月
-- 页数：104 页
-- 文件：105.6 MB
-- 分类：时尚成人

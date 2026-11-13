@@ -29,10 +29,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "BOUBW2408.jpg"
 ---
-## 本期信息
-
-- 刊物：Boudoir Inspiration
-- 期次：2024 年 8 月 · Black and White
-- 页数：54 页
-- 文件：47.5 MB
-- 分类：时尚成人

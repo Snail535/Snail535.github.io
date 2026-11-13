@@ -29,10 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "FHMZA2509.jpg"
 ---
-## 本期信息
-
-- 刊物：FHM（South Africa 版）
-- 期次：2025 年 9 月 · SouthAfrica
-- 页数：104 页
-- 文件：56.1 MB
-- 分类：时尚成人

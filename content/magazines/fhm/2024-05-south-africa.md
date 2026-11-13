@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "FHMZA2405.jpg"
 ---
-## 本期信息
-
-- 刊物：FHM（South Africa 版）
-- 期次：2024 年 5 月
-- 页数：104 页
-- 文件：48.8 MB
-- 分类：时尚成人

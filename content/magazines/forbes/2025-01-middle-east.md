@@ -29,11 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "FORME2412.jpg"
 ---
-## 本期信息
-
-- 刊物：Forbes（Middle East 版）
-- 期次：2024 年 12 月 – 2025 年 1 月
-- 页数：104 页
-- 文件：83.8 MB
-- 分类：商业财经
-

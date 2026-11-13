@@ -28,10 +28,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "PBSSW2505.jpg"
 ---
-## 本期信息
-
-- 刊物：Playbabes Special Edition
-- 期次：2025 年 5 月 · Swimsuit
-- 页数：82 页
-- 文件：44.2 MB
-- 分类：时尚成人

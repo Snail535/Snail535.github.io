@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "PLBDK2112.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（Denmark 版）
-- 期次：2021 年 12 月
-- 页数：102 页
-- 文件：30.2 MB
-- 分类：时尚成人

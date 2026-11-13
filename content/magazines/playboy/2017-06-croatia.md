@@ -28,10 +28,3 @@ preview4: "/thumbs/magazines/playboy/2017-06-croatia/p4.webp"
 download_url: ""
 download_pwd: ""
 ---
-## 本期信息
-
-- 刊物：Playboy（Croatia 版）
-- 期次：2017 年 6 月
-- 页数：139 页
-- 文件：32.6 MB
-- 分类：时尚成人

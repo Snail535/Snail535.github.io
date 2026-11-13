@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "FHMAU2012.jpg"
 ---
-## 本期信息
-
-- 刊物：FHM（Australia 版）
-- 期次：2020 年 12 月
-- 页数：101 页
-- 文件：28.8 MB
-- 分类：时尚成人

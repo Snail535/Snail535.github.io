@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "PLBNZ2103.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（New Zealand 版）
-- 期次：2021 年 3 月
-- 页数：101 页
-- 文件：36.4 MB
-- 分类：时尚成人

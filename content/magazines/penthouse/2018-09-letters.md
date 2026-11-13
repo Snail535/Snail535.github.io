@@ -28,11 +28,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "PNTLT1809.jpg"
 ---
-## 本期信息
-
-- 刊物：Penthouse
-- 期次：2018 年 9 月 · Letters
-- 页数：148 页
-- 文件：12.2 MB
-- 分类：时尚成人
-

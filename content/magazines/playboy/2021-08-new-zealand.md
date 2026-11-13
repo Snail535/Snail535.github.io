@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "PLBNZ2108.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（New Zealand 版）
-- 期次：2021 年 8 月
-- 页数：100 页
-- 文件：47.0 MB
-- 分类：时尚成人

@@ -29,10 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "FHMNZ2512.jpg"
 ---
-## 本期信息
-
-- 刊物：FHM（New Zealand 版）
-- 期次：2025 年 12 月 · NewZealand
-- 页数：84 页
-- 文件：23.7 MB
-- 分类：时尚成人

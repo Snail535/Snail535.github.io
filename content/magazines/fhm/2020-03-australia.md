@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "FHMAU2003.jpg"
 ---
-## 本期信息
-
-- 刊物：FHM（Australia 版）
-- 期次：2020 年 3 月
-- 页数：97 页
-- 文件：41.3 MB
-- 分类：时尚成人

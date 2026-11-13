@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "MAXAU1812.jpg"
 ---
-## 本期信息
-
-- 刊物：Maxim（Australia 版）
-- 期次：2018 年 12 月
-- 页数：99 页
-- 文件：16.5 MB
-- 分类：时尚成人

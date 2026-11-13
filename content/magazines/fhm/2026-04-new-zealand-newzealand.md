@@ -29,10 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "FHMNZ2604.jpg"
 ---
-## 本期信息
-
-- 刊物：FHM（New Zealand 版）
-- 期次：2026 年 4 月 · NewZealand
-- 页数：86 页
-- 文件：27.1 MB
-- 分类：时尚成人

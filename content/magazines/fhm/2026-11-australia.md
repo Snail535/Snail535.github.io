@@ -29,10 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "FHMAU2611.jpg"
 ---
-## 本期信息
-
-- 刊物：FHM（Australia 版）
-- 期次：2026 年 11 月
-- 页数：84 页
-- 文件：34.7 MB
-- 分类：时尚成人

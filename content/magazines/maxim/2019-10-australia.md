@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "MAXAU1910.jpg"
 ---
-## 本期信息
-
-- 刊物：Maxim（Australia 版）
-- 期次：2019 年 10 月
-- 页数：95 页
-- 文件：41.7 MB
-- 分类：时尚成人

@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "FHMZA2112.jpg"
 ---
-## 本期信息
-
-- 刊物：FHM（South Africa 版）
-- 期次：2021 年 12 月
-- 页数：102 页
-- 文件：51.9 MB
-- 分类：时尚成人

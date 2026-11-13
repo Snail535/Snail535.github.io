@@ -29,11 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "PLBFI2509.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（Finland 版）
-- 期次：2025 年 9 月
-- 页数：104 页
-- 文件：47.1 MB
-- 分类：时尚成人
-

@@ -28,11 +28,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "KDYSU2606.jpg"
 ---
-
-## 本期信息
-
-- 刊物：Kandy
-- 期次：2026 年仲夏特刊
-- 页数：84 页
-
-> 特刊，网盘暂未收录对应图种文件，下载地址整理中。

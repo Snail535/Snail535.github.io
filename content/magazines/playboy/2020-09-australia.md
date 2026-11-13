@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "PLBAU2009.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（Australia 版）
-- 期次：2020 年 9 月
-- 页数：101 页
-- 文件：87.8 MB
-- 分类：时尚成人

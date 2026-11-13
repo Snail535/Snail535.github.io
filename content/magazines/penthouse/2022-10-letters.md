@@ -28,11 +28,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "PNTLT2210.jpg"
 ---
-## 本期信息
-
-- 刊物：Penthouse
-- 期次：2022 年 10 月 · Letters
-- 页数：150 页
-- 文件：115.3 MB
-- 分类：时尚成人
-

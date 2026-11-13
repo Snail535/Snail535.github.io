@@ -29,11 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "FORME2503.jpg"
 ---
-## 本期信息
-
-- 刊物：Forbes（Middle East 版）
-- 期次：2025 年 3 月
-- 页数：84 页
-- 文件：65.0 MB
-- 分类：商业财经
-

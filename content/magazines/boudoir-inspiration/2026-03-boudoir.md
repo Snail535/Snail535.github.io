@@ -28,10 +28,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "BOUBI2603.jpg"
 ---
-## 本期信息
-
-- 刊物：Boudoir Inspiration
-- 期次：2026 年 3 月 · Boudoir
-- 页数：62 页
-- 文件：47.0 MB
-- 分类：时尚成人

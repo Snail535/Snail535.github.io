@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "PLBNZ2409.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（New Zealand 版）
-- 期次：2024 年 9 月
-- 页数：104 页
-- 文件：52.0 MB
-- 分类：时尚成人

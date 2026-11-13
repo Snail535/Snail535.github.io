@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "PLBNZ2105.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（New Zealand 版）
-- 期次：2021 年 5 月
-- 页数：101 页
-- 文件：28.2 MB
-- 分类：时尚成人

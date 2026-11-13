@@ -28,10 +28,3 @@ preview4: "/thumbs/magazines/playboy/2017-06-argentina-n-137/p4.webp"
 download_url: ""
 download_pwd: ""
 ---
-## 本期信息
-
-- 刊物：Playboy（Argentina 版）
-- 期次：2017 年 6 月 · N 137
-- 页数：117 页
-- 文件：18.2 MB
-- 分类：时尚成人

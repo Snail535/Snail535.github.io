@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "PLBNZ2107.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（New Zealand 版）
-- 期次：2021 年 7 月
-- 页数：100 页
-- 文件：56.5 MB
-- 分类：时尚成人

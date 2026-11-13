@@ -28,11 +28,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "BOULI2511.jpg"
 ---
-## 本期信息
-
-- 刊物：Boudoir Inspiration
-- 期次：2025 年 11 月 · Lingerie Inspiration
-- 页数：84 页
-- 文件：65.3 MB
-- 分类：时尚成人
-

@@ -29,10 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "PLBNZ2605.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（New Zealand 版）
-- 期次：2026 年 5 月 · NewZealand
-- 页数：100 页
-- 文件：86.8 MB
-- 分类：时尚成人

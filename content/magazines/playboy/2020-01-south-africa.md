@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "PLBZA2001.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（South Africa 版）
-- 期次：2020 年 1 月
-- 页数：101 页
-- 文件：92.4 MB
-- 分类：时尚成人

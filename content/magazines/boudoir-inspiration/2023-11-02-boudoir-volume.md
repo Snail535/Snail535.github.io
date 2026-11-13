@@ -29,10 +29,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "BOUBI2311.jpg"
 ---
-## 本期信息
-
-- 刊物：Boudoir Inspiration
-- 期次：2023 年 11 月 2 日 · Boudoir Volume
-- 页数：62 页
-- 文件：53.3 MB
-- 分类：时尚成人

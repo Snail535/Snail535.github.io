@@ -29,11 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "RDGAU2610.jpg"
 ---
-## 本期信息
-
-- 刊物：Reader's Digest（Australia 版）
-- 期次：2026 年 10 月 – 2026 年 11 月
-- 页数：168 页
-- 文件：32.9 MB
-- 分类：文化生活
-

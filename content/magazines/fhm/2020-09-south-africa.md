@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "FHMZA2009.jpg"
 ---
-## 本期信息
-
-- 刊物：FHM（South Africa 版）
-- 期次：2020 年 9 月
-- 页数：50 页
-- 文件：27.3 MB
-- 分类：时尚成人

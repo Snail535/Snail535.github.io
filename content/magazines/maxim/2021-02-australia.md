@@ -29,10 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "MAXAU2102.jpg"
 ---
-## 本期信息
-
-- 刊物：Maxim（Australia 版）
-- 期次：2021 年 2 月
-- 页数：101 页
-- 文件：30.4 MB
-- 分类：时尚成人

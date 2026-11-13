@@ -28,10 +28,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "BOUAN2607.jpg"
 ---
-## 本期信息
-
-- 刊物：Boudoir Inspiration
-- 期次：2026 年 7 月 · Artistic Nude
-- 页数：58 页
-- 文件：38.3 MB
-- 分类：时尚成人

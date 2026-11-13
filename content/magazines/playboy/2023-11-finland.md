@@ -30,10 +30,3 @@ download_pwd: ""
 has_download: true
 netdisk_file: "PLBFI2311.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（Finland 版）
-- 期次：2023 年 11 月
-- 页数：104 页
-- 文件：49.5 MB
-- 分类：时尚成人

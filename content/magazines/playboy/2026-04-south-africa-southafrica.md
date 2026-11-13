@@ -29,10 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "PLBZA2604.jpg"
 ---
-## 本期信息
-
-- 刊物：Playboy（South Africa 版）
-- 期次：2026 年 4 月 · SouthAfrica
-- 页数：102 页
-- 文件：97.3 MB
-- 分类：时尚成人

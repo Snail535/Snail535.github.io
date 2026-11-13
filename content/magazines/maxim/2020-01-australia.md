@@ -29,10 +29,3 @@ has_download: true
 download_pwd: ""
 netdisk_file: "MAXAU2001.jpg"
 ---
-## 本期信息
-
-- 刊物：Maxim（Australia 版）
-- 期次：2020 年 1 月
-- 页数：101 页
-- 文件：48.2 MB
-- 分类：时尚成人
