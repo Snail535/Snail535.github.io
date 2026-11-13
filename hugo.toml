@@ -1,13 +1,15 @@
-baseURL = "https://Snail535.github.io/"
+baseURL = "https://snail535.github.io/"
 locale = "zh-CN"
 title = "新叶素材"
 theme = "PaperMod"
 buildFuture = true
 buildExpired = true
+# 让 PaperMod 的 robots.txt 模板生效（里面会自动带上 Sitemap 地址）
+enableRobotsTXT = true
 
 [params]
   env = "production"
-  description = "免费分享的英文原版杂志库"
+  description = "免费分享的英文原版杂志库：经济学人、纽约客、福布斯、科学、时代周刊等，按期更新，提供封面与内页预览、在线试读和网盘下载。"
   ShowReadingTime = false
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = false
@@ -82,3 +84,14 @@ distance = 1000
 threshold = 0.4
 minMatchCharLength = 1
 keys = ["title", "summary", "content", "magazine"]
+
+# ========== 搜索引擎收录 ==========
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+# 站长平台验证：拿到 Google Search Console 的 meta 验证码后，
+# 去掉下面两行的注释并把引号里换成验证码即可（比放 HTML 文件更省事）。
+# [params.analytics.google]
+#   SiteVerificationTag = "这里填验证码"

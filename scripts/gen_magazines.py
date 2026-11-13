@@ -367,9 +367,19 @@ def make_thumbs(pdf: Path, out_dir: Path):
 def write_md(rec, mag):
     slug, ed_slug = mag["slug"], rec["edition_slug"]
     rel_img = f"/thumbs/magazines/{slug}/{rec['key']}"
+    # SEO：标题带刊名，避免几千个页面都叫「2023 年 1 月」被搜索引擎判为重复低质页。
+    # 这段要和 scripts/seo_frontmatter.py 的 make_title / make_description 保持一致。
+    seo_name = mag["name"] + (f'（{rec["edition"]} 版）' if rec["edition"] else "")
+    seo_title = f'{seo_name} · {rec["label"]}'
+    seo_desc = (
+        f'{seo_title}，{rec["pages"]} 页。'
+        "英文原版杂志在线试读，含封面与内页预览、期次信息与网盘下载入口；"
+        "新叶素材杂志库按期更新，可按刊物与年份浏览全部期次。"
+    )
     fm = [
         "---",
-        f'title: "{rec["label"]}"',
+        f'title: {json.dumps(seo_title, ensure_ascii=False)}',
+        f'description: {json.dumps(seo_desc, ensure_ascii=False)}',
         f'date: {rec["date"]}T00:00:00+08:00',
         "draft: false",
         f'magazine: "{mag["name"]}"',

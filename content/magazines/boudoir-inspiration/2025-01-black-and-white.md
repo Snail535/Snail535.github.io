@@ -1,5 +1,6 @@
 ---
-title: "2025 年 1 月 · Black and White"
+title: "Boudoir Inspiration · 2025 年 1 月 · Black and White"
+description: "Boudoir Inspiration · 2025 年 1 月 · Black and White，74 页。英文原版杂志在线试读，含封面与内页预览、期次信息与网盘下载入口；新叶素材杂志库按期更新，可按刊物与年份浏览全部期次。"
 date: 2025-01-01T00:00:00+08:00
 draft: false
 magazine: "Boudoir Inspiration"

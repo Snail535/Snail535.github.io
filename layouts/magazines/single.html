@@ -2,7 +2,8 @@
 <article class="post-single mg-single">
   <header class="post-header">
     {{- partial "breadcrumbs.html" . }}
-    <h1 class="post-title">{{ .Title }}</h1>
+    {{- /* SEO：title 带刊名（唯一化），H1 保持纯期次，避免和下面的刊名链接重复 */ -}}
+    <h1 class="post-title">{{ .Params.issue_label | default .Title }}</h1>
     <div class="mg-single-sub">
       {{- $cad := dict "weekly" "周刊" "monthly" "月刊" "bimonthly" "双月刊" "biweekly" "双周刊" "quarterly" "季刊" }}
       <a href="{{ printf "/magazines/%s/" .Params.magazine_slug | relURL }}">{{ .Params.magazine }}</a>
@@ -118,6 +119,17 @@
     <p class="mg-muted">本期下载地址整理中，稍后补充。</p>
     {{- end }}
   </div>
+
+  {{- /* SEO：原来正文只有 5 行参数，容易被判为薄内容；补一段带刊物简介的说明 */ -}}
+  {{- $sec := site.GetPage (printf "/magazines/%s" .Params.magazine_slug) }}
+  <section class="mg-about">
+    <h2>关于 {{ .Params.magazine }}{{ with .Params.edition }}（{{ . }} 版）{{ end }}</h2>
+    <p>{{- with $sec }}{{ with .Params.description }}{{ . }}{{ end }}{{ end -}}
+      本期（{{ .Params.issue_label | default .Title }}）共 {{ .Params.pages | default "若干" }} 页，
+      附有封面与内页预览、文件大小和入库日期，方便在下载前确认版式与期次。
+      该刊其他年份与期次可在<a href="{{ printf "/magazines/%s/" .Params.magazine_slug | relURL }}">刊物页</a>浏览，
+      也可以用<a href="{{ "/search/" | relURL }}">站内搜索</a>直接查期号。</p>
+  </section>
 
   <p class="mg-feedback">
     链接失效、缺期或内容有误？{{ partial "contact_email.html" (dict "mode" "inline" "copy" "1") }} 告诉我们，也可以到仓库提 issue。

@@ -1112,3 +1112,23 @@
 @media (max-width: 560px) {
   .about-contact-actions { width: 100%; }
 }
+
+/* ---------- 详情页「关于本刊」说明段 ---------- */
+.mg-about {
+  margin: 1.6rem 0 1.1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: .88rem;
+  line-height: 1.85;
+  color: var(--secondary);
+}
+.mg-about h2 {
+  margin: 0 0 .4rem;
+  font-size: 1rem;
+  color: var(--primary);
+}
+.mg-about a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

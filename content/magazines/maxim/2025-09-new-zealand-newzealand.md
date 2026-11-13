@@ -1,5 +1,6 @@
 ---
-title: "2025 年 9 月 · NewZealand"
+title: "Maxim（New Zealand 版） · 2025 年 9 月 · NewZealand"
+description: "Maxim（New Zealand 版） · 2025 年 9 月 · NewZealand，88 页。英文原版杂志在线试读，含封面与内页预览、期次信息与网盘下载入口；新叶素材杂志库按期更新，可按刊物与年份浏览全部期次。"
 date: 2025-09-01T00:00:00+08:00
 draft: false
 magazine: "Maxim"
