@@ -91,7 +91,10 @@ keys = ["title", "summary", "content", "magazine"]
   priority = 0.5
   filename = "sitemap.xml"
 
-# 站长平台验证：拿到 Google Search Console 的 meta 验证码后，
-# 去掉下面两行的注释并把引号里换成验证码即可（比放 HTML 文件更省事）。
-# [params.analytics.google]
-#   SiteVerificationTag = "这里填验证码"
+# 站长平台验证：拿到验证码后，去掉下面的注释、把引号里换成验证码即可。
+# 会由 layouts/partials/extend_head.html 输出成首页 <meta> 标签，
+# 比往 static/ 放验证文件省事，也不需要改模板。
+# [params.verification]
+#   google = "Google Search Console 的验证码"
+#   baidu = "百度搜索资源平台的验证码"
+#   bing  = "Bing Webmaster 的验证码"

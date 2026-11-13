@@ -1,0 +1,24 @@
+{{- /*
+  搜索引擎站长平台的所有权验证标签。
+  在 hugo.toml 的 [params.verification] 里填入对应验证码即可，
+  不用往 static/ 放验证文件，也不会污染页面内容。
+  常见验证码：google-site-verification / baidu-site-verification / msvalidate.01。
+  先 with 整个 map 再取子字段，避免未配置时对 nil 取属性报错。
+*/ -}}
+{{- with site.Params.verification -}}
+  {{- with .google -}}
+<meta name="google-site-verification" content="{{ . }}">
+  {{- end -}}
+  {{- with .baidu -}}
+<meta name="baidu-site-verification" content="{{ . }}">
+  {{- end -}}
+  {{- with .bing -}}
+<meta name="msvalidate.01" content="{{ . }}">
+  {{- end -}}
+  {{- with .sogou -}}
+<meta name="sogou_site_verification" content="{{ . }}">
+  {{- end -}}
+  {{- with .shenma -}}
+<meta name="shenma-site-verification" content="{{ . }}">
+  {{- end -}}
+{{- end -}}
