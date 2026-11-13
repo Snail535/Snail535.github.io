@@ -9,6 +9,8 @@
   <p>{{ site.Params.description }} · 收录 {{ len $sections }} 种刊物 / {{ len $issues }} 期</p>
 </section>
 
+{{- partial "hot_panel.html" (dict "view" "grid" "days" 7 "n" 8 "hide" true "title" "本周热榜" "more" "/hot/" "moreLabel" "完整榜单 →") }}
+
 <section class="cat-block">
   <div class="block-head">
     <h2 class="cat-title">按刊物浏览</h2>

@@ -120,5 +120,106 @@ check("白名单 IP 豁免", byIp.status === 200 && (await byIp.json()).bypass =
 const noSecret = await handle(req(K + "&t=", { ip: "7.7.7.7" }), env, T0);
 check("未配置密钥时不影响普通计数", noSecret.status === 200);
 
+/* ---------------- 热度统计（D1 内存模拟） ---------------- */
+class StubDB {
+  constructor() {
+    this.rows = new Map(); // "day|k" -> n
+    this.boom = false;
+    this.writes = 0;
+  }
+  prepare(sql) {
+    const self = this;
+    const stmt = (args) => ({
+      all: async () => self._all(sql, args),
+      run: async () => self._run(sql, args),
+    });
+    return {
+      bind: (...args) => stmt(args),
+      ...stmt([]),
+    };
+  }
+  async batch(list) {
+    const out = [];
+    for (const s of list) out.push(await s.all());
+    return out;
+  }
+  async _run(sql, args) {
+    if (this.boom) throw new Error("d1 down");
+    if (sql.includes("INSERT INTO hits")) {
+      const id = `${args[0]}|${args[1]}`;
+      this.rows.set(id, (this.rows.get(id) || 0) + 1);
+      this.writes += 1;
+      return { success: true };
+    }
+    throw new Error("unsupported sql " + sql);
+  }
+  async _all(sql, args) {
+    if (this.boom) throw new Error("d1 down");
+    const all = [...this.rows.entries()].map(([id, n]) => {
+      const [day, k] = id.split("|");
+      return { day, k, n };
+    });
+    const from = args[0];
+    if (sql.includes("GROUP BY k")) {
+      const agg = new Map();
+      all.filter((r) => r.day >= from).forEach((r) => agg.set(r.k, (agg.get(r.k) || 0) + r.n));
+      const items = [...agg.entries()]
+        .map(([k, n]) => ({ k, n }))
+        .sort((a, b) => b.n - a.n || (a.k < b.k ? -1 : 1))
+        .slice(0, args[1]);
+      return { success: true, results: items };
+    }
+    if (sql.includes("GROUP BY day")) {
+      const agg = new Map();
+      all.filter((r) => r.day >= from).forEach((r) => agg.set(r.day, (agg.get(r.day) || 0) + r.n));
+      const results = [...agg.entries()].sort((a, b) => (a[0] < b[0] ? -1 : 1)).map(([day, n]) => ({ day, n }));
+      return { success: true, results };
+    }
+    if (sql.includes("COALESCE(SUM(n), 0)")) {
+      const total = all.filter((r) => r.day >= from).reduce((s, r) => s + r.n, 0);
+      return { success: true, results: [{ n: total }] };
+    }
+    throw new Error("unsupported sql " + sql);
+  }
+}
+
+console.log("\n热度统计");
+const db = new StubDB();
+const envDb = { ...env, DB: db };
+const before2 = env.LINKS.writes;
+
+const h1 = await handle(req("/link?k=magazines/economist/2025-01-04-usa", { ip: "10.0.0.1" }), envDb, T0);
+check("带 D1 时仍正常发链", h1.status === 200 && (await h1.json()).ok === true);
+check("一次发链记 1 行统计", db.writes === 1, `writes=${db.writes}`);
+check("统计不动 KV 计数之外的东西", env.LINKS.writes === before2 + 1, `writes=${env.LINKS.writes}`);
+
+await handle(req("/link?k=magazines/economist/2025-01-04-usa", { ip: "10.0.0.2" }), envDb, T0);
+await handle(req("/link?k=magazines/fhm/2025-02-canada", { ip: "10.0.0.3" }), envDb, T0);
+
+const hot = await handle(req("/hot"), envDb, T0);
+const hotBody = await hot.json();
+check("热榜 200 且公开可读", hot.status === 200 && hot.headers.get("Access-Control-Allow-Origin") === "*");
+check("热榜按次数排序", hotBody.items[0].k === "magazines/economist/2025-01-04-usa" && hotBody.items[0].n === 2, JSON.stringify(hotBody.items));
+check("热榜带总数", hotBody.total === 3, `total=${hotBody.total}`);
+
+const hotEmpty = await (await handle(req("/hot"), env, T0)).json();
+check("没有 D1 时热榜降级为空", hotEmpty.ok === true && hotEmpty.items.length === 0);
+
+const dbBoom = new StubDB();
+dbBoom.boom = true;
+const boomLink = await handle(req("/link?k=magazines/fhm/2025-02-canada", { ip: "10.0.0.9" }), { ...env, DB: dbBoom }, T0);
+check("D1 挂了也不影响发链", boomLink.status === 200 && (await boomLink.json()).ok === true);
+const boomHot = await (await handle(req("/hot"), { ...env, DB: dbBoom }, T0)).json();
+check("D1 挂了热榜返回空而不是 500", boomHot.ok === true && boomHot.items.length === 0);
+
+const bypassStat = await handle(req("/link?k=magazines/fhm/2025-02-canada&t=" + KEY, { ip: "10.0.0.4" }), { ...envDb, ADMIN_KEY: KEY }, T0);
+check("站长豁免不记热度", bypassStat.status === 200 && db.writes === 3, `writes=${db.writes}`);
+
+const statsNoKey = await handle(req("/stats"), envDb, T0);
+check("明细接口无密钥 403", statsNoKey.status === 403);
+const stats = await handle(req("/stats?t=" + KEY), { ...envDb, ADMIN_KEY: KEY }, T0);
+const statsBody = await stats.json();
+check("明细带按天趋势", stats.status === 200 && statsBody.daily.length === 1 && statsBody.daily[0].n === 3, JSON.stringify(statsBody.daily));
+
 console.log(`\n结果：${pass} 通过，${fail} 失败`);
 if (fail) process.exit(1);

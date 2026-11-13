@@ -18,6 +18,13 @@ BYPASS_IPS = ""
 binding = "LINKS"
 id = "26591befb8e2488f8fb68a19cf8a4239"
 
+# 热度统计（第几次被打开）存 D1；id 由 `wrangler d1 create magazine_stats` 生成，
+# 填好之后执行 `wrangler d1 execute magazine_stats --remote --file=schema.sql`
+[[d1_databases]]
+binding = "DB"
+database_name = "magazine_stats"
+database_id = "TO_BE_FILLED"
+
 # 自定义域名：workers.dev 在国内直连不通，必须走自己的域名
 [[routes]]
 pattern = "dl.xinyesucai.top"

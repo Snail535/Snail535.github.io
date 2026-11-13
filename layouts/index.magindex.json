@@ -1,0 +1,24 @@
+{{- /*
+  热榜索引用的小数据集：/magindex.json
+  格式：[ [键, 标题, 链接, 缩略图, 刊名], ... ]，每一行都手写 jsonify，
+  避免 Hugo 的 append 把嵌套数组压平。
+  键必须和 layouts/magazines/single.html 里的 data-key 完全一致：
+      <magazine_slug>-<期次文件名去后缀>
+*/ -}}
+{{- $issues := where site.RegularPages "Section" "magazines" -}}
+{{- $censor := site.Data.censored_previews | default dict -}}
+{{- $rows := slice -}}
+{{- range $issues -}}
+  {{- if .Params.has_download -}}
+    {{- $k := printf "%s-%s" .Params.magazine_slug .File.TranslationBaseName -}}
+    {{- $cover := "" -}}
+    {{- with .Params.cover -}}
+      {{- if .thumb }}{{ $cover = .thumb }}{{ else }}{{ $cover = .image }}{{ end -}}
+    {{- end -}}
+    {{- $safe := $cover -}}
+    {{- with $cover }}{{ $safe = index $censor . | default . }}{{ end -}}
+    {{- $row := printf "[%s,%s,%s,%s,%s]" (jsonify $k) (jsonify .Title) (jsonify .RelPermalink) (jsonify $safe) (jsonify (.Params.magazine | default "")) -}}
+    {{- $rows = $rows | append $row -}}
+  {{- end -}}
+{{- end -}}
+[{{ delimit $rows "," | safeHTML }}]

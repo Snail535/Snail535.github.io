@@ -1,0 +1,9 @@
+{{ define "main" }}
+<header class="list-head">
+  <h1>{{ .Title }}</h1>
+  {{- with .Content }}<div class="list-intro">{{ . }}</div>{{ end }}
+</header>
+
+{{- partial "hot_panel.html" (dict "view" "list" "days" 7 "n" 20 "title" "近 7 天") }}
+{{- partial "hot_panel.html" (dict "view" "list" "days" 30 "n" 20 "title" "近 30 天") }}
+{{ end }}

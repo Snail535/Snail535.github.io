@@ -1,0 +1,31 @@
+{{- /*
+  热榜区块（首页 / 热榜页共用）
+  参数（dict）：
+    view        grid | list     展示形态
+    days        统计窗口，默认 7
+    n           条数，默认 10
+    hide        true = 没数据时整块隐藏（首页用，避免空白）
+    title       标题文案
+    more        右上角「更多」链接（可选）
+    moreLabel   链接文案
+  数据来自 Worker 的 /hot，前端用 /magindex.json 把键翻成卡片。
+*/ -}}
+{{- $view := .view | default "grid" -}}
+{{- $days := .days | default 7 -}}
+{{- $n := .n | default 10 -}}
+<section class="hot-block" data-hot-panel
+         data-api="{{ site.Params.linkApi | default "" }}"
+         data-index="{{ "/magindex.json" | relURL }}"
+         data-days="{{ $days }}"
+         data-n="{{ $n }}"
+         data-hide-on-empty="{{ if .hide }}1{{ else }}0{{ end }}">
+  <div class="block-head">
+    <h2 class="cat-title">{{ .title | default "本周热榜" }}</h2>
+    {{- with .more }}
+    <a class="more" href="{{ . | relURL }}">{{ $.moreLabel | default "完整榜单 →" }}</a>
+    {{- end }}
+  </div>
+  <p class="hot-sum" data-hot-summary>正在读取统计…</p>
+  <div class="hot-list hot-view-{{ $view }}" data-hot-list></div>
+  <p class="hot-empty">热榜正在攒数据，等大家下载几本之后就会出现在这里。</p>
+</section>

@@ -9,6 +9,9 @@
       {{- with .Params.edition }} · <a href="{{ printf "/editions/%s/" (. | urlize) | relURL }}">{{ . }}</a> 版{{ end }}
       {{- with .Params.cadence }} · {{ index $cad . | default . }}{{ end }}
     </div>
+    {{- /* 本周热榜角标：只在进前 30 时由 hot.js 填内容，否则保持隐藏 */ -}}
+    {{- $hotKey := printf "%s-%s" .Params.magazine_slug .File.TranslationBaseName }}
+    <p class="mg-hotline" data-hot-key="{{ $hotKey }}" data-api="{{ site.Params.linkApi | default "" }}" hidden></p>
   </header>
 
   <div class="mg-hero{{ if .Params.adult }} is-adult{{ end }}">
