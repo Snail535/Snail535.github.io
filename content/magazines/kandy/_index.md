@@ -1,6 +1,6 @@
 ---
 title: "Kandy"
-weight: 130
+weight: 170
 category: "男士杂志"
 cadence: "monthly"
 color: "#d81b60"

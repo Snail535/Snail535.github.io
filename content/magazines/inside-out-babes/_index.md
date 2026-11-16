@@ -1,6 +1,6 @@
 ---
 title: "Inside Out Babes"
-weight: 190
+weight: 230
 category: "男士杂志"
 cadence: "monthly"
 color: "#a31545"

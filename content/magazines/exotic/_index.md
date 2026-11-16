@@ -1,6 +1,6 @@
 ---
 title: "Exotic"
-weight: 170
+weight: 210
 category: "男士杂志"
 cadence: "monthly"
 color: "#6b2fa0"

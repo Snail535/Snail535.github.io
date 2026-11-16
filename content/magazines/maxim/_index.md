@@ -1,6 +1,6 @@
 ---
 title: "Maxim"
-weight: 110
+weight: 150
 category: "男士杂志"
 cadence: "monthly"
 color: "#b0202a"

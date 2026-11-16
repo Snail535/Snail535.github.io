@@ -1,6 +1,6 @@
 ---
 title: "Inciter"
-weight: 180
+weight: 220
 category: "男士杂志"
 cadence: "monthly"
 color: "#c2185b"

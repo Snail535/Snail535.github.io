@@ -1,6 +1,6 @@
 ---
 title: "Boudoir Inspiration"
-weight: 140
+weight: 180
 category: "男士杂志"
 cadence: "monthly"
 color: "#8e5a6b"

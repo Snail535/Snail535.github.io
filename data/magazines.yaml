@@ -114,6 +114,38 @@ magazines:
     color: "#0b3d91"
     desc: "福布斯，企业家、富豪榜与商业趋势观察。"
 
+  - slug: bloomberg-businessweek
+    name: "Bloomberg Businessweek"
+    category: "商业财经"
+    folders: ["BBW"]
+    cadence: "weekly"
+    color: "#1a1a1a"
+    desc: "彭博商业周刊，全球商业、金融与政策新闻周报。"
+
+  - slug: fortune
+    name: "Fortune"
+    category: "商业财经"
+    folders: ["FTN"]
+    cadence: "bimonthly"
+    color: "#0e7fa8"
+    desc: "财富杂志，公司、投资与商业领袖的深度报道。"
+
+  - slug: new-scientist
+    name: "New Scientist"
+    category: "科学"
+    folders: ["NS"]
+    cadence: "weekly"
+    color: "#b3123d"
+    desc: "新科学家，面向大众的科技进展与科学新闻周刊。"
+
+  - slug: scientific-american
+    name: "Scientific American"
+    category: "科学"
+    folders: ["SCA"]
+    cadence: "monthly"
+    color: "#c8102e"
+    desc: "科学美国人，历史最悠久的深度科普月刊。"
+
   - slug: time
     name: "TIME"
     category: "时事新闻"

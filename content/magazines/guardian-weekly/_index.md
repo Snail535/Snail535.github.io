@@ -1,6 +1,6 @@
 ---
 title: "The Guardian Weekly"
-weight: 80
+weight: 120
 category: "时事新闻"
 cadence: "weekly"
 color: "#052962"

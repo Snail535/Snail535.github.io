@@ -1,6 +1,6 @@
 ---
 title: "Mancave Playbabes"
-weight: 210
+weight: 250
 category: "男士杂志"
 cadence: "bimonthly"
 color: "#4a1c2b"

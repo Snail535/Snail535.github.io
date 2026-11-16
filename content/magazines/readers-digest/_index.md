@@ -1,6 +1,6 @@
 ---
 title: "Reader's Digest"
-weight: 70
+weight: 110
 category: "文化生活"
 cadence: "monthly"
 color: "#d62b1f"

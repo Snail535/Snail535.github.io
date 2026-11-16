@@ -1,6 +1,6 @@
 ---
 title: "Lingerie Plus"
-weight: 200
+weight: 240
 category: "男士杂志"
 cadence: "monthly"
 color: "#7d2b4b"

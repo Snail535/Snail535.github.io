@@ -1,6 +1,6 @@
 ---
 title: "Bossing"
-weight: 160
+weight: 200
 category: "男士杂志"
 cadence: "monthly"
 color: "#8b1e3f"

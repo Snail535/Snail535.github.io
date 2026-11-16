@@ -1,6 +1,6 @@
 ---
 title: "Science"
-weight: 50
+weight: 90
 category: "科学"
 cadence: "weekly"
 color: "#0b6e4f"

@@ -1,6 +1,6 @@
 ---
 title: "Tempting Photo Magazine"
-weight: 150
+weight: 190
 category: "男士杂志"
 cadence: "monthly"
 color: "#e06c00"

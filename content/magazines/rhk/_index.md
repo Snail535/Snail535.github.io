@@ -1,6 +1,6 @@
 ---
 title: "RHK Magazine"
-weight: 230
+weight: 270
 category: "男士杂志"
 cadence: "monthly"
 color: "#5a3d7a"

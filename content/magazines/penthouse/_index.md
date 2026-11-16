@@ -1,6 +1,6 @@
 ---
 title: "Penthouse"
-weight: 100
+weight: 140
 category: "男士杂志"
 cadence: "monthly"
 color: "#7b1e3b"

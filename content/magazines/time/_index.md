@@ -1,6 +1,6 @@
 ---
 title: "TIME"
-weight: 40
+weight: 80
 category: "时事新闻"
 cadence: "biweekly"
 color: "#e2231a"

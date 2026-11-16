@@ -1,6 +1,6 @@
 ---
 title: "The Atlantic"
-weight: 60
+weight: 100
 category: "文化生活"
 cadence: "monthly"
 color: "#b31b1b"

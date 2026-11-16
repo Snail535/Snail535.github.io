@@ -1,6 +1,6 @@
 ---
 title: "Playboy"
-weight: 90
+weight: 130
 category: "男士杂志"
 cadence: "monthly"
 color: "#111111"
