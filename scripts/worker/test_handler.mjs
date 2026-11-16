@@ -221,5 +221,156 @@ const stats = await handle(req("/stats?t=" + KEY), { ...envDb, ADMIN_KEY: KEY },
 const statsBody = await stats.json();
 check("明细带按天趋势", stats.status === 200 && statsBody.daily.length === 1 && statsBody.daily[0].n === 3, JSON.stringify(statsBody.daily));
 
+/* ---------------- 通行证（邀请码兑换） ---------------- */
+
+class PassDB {
+  constructor() {
+    this.codes = new Map(); // code -> {uses_max, uses_done, days, created_at, note}
+    this.passes = new Map(); // pid -> {code, exp, created}
+    this.writes = 0; // hits 行（复用 recordHit 验证）
+    this.hits = new Map(); // "day|k" -> n
+  }
+  prepare(sql) {
+    const self = this;
+    const stmt = (args) => ({
+      all: async () => self._all(sql, args),
+      first: async () => self._first(sql, args),
+      run: async () => self._run(sql, args),
+    });
+    return { bind: (...args) => stmt(args), ...stmt([]) };
+  }
+  async batch(list) {
+    const out = [];
+    for (const s of list) out.push(await s.all());
+    return out;
+  }
+  async _first(sql, args) {
+    if (sql.includes("FROM passes")) {
+      const rec = this.passes.get(args[0]);
+      return rec ? { exp: rec.exp } : null;
+    }
+    if (sql.includes("FROM codes WHERE code = ?")) {
+      const rec = this.codes.get(args[0]);
+      return rec ? { uses_max: rec.uses_max, uses_done: rec.uses_done, days: rec.days } : null;
+    }
+    throw new Error("unsupported first " + sql);
+  }
+  async _run(sql, args) {
+    if (sql.includes("INSERT INTO hits")) {
+      const id = `${args[0]}|${args[1]}`;
+      this.hits.set(id, (this.hits.get(id) || 0) + 1);
+      this.writes += 1;
+      return { success: true };
+    }
+    if (sql.includes("UPDATE codes")) {
+      const rec = this.codes.get(args[0]);
+      if (!rec || rec.uses_done >= rec.uses_max) return { success: true, meta: { changes: 0 } };
+      rec.uses_done += 1;
+      return { success: true, meta: { changes: 1 } };
+    }
+    if (sql.includes("INSERT INTO passes")) {
+      this.passes.set(args[0], { code: args[1], exp: args[2], created: args[3] });
+      return { success: true, meta: { changes: 1 } };
+    }
+    if (sql.includes("INSERT INTO codes")) {
+      this.codes.set(args[0], { uses_max: args[1], uses_done: 0, days: args[2], created_at: args[3], note: args[4] });
+      return { success: true, meta: { changes: 1 } };
+    }
+    throw new Error("unsupported run " + sql);
+  }
+  async _all(sql, args) {
+    if (sql.includes("GROUP BY k")) {
+      const from = args[0];
+      const agg = new Map();
+      [...this.hits.entries()].forEach(([id, n]) => {
+        const [day, k] = id.split("|");
+        if (day >= from) agg.set(k, (agg.get(k) || 0) + n);
+      });
+      const items = [...agg.entries()].map(([k, n]) => ({ k, n })).sort((a, b) => b.n - a.n || (a.k < b.k ? -1 : 1));
+      return { success: true, results: items.slice(0, args[1]) };
+    }
+    if (sql.includes("COALESCE(SUM(n), 0)")) {
+      let total = 0;
+      [...this.hits.entries()].forEach(([id, n]) => {
+        if (id.split("|")[0] >= args[0]) total += n;
+      });
+      return { success: true, results: [{ n: total }] };
+    }
+    if (sql.includes("ORDER BY created_at DESC")) {
+      const rows = [...this.codes.entries()].map(([code, r]) => ({
+        code, uses_max: r.uses_max, uses_done: r.uses_done, days: r.days, created_at: r.created_at, note: r.note,
+      })).sort((a, b) => b.created_at - a.created_at).slice(0, 200);
+      return { success: true, results: rows };
+    }
+    if (sql.includes("COUNT(*)")) {
+      return { success: true, results: [{ n: this.passes.size }] };
+    }
+    throw new Error("unsupported all " + sql);
+  }
+}
+
+console.log("\n通行证（邀请码兑换）");
+const pdb = new PassDB();
+const penv = { ...env, DB: pdb, ADMIN_KEY: KEY };
+
+const genNoKey = await handle(req("/gen"), penv, T0);
+check("发码接口无密钥 403", genNoKey.status === 403);
+
+const gen = await (await handle(req(`/gen?t=${KEY}&n=5&uses=1&days=90&note=测试`), penv, T0)).json();
+check("发码一次出 5 个", gen.ok === true && gen.codes.length === 5, JSON.stringify(gen));
+check("码格式：12 位无易混字符", gen.codes.every((c) => /^[ABCDEFGHJKLMNPQRSTUVWXYZ23456789]{12}$/.test(c)));
+
+const gen2 = await (await handle(req(`/gen?t=${KEY}&n=1&uses=2`), penv, T0)).json();
+const sharedCode = gen2.codes[0];
+
+const redeemBad = await handle(req("/redeem?code=NOPECODE", { ip: "20.0.0.1" }), penv, T0);
+check("无效码 404", redeemBad.status === 404 && (await redeemBad.json()).reason === "bad_code");
+
+const redeem1 = await (await handle(req("/redeem?code=" + gen.codes[0], { ip: "20.0.0.1" }), penv, T0)).json();
+check("有效码兑换成功", redeem1.ok === true && /^[a-f0-9]{32}$/.test(redeem1.pid), JSON.stringify(redeem1));
+check("有效期 90 天", redeem1.exp - T0 === 90 * 86400000, `${redeem1.exp - T0}`);
+
+const redeemAgain = await handle(req("/redeem?code=" + gen.codes[0], { ip: "20.0.0.2" }), penv, T0);
+check("一次性码二次兑换 409", redeemAgain.status === 409 && (await redeemAgain.json()).reason === "code_used");
+
+const r1 = await (await handle(req("/redeem?code=" + sharedCode, { ip: "20.0.0.3" }), penv, T0)).json();
+const r2 = await (await handle(req("/redeem?code=" + sharedCode, { ip: "20.0.0.4" }), penv, T0)).json();
+const r3 = await handle(req("/redeem?code=" + sharedCode, { ip: "20.0.0.5" }), penv, T0);
+check("限 2 次的码前两次成功", r1.ok === true && r2.ok === true);
+check("限 2 次的码第三次 409", r3.status === 409);
+
+let tryLimited = false;
+for (let i = 0; i < 6; i += 1) {
+  const r = await handle(req("/redeem?code=BADCODEX" + "234567"[i], { ip: "20.0.0.6" }), penv, T0);
+  tryLimited = r.status === 429 && (await r.json()).reason === "try_limit";
+}
+check("同 IP 连错 5 次后被 429", tryLimited === true);
+
+const passOk = await (await handle(req("/pass?p=" + redeem1.pid), penv, T0)).json();
+check("查通行证状态有效", passOk.ok === true && passOk.valid === true);
+const passBad = await (await handle(req("/pass?p=" + "0".repeat(32)), penv, T0)).json();
+check("查不存在的通行证", passBad.valid === false);
+
+const hitsBefore = pdb.writes;
+const linkPass = await (await handle(req("/link?k=magazines/economist/2025-01-04-usa&p=" + redeem1.pid, { ip: "20.0.0.7" }), penv, T0)).json();
+check("通行证下载成功且标记 pass", linkPass.ok === true && linkPass.pass === true, JSON.stringify(linkPass));
+check("通行证下载不占配额（used=0）", linkPass.used === 0);
+check("通行证下载热度照记", pdb.writes === hitsBefore + 1, `writes=${pdb.writes}`);
+
+let normalLimit = false;
+const tmpEnv = { ...env, DB: pdb, ADMIN_KEY: KEY };
+for (let i = 1; i <= 6; i += 1) {
+  const r = await handle(req("/link?k=magazines/economist/2025-01-04-usa&p=" + "f".repeat(32), { ip: "20.0.0.8" }), tmpEnv, T0);
+  const b = await r.json();
+  if (i === 6) normalLimit = r.status === 429 && b.reason === "limit";
+}
+check("无效通行证仍按游客配额", normalLimit === true);
+
+const codesList = await (await handle(req(`/codes?t=${KEY}`), penv, T0)).json();
+check("码况列表含使用进度", codesList.ok === true && codesList.codes[0].uses.includes("/") && codesList.passes >= 3, JSON.stringify(codesList.codes && codesList.codes[0]));
+
+const redeemNoDb = await handle(req("/redeem?code=" + gen.codes[1]), env, T0);
+check("无 D1 时兑换 503", redeemNoDb.status === 503);
+
 console.log(`\n结果：${pass} 通过，${fail} 失败`);
 if (fail) process.exit(1);

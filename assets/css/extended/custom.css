@@ -1133,3 +1133,116 @@
   text-decoration: underline;
   text-underline-offset: 2px;
 }
+
+/* ---------- 通行证页 ---------- */
+.pass-page { max-width: 720px; margin: 0 auto; }
+.pass-hero { margin: 1.6rem 0 1.4rem; }
+.pass-hero h1 { margin: 0 0 .4rem; font-size: 1.6rem; }
+.pass-tagline { margin: 0; color: var(--secondary); font-size: .92rem; line-height: 1.85; }
+
+.pass-card {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.3rem 1.4rem;
+  margin-bottom: 1.6rem;
+}
+.pass-status { font-size: .9rem; color: var(--secondary); margin: 0 0 1rem; }
+.pass-status.is-ok { color: var(--primary); font-weight: 600; }
+.pass-form-title { margin: 0 0 .55rem; font-weight: 600; font-size: .95rem; }
+.pass-form-row { display: flex; gap: .55rem; margin: 0 0 .55rem; flex-wrap: wrap; }
+.pass-form-row input {
+  flex: 1 1 14rem;
+  min-width: 0;
+  padding: .52rem .7rem;
+  font: inherit;
+  font-size: .92rem;
+  letter-spacing: .08em;
+  color: var(--content);
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.pass-form-row input:focus { outline: 2px solid var(--primary); outline-offset: 1px; border-color: var(--primary); }
+.pass-form-row button {
+  padding: .52rem 1.1rem;
+  font: inherit;
+  font-size: .92rem;
+  color: #fff;
+  background: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.pass-form-row button:hover { opacity: .88; }
+.pass-form-row button:disabled { opacity: .5; cursor: wait; }
+.pass-form-hint { margin: 0; font-size: .8rem; color: var(--secondary); line-height: 1.8; }
+
+.pass-ok-title { margin: 0 0 .3rem; font-weight: 600; color: var(--primary); font-size: .98rem; }
+.pass-ok-meta { margin: 0 0 .7rem; font-size: .9rem; }
+.pass-ok-tip { margin: 0 0 .8rem; font-size: .8rem; color: var(--secondary); line-height: 1.8; }
+.pass-ok-actions { margin: 0; }
+.pass-ok-btn {
+  display: inline-block;
+  padding: .45rem 1rem;
+  font-size: .88rem;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  text-decoration: none;
+}
+.pass-ok-btn:hover { background: var(--primary); color: #fff; }
+
+.pass-faq h2 { font-size: 1.05rem; margin: 1.4rem 0 .6rem; }
+.pass-faq dt { font-weight: 600; font-size: .92rem; margin-top: .8rem; }
+.pass-faq dd { margin: .25rem 0 0; font-size: .88rem; color: var(--secondary); line-height: 1.85; }
+.pass-faq a { color: var(--primary); text-decoration: underline; text-underline-offset: 2px; }
+
+/* ---------- 详情页下载区：通行证与邀请码 ---------- */
+.mg-pass-chip {
+  display: inline-block;
+  margin-left: .5rem;
+  padding: .1rem .5rem;
+  font-size: .72rem;
+  font-weight: 600;
+  vertical-align: middle;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 99px;
+}
+.mg-pass-box {
+  margin: .7rem 0 0;
+  padding: .75rem .85rem;
+  background: var(--entry);
+  border: 1px dashed var(--primary);
+  border-radius: 10px;
+}
+.mg-pass-box-title { margin: 0 0 .45rem; font-size: .85rem; font-weight: 600; color: var(--primary); }
+.mg-pass-box-row { display: flex; gap: .5rem; flex-wrap: wrap; margin: 0 0 .4rem; }
+.mg-pass-box input {
+  flex: 1 1 10rem;
+  min-width: 0;
+  padding: .42rem .6rem;
+  font: inherit;
+  font-size: .85rem;
+  letter-spacing: .08em;
+  color: var(--content);
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+}
+.mg-pass-box input:focus { outline: 2px solid var(--primary); outline-offset: 1px; }
+.mg-pass-box button {
+  padding: .42rem .85rem;
+  font: inherit;
+  font-size: .85rem;
+  color: #fff;
+  background: var(--primary);
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.mg-pass-box button:hover { opacity: .88; }
+.mg-pass-box button:disabled { opacity: .5; cursor: wait; }
+.mg-pass-box-hint { margin: 0; font-size: .76rem; color: var(--secondary); line-height: 1.7; }
+.mg-pass-box-hint a { color: var(--primary); text-decoration: underline; text-underline-offset: 2px; }

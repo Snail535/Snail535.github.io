@@ -92,6 +92,14 @@
       <button type="button" class="mg-copy" data-act="copy">复制链接</button>
     </p>
     <p class="mg-dl-status" data-role="status"></p>
+    <div class="mg-pass-box" data-role="passbox" hidden>
+      <p class="mg-pass-box-title">有邀请码？解锁不限次下载</p>
+      <p class="mg-pass-box-row">
+        <input type="text" placeholder="输入邀请码" maxlength="16" autocomplete="off" spellcheck="false" data-role="passinput">
+        <button type="button" data-role="passredeem">解锁</button>
+      </p>
+      <p class="mg-pass-box-hint">通行证有效期 90 天，期间获取下载链接不限次；没有码也可以去<a href="/pass/">通行证页</a>看怎么申请。</p>
+    </div>
     {{- if hasSuffix (.Params.netdisk_file | default "") ".sssEFs" }}
     <p class="mg-arc-note">
       网盘里是<b>PDF 原文件</b>（<code>.pdf.sssEFs</code>）：下载后把文件名末尾的 <code>.sssEFs</code> 去掉，
@@ -182,6 +190,75 @@
     var known = false; // 接口模式下，服务端返回过余量没有
     var adminMode = false;
 
+    // 通行证：在通行证页用邀请码兑换后存 localStorage，所有详情页共用
+    var passMode = false;
+    var passPid = '';
+    try {
+      var storedPass = JSON.parse(localStorage.getItem('mgPass') || 'null');
+      if (storedPass && storedPass.pid && storedPass.exp > Date.now()) {
+        passMode = true;
+        passPid = storedPass.pid;
+      }
+    } catch (e) {}
+
+    var passBox = box.querySelector('[data-role="passbox"]');
+    var passInput = box.querySelector('[data-role="passinput"]');
+    var passBtn = box.querySelector('[data-role="passredeem"]');
+    var passChip = null;
+
+    function markPassMode(exp) {
+      passMode = true;
+      if (passChip) return;
+      var h3 = box.querySelector('h3');
+      if (h3) {
+        passChip = document.createElement('span');
+        passChip.className = 'mg-pass-chip';
+        passChip.textContent = '通行证 · 不限次';
+        h3.appendChild(passChip);
+      }
+      if (passBox) passBox.hidden = true;
+      if (exp) {
+        var d = new Date(exp + 8 * 3600 * 1000);
+        box.dataset.passExp = (d.getUTCFullYear()) + '-' + (d.getUTCMonth() + 1) + '-' + d.getUTCDate();
+      }
+    }
+
+    function onRedeemPass(then) {
+      var code = (passInput.value || '').trim().toUpperCase();
+      if (!code) { passInput.focus(); return; }
+      passBtn.disabled = true;
+      passBtn.textContent = '解锁中…';
+      fetch(api + '/redeem?code=' + encodeURIComponent(code), { credentials: 'omit' })
+        .then(function (r) { return r.json().then(function (b) { return { status: r.status, body: b }; }); })
+        .then(function (res) {
+          var b = res.body || {};
+          passBtn.disabled = false;
+          passBtn.textContent = '解锁';
+          if (b.ok && b.pid) {
+            try { localStorage.setItem('mgPass', JSON.stringify({ pid: b.pid, exp: b.exp })); } catch (e) {}
+            passPid = b.pid;
+            markPassMode(b.exp);
+            statusEl.textContent = '通行证已生效，下载不限次（90 天）';
+            if (then) then();
+          } else {
+            statusEl.textContent = b.message || '邀请码无效，请检查后重试';
+            passInput.select();
+          }
+        })
+        .catch(function () {
+          passBtn.disabled = false;
+          passBtn.textContent = '解锁';
+          statusEl.textContent = '网络异常，兑换没成功，请稍后再试';
+        });
+    }
+
+    if (passBtn) passBtn.addEventListener('click', function () { onRedeemPass(function () { paint(); }); });
+    if (passInput) passInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') onRedeemPass(function () { paint(); });
+    });
+    if (passMode) markPassMode();
+
+
     // 站长密钥：访问任意详情页时带一次 ?admin=密钥，之后本机不再受次数限制
     var adminKey = '';
     try { adminKey = localStorage.getItem('mgAdmin') || ''; } catch (e) {}
@@ -216,6 +293,8 @@
       box.classList.toggle('is-locked', remaining <= 0);
       if (adminMode) {
         statusEl.textContent = '管理密钥已启用，不限次数';
+      } else if (passMode) {
+        statusEl.textContent = '通行证有效，下载不限次';
       } else if (remaining <= 0) {
         statusEl.textContent = '今日 ' + total + ' 次下载入口已用完，' + resetLabel() + '（北京时间）恢复';
       } else if (api && !known) {
@@ -251,7 +330,10 @@
 
     function viaApi(act) {
       var win = act === 'open' ? window.open('', '_blank') : null;
-      fetch(api + '/link?k=' + encodeURIComponent(key) + (adminKey ? '&t=' + encodeURIComponent(adminKey) : ''), { credentials: 'omit' })
+      var qs = '?k=' + encodeURIComponent(key) +
+        (adminKey ? '&t=' + encodeURIComponent(adminKey) : '') +
+        (passMode && passPid ? '&p=' + encodeURIComponent(passPid) : '');
+      fetch(api + '/link' + qs, { credentials: 'omit' })
         .then(function (r) { return r.json().then(function (b) { return { status: r.status, body: b }; }); })
         .then(function (res) {
           var b = res.body || {};
@@ -260,6 +342,8 @@
             if (b.reason === 'limit') {
               remaining = 0;
               paint();
+              if (passBox) passBox.hidden = false; // 原地展开邀请码输入框
+              passInput && passInput.focus();
             } else if (b.reason === 'not_found') {
               statusEl.textContent = '本期下载入口暂未开通';
             } else {
@@ -268,9 +352,23 @@
             return;
           }
           if (b.bypass) { adminMode = true; remaining = total; known = true; paint(); }
+          else if (b.pass) {
+            // 通行证被服务端确认有效
+            markPassMode(b.exp);
+            remaining = total;
+            known = true;
+            paint();
+          }
           else {
             remaining = typeof b.remaining === 'number' ? b.remaining : remaining - 1;
             known = true;
+            if (passMode) {
+              // 本地记过通行证但服务端不认：过期或被撤销，清掉本地记录
+              passMode = false;
+              passPid = '';
+              try { localStorage.removeItem('mgPass'); } catch (e) {}
+              if (passChip) { passChip.remove(); passChip = null; }
+            }
             paint();
           }
           if (act === 'open') {
