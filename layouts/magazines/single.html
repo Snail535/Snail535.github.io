@@ -92,7 +92,7 @@
       <button type="button" class="mg-copy" data-act="copy">复制链接</button>
     </p>
     <p class="mg-dl-status" data-role="status"></p>
-    <div class="mg-pass-box" data-role="passbox" hidden>
+    <div class="mg-pass-box" data-role="passbox">
       <p class="mg-pass-box-title">有邀请码？解锁不限次下载</p>
       <p class="mg-pass-box-row">
         <input type="text" placeholder="输入邀请码" maxlength="16" autocomplete="off" spellcheck="false" data-role="passinput">
@@ -296,7 +296,7 @@
       } else if (passMode) {
         statusEl.textContent = '通行证有效，下载不限次';
       } else if (remaining <= 0) {
-        statusEl.textContent = '今日 ' + total + ' 次下载入口已用完，' + resetLabel() + '（北京时间）恢复';
+        statusEl.textContent = '今日 ' + total + ' 次下载入口已用完，' + resetLabel() + '（北京时间）恢复；有邀请码可在下方输入解锁';
       } else if (api && !known) {
         statusEl.textContent = '每天最多 ' + total + ' 次，' + resetLabel() + '（北京时间）重置';
       } else {
