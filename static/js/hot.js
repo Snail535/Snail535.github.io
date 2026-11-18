@@ -7,6 +7,8 @@
   "use strict";
 
   var MEM_TTL = 5 * 60 * 1000; // 浏览器内缓存 5 分钟，翻页来回不重复请求
+  var CACHE_VER = "v2";        // 换缓存结构时改这里，避免读到旧键
+  var SNAPSHOT_N = 100;        // 固定请求条数：首页/榜单页/角标共用同一 URL
   var idxCache = {};           // { url: Promise<map> }
 
   function cacheGet(key) {
@@ -30,11 +32,14 @@
     });
   }
 
-  function hotData(api, days, n) {
-    var key = api + "|" + days + "|" + n;
+  // 注意：请求 URL 不能带 n。首页 n=8、榜单页 n=20、角标 n=30 若各请求
+  // /hot?n=... ，URL 不同 → CDN 和浏览器各缓存一份，刷新时间错开就会不同步。
+  // 统一拉同一份完整快照（100 条），各面板再按自己的 n 截取。
+  function hotData(api, days) {
+    var key = CACHE_VER + "|" + api + "|" + days;
     var hit = cacheGet(key);
     if (hit) return Promise.resolve(hit);
-    return getJSON(api + "/hot?days=" + days + "&n=" + n).then(function (d) {
+    return getJSON(api + "/hot?days=" + days + "&n=" + SNAPSHOT_N).then(function (d) {
       if (d && d.ok) cacheSet(key, d);
       return d || {};
     });
@@ -135,7 +140,7 @@
     var n = parseInt(panel.dataset.n, 10) || 10;
     if (!api || !idx) { panel.hidden = true; return; }
 
-    Promise.all([hotData(api, days, n), issueMap(idx)])
+    Promise.all([hotData(api, days), issueMap(idx)])
       .then(function (res) { paint(panel, res[0], res[1]); })
       .catch(function () {
         panel.classList.add("is-empty");
@@ -151,7 +156,7 @@
     var api = (badge.dataset.api || "").replace(/\/+$/, "");
     var key = badge.dataset.hotKey || "";
     if (!api || !key) return;
-    hotData(api, 7, 30).then(function (data) {
+    hotData(api, 7).then(function (data) {
       var items = data.items || [];
       for (var i = 0; i < items.length; i += 1) {
         if (items[i].k === key) {
