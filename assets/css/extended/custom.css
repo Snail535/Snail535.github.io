@@ -1197,6 +1197,7 @@
 .pass-faq dt { font-weight: 600; font-size: .92rem; margin-top: .8rem; }
 .pass-faq dd { margin: .25rem 0 0; font-size: .88rem; color: var(--secondary); line-height: 1.85; }
 .pass-faq a { color: var(--primary); text-decoration: underline; text-underline-offset: 2px; }
+.pass-faq a.pass-mail { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 2px; }
 
 /* ---------- 详情页下载区：通行证与邀请码 ---------- */
 .mg-pass-chip {
@@ -1246,3 +1247,17 @@
 .mg-pass-box button:disabled { opacity: .5; cursor: wait; }
 .mg-pass-box-hint { margin: 0; font-size: .76rem; color: var(--secondary); line-height: 1.7; }
 .mg-pass-box-hint a { color: var(--primary); text-decoration: underline; text-underline-offset: 2px; }
+.mg-pass-apply {
+  margin: .55rem 0 0;
+  padding: .5rem .7rem;
+  font-size: .8rem;
+  line-height: 1.6;
+  background: var(--primary);
+  border-radius: 8px;
+}
+.mg-pass-apply a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

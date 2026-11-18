@@ -98,7 +98,8 @@
         <input type="text" placeholder="输入邀请码" maxlength="16" autocomplete="off" spellcheck="false" data-role="passinput">
         <button type="button" data-role="passredeem">解锁</button>
       </p>
-      <p class="mg-pass-box-hint">通行证有效期 90 天，期间获取下载链接不限次；没有码也可以去<a href="/pass/">通行证页</a>看怎么申请。</p>
+      <p class="mg-pass-box-hint">持通行证期间获取下载链接不限次，有效期以邀请码为准；没有通行证也不影响每日 5 次额度。</p>
+      <p class="mg-pass-apply">还没有邀请码？<a href="/pass/">去通行证页看怎么申请 →</a></p>
     </div>
     {{- if hasSuffix (.Params.netdisk_file | default "") ".sssEFs" }}
     <p class="mg-arc-note">
@@ -238,7 +239,7 @@
             try { localStorage.setItem('mgPass', JSON.stringify({ pid: b.pid, exp: b.exp })); } catch (e) {}
             passPid = b.pid;
             markPassMode(b.exp);
-            statusEl.textContent = '通行证已生效，下载不限次（90 天）';
+            statusEl.textContent = '通行证已生效，下载不限次';
             if (then) then();
           } else {
             statusEl.textContent = b.message || '邀请码无效，请检查后重试';
