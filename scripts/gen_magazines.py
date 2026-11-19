@@ -31,6 +31,17 @@ OUT_THUMBS = HERE / "static" / "thumbs" / "magazines"
 _CACHE_PATH = HERE / "scripts" / "source_path.txt"
 
 
+def safe_write(path: Path, text: str) -> None:
+    """写文本；若目标文件被别的进程持有句柄（Windows 上 write 会 13 拒绝访问），
+    改为写临时文件再 os.replace 覆盖。"""
+    try:
+        path.write_text(text, encoding="utf-8")
+    except PermissionError:
+        tmp = path.with_name(path.name + f".tmp{os.getpid()}")
+        tmp.write_text(text, encoding="utf-8")
+        os.replace(tmp, path)
+
+
 def _source_root() -> Path:
     """杂志库位置：环境变量 MAGAZINE_SRC > scripts/source_path.txt > 默认路径。
 
@@ -448,13 +459,18 @@ def write_md(rec, mag):
     # 刊物/期次/页数/文件/分类，重复输出会让访客看到两遍。只保留 front matter。
     out = OUT_CONTENT / slug / f"{rec['key']}.md"
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text("\n".join(fm), encoding="utf-8")
+    safe_write(out, "\n".join(fm))
     return out
 
 
 def write_section_indexes(mags, latest_cover):
     for mag in mags:
         d = OUT_CONTENT / mag["slug"]
+        # 空壳刊物（自动登记的占位目录，没有任何期次）不建索引，避免上线空栏目
+        has_issue = d.exists() and any(
+            p.name != "_index.md" for p in d.glob("*.md"))
+        if not has_issue:
+            continue
         d.mkdir(parents=True, exist_ok=True)
         cover = latest_cover.get(mag["slug"], "")
         lines = [
@@ -470,14 +486,12 @@ def write_section_indexes(mags, latest_cover):
         if cover:
             lines += ["cover:", f'  thumb: "{cover}"', f'  alt: "{mag["name"]}"']
         lines += ["---", "", mag.get("desc", ""), ""]
-        (d / "_index.md").write_text("\n".join(lines), encoding="utf-8")
+        safe_write(d / "_index.md", "\n".join(lines))
 
     root = OUT_CONTENT / "_index.md"
     root.parent.mkdir(parents=True, exist_ok=True)
-    root.write_text(
-        "---\ntitle: \"杂志库\"\ndescription: \"按期更新的英文原版杂志合集\"\n"
-        "---\n\n按刊物浏览，点进任意一期可看封面、内页预览与下载信息。\n",
-        encoding="utf-8")
+    safe_write(root, "---\ntitle: \"杂志库\"\ndescription: \"按期更新的英文原版杂志合集\"\n"
+                "---\n\n按刊物浏览，点进任意一期可看封面、内页预览与下载信息。\n")
 
 
 # ---------------------------------------------------------------- main
@@ -543,8 +557,10 @@ def main():
             continue
         _, end, label = parsed
         y, m, d = end
-        edition = detect_edition(pub_part, editions)
-        if not edition:
+        # no_edition: 刊名本身含 China/Africa 等地名词时，别误认成地区版
+        # （如 China Africa / China Report / China Pictorial）
+        edition = "" if mag.get("no_edition") else detect_edition(pub_part, editions)
+        if not edition and not mag.get("no_edition"):
             # 文件名没写国家时，退回到目录名（如 FOR/2026/USA/、ReadersDigest/2025/India/）
             for part in rel.parts[1:-1]:
                 edition = detect_edition(part, editions)
@@ -641,9 +657,9 @@ def main():
     total = sum(f.stat().st_size for f in OUT_THUMBS.rglob(f"*.{IMG_EXT}")) if OUT_THUMBS.exists() else 0
     print(f"\n完成：生成 {done} 期，跳过 {skipped} 期，耗时 {time.time() - t0:.0f}s")
     print(f"缩略图总量：{total / 1048576:.0f} MB")
-    json.dump([{k: str(v) for k, v in r.items()} for r in records],
-              open(HERE / ".magazines.json", "w", encoding="utf-8"),
-              ensure_ascii=False, indent=1)
+    safe_write(HERE / ".magazines.json", json.dumps(
+        [{k: str(v) for k, v in r.items()} for r in records],
+        ensure_ascii=False, indent=1))
 
 
 if __name__ == "__main__":

@@ -335,6 +335,42 @@ magazines:
     adult: false
     desc: "Riche Magazine，时尚人像与模特专访月刊。"
 
+  - slug: china-africa
+    name: "China Africa"
+    category: "时事新闻"
+    folders: ["CAF"]
+    cadence: "monthly"
+    color: "#0b6e4f"
+    no_edition: true
+    desc: "中非话题英文刊，聚焦中国与非洲的经贸、投资与人文交流。"
+
+  - slug: champak
+    name: "Champak"
+    category: "儿童教育"
+    folders: ["CPE"]
+    cadence: "monthly"
+    color: "#e07b1a"
+    no_edition: true
+    desc: "Champak 英文版，印度老牌儿童漫画与故事月刊。"
+
+  - slug: china-pictorial
+    name: "China Pictorial"
+    category: "文化生活"
+    folders: ["CPT"]
+    cadence: "monthly"
+    color: "#c8102e"
+    no_edition: true
+    desc: "人民画报英文版，以图片记录中国社会发展与风土人文。"
+
+  - slug: china-report
+    name: "China Report"
+    category: "时事新闻"
+    folders: ["CRP"]
+    cadence: "quarterly"
+    color: "#1f4e79"
+    no_edition: true
+    desc: "China Report，关注中国与南亚的学术季刊，SAGE 出版。"
+
   # ---------- 预留位 ----------
   # 若要新增刊种，照抄一段改字段即可；PDF 目录不存在时脚本会跳过，不会报错。
 

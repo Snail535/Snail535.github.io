@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import sys
 import time
@@ -28,6 +29,15 @@ CONTENT = ROOT / "content" / "magazines"
 LINKS = HERE / ".links_kv.json"
 TREE = HERE / ".cloud_tree.json"
 OUT = HERE / ".new_shares_batch3.json"
+
+def safe_write(path: Path, text: str) -> None:
+    try:
+        path.write_text(text, encoding="utf-8", newline="")
+    except PermissionError:
+        tmp = path.with_name(path.name + f".tmp{os.getpid()}")
+        tmp.write_text(text, encoding="utf-8", newline="")
+        os.replace(tmp, path)
+
 
 sys.path.insert(0, str(HERE))
 # repair_shares 依赖 requests，只在真正建分享时导入（--apply-only 用不到）
@@ -114,7 +124,7 @@ def mark_md(slug: str, key: str, cloud_name: str) -> bool:
         text = re.sub(r"^(download_pwd:.*)$",
                       lambda m: f'{m.group(1)}\nnetdisk_file: "{cloud_name}"',
                       text, count=1, flags=re.M)
-    md.write_text(text, encoding="utf-8", newline="")
+    safe_write(md, text)
     return True
 
 
@@ -126,11 +136,10 @@ def write_back(ok: list[dict]) -> int:
     links = json.loads(LINKS.read_text(encoding="utf-8"))
     for it in ok:
         links[it["key"]] = {"url": it["url"], "pwd": ""}
-    LINKS.write_text(json.dumps(links, ensure_ascii=False, indent=1), encoding="utf-8")
+    safe_write(LINKS, json.dumps(links, ensure_ascii=False, indent=1))
     bulk = [{"key": "i:" + k, "value": json.dumps(v, ensure_ascii=False)}
             for k, v in links.items()]
-    (HERE / ".links_bulk.json").write_text(json.dumps(bulk, ensure_ascii=False, indent=0),
-                                           encoding="utf-8")
+    safe_write(HERE / ".links_bulk.json", json.dumps(bulk, ensure_ascii=False, indent=0))
     print(f"[apply] 写回 md {n_md} 条、.links_kv.json（含 bulk）共 {len(links)} 条")
     return n_md
 
@@ -201,8 +210,7 @@ def main():
         print(f"  OK {it['key']:<36} {it['url']}", flush=True)
         time.sleep(0.3)
 
-    OUT.write_text(json.dumps({"done": ok, "failed": failed}, ensure_ascii=False, indent=1),
-                   encoding="utf-8")
+    safe_write(OUT, json.dumps({"done": ok, "failed": failed}, ensure_ascii=False, indent=1))
     print(f"\n成功 {len(ok)}，失败 {len(failed)} -> {OUT}")
 
     if args.apply and ok:

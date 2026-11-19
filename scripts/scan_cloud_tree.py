@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 import sys
 import time
 from pathlib import Path
@@ -45,7 +46,13 @@ def main() -> None:
                 })
 
     rec(q.walk(ROOT), ROOT, 0)
-    OUT.write_text(json.dumps(rows, ensure_ascii=False, indent=0), encoding="utf-8")
+    text = json.dumps(rows, ensure_ascii=False, indent=0)
+    try:
+        OUT.write_text(text, encoding="utf-8")
+    except PermissionError:
+        tmp = OUT.with_name(OUT.name + ".tmp")
+        tmp.write_text(text, encoding="utf-8")
+        os.replace(tmp, OUT)
     print(f"\n目录数 {dirs}，文件数 {len(rows)} → {OUT}")
 
 

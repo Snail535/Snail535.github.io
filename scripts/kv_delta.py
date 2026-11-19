@@ -1,5 +1,6 @@
 """把 .links_kv.json 里 KV 还没写过的条目增量写入（省每日 1000 写配额）"""
 import json
+import os
 import sys
 import urllib.request
 from pathlib import Path
@@ -48,8 +49,14 @@ def main():
     print(f"待补 {len(patch)} 条")
     for p in patch[:5]:
         print("  ", p["key"])
-    (HERE / ".links_delta.json").write_text(json.dumps(patch, ensure_ascii=False, indent=0),
-                                            encoding="utf-8")
+    delta_text = json.dumps(patch, ensure_ascii=False, indent=0)
+    delta_path = HERE / ".links_delta.json"
+    try:
+        delta_path.write_text(delta_text, encoding="utf-8")
+    except PermissionError:
+        tmp = delta_path.with_name(delta_path.name + f".tmp{os.getpid()}")
+        tmp.write_text(delta_text, encoding="utf-8")
+        os.replace(tmp, delta_path)
     if not apply or not patch:
         return
     for i in range(0, len(patch), 500):
