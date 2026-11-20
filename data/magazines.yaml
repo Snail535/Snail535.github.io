@@ -371,6 +371,60 @@ magazines:
     no_edition: true
     desc: "China Report，关注中国与南亚的学术季刊，SAGE 出版。"
 
+  - slug: learn-hot-english
+    name: "Learn Hot English"
+    category: "语言学习"
+    folders: ["LHE"]
+    cadence: "monthly"
+    color: "#1d4ed8"
+    no_edition: true
+    desc: "Learn Hot English（流行英语），面向英语学习者的词汇语法月刊。"
+
+  - slug: china-today
+    name: "China Today"
+    category: "时事新闻"
+    folders: ["CTD"]
+    cadence: "monthly"
+    color: "#d0342c"
+    no_edition: true
+    desc: "China Today（《今日中国》英文版），中国主题的综合时事月刊。"
+
+  - slug: china-report-asean
+    name: "China Report ASEAN"
+    category: "时事新闻"
+    folders: ["CRA"]
+    cadence: "monthly"
+    color: "#0f766e"
+    no_edition: true
+    desc: "China Report ASEAN（中国东盟报道），聚焦中国与东盟经贸与关系的英文月刊。"
+
+  - slug: i-love-english-junior
+    name: "I Love English Junior"
+    category: "语言学习"
+    folders: ["ILE"]
+    cadence: "monthly"
+    color: "#e11d48"
+    no_edition: true
+    desc: "I Love English Junior（我爱英语少儿版），青少年英语学习月刊。"
+
+  - slug: daphnes-diary
+    name: "Daphne's Diary"
+    category: "文化生活"
+    folders: ["DPD"]
+    cadence: "monthly"
+    color: "#a16207"
+    no_edition: true
+    desc: "Daphne's Diary，手账拼贴与手作灵感主题的手账刊，附贴纸与海报。"
+
+  - slug: spielbox
+    name: "Spielbox"
+    category: "桌游生活"
+    folders: ["SPB"]
+    cadence: "monthly"
+    color: "#7c3aed"
+    no_edition: true
+    desc: "Spielbox，德国老牌桌游杂志，附赠桌游扩展与玩法评测。"
+
   # ---------- 预留位 ----------
   # 若要新增刊种，照抄一段改字段即可；PDF 目录不存在时脚本会跳过，不会报错。
 

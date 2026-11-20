@@ -1,0 +1,726 @@
+# ============================================================
+# 期次覆盖表 —— 文件名里没有月份、或与既有页面 key 规则不一致的期次
+# ============================================================
+# 键是相对「原文档」根目录的路径（用 / 分隔）。可用字段：
+#   date:    覆盖期次年月（YYYY-MM 或 YYYY-MM-DD）
+#   key:     覆盖期次 key（与 content/magazines/<slug>/<key>.md 对应）
+#   label:   覆盖期次显示文案
+#   edition: 覆盖地区版
+#   skip:    true 表示这份 PDF 与已收录期次重复，不再单独建页
+#   cloud:   对应的夸克云盘文件（供建分享脚本使用，生成器本身不读）
+#
+# 由 scripts/build_batch5_overrides.py 生成，改动请同时改脚本。
+
+"LHE/2024/Learn_Hot_English_-_Issue_260_-_January_2024.pdf":
+  date: "2024-01"
+  key: "2024-01-issue-260"
+  label: "2024 年 1 月 · Issue 260"
+  cloud: "外文期刊/月刊/LHE/2024/LHE260.jpg"
+
+"LHE/2024/Learn_Hot_English_-_Issue_261_-_February_2024.pdf":
+  date: "2024-02"
+  key: "2024-02-issue-261"
+  label: "2024 年 2 月 · Issue 261"
+  cloud: "外文期刊/月刊/LHE/2024/LHE261.jpg"
+
+"LHE/2024/Learn_Hot_English_-_Issue_262_-_March_2024.pdf":
+  date: "2024-03"
+  key: "2024-03-issue-262"
+  label: "2024 年 3 月 · Issue 262"
+  cloud: "外文期刊/月刊/LHE/2024/LHE262.jpg"
+
+"LHE/2024/Learn_Hot_English_-_Issue_263_-_April_2024.pdf":
+  date: "2024-04"
+  key: "2024-04-issue-263"
+  label: "2024 年 4 月 · Issue 263"
+  cloud: "外文期刊/月刊/LHE/2024/LHE263.jpg"
+
+"LHE/2024/Learn_Hot_English_-_Issue_264_-_May_2024.pdf":
+  date: "2024-05"
+  key: "2024-05-issue-264"
+  label: "2024 年 5 月 · Issue 264"
+  cloud: "外文期刊/月刊/LHE/2024/LHE264.jpg"
+
+"LHE/2024/Learn_Hot_English_-_Issue_265_-_June_2024.pdf":
+  date: "2024-06"
+  key: "2024-06-issue-265"
+  label: "2024 年 6 月 · Issue 265"
+  cloud: "外文期刊/月刊/LHE/2024/LHE265.jpg"
+
+"LHE/2024/Learn_Hot_English_-_Issue_266_-_July_2024.pdf":
+  date: "2024-07"
+  key: "2024-07-issue-266"
+  label: "2024 年 7 月 · Issue 266"
+  cloud: "外文期刊/月刊/LHE/2024/LHE266.jpg"
+
+"LHE/2024/Learn_Hot_English_-_Issue_268_2024.pdf":
+  date: "2024-09"
+  key: "2024-09-issue-268"
+  label: "2024 年 9 月 · Issue 268"
+  cloud: "外文期刊/月刊/LHE/2024/LHE268.jpg"
+
+"LHE/2024/Learn_Hot_English_-_Issue_270_2024_freemagazines_top.pdf":
+  date: "2024-11"
+  key: "2024-11-issue-270"
+  label: "2024 年 11 月 · Issue 270"
+  cloud: "外文期刊/月刊/LHE/2024/LHE270.jpg"
+
+"LHE/2024/Learn_Hot_English_-_Issue_271_2024.pdf":
+  date: "2024-12"
+  key: "2024-12-issue-271"
+  label: "2024 年 12 月 · Issue 271"
+  cloud: "外文期刊/月刊/LHE/2024/LHE271.jpg"
+
+"LHE/2024/Learn_Hot_English_I267_2024_freemagazines_top.pdf":
+  skip: true
+
+"LHE/2024/Learn_Hot_English_I269_2024_freemagazines_top.pdf":
+  date: "2024-10"
+  key: "2024-10-issue-269"
+  label: "2024 年 10 月 · Issue 269"
+  cloud: "外文期刊/月刊/LHE/2024/LHE269.jpg"
+
+"LHE/2024/Learn_Hot_English_N_267_-_August_2024.pdf":
+  date: "2024-08"
+  key: "2024-08-issue-267"
+  label: "2024 年 8 月 · Issue 267"
+  cloud: "外文期刊/月刊/LHE/2024/LHE267.jpg"
+
+"LHE/2025/Learn_Hot_English_-_Issue_272_2025.pdf":
+  date: "2025-01"
+  key: "2025-01-issue-272"
+  label: "2025 年 1 月 · Issue 272"
+  cloud: "外文期刊/月刊/LHE/2025/LHE272.jpg"
+
+"LHE/2025/Learn_Hot_English_-_Issue_273_2025.pdf":
+  date: "2025-02"
+  key: "2025-02-issue-273"
+  label: "2025 年 2 月 · Issue 273"
+  cloud: "外文期刊/月刊/LHE/2025/LHE273.jpg"
+
+"LHE/2025/Learn_Hot_English_-_Issue_274_2025.pdf":
+  date: "2025-03"
+  key: "2025-03-issue-274"
+  label: "2025 年 3 月 · Issue 274"
+  cloud: "外文期刊/月刊/LHE/2025/LHE274.jpg"
+
+"LHE/2025/Learn_Hot_English_-_Issue_275_2025.pdf":
+  date: "2025-04"
+  key: "2025-04-issue-275"
+  label: "2025 年 4 月 · Issue 275"
+  cloud: "外文期刊/月刊/LHE/2025/LHE275.jpg"
+
+"LHE/2025/Learn_Hot_English_-_Issue_276_2025.pdf":
+  date: "2025-05"
+  key: "2025-05-issue-276"
+  label: "2025 年 5 月 · Issue 276"
+  cloud: "外文期刊/月刊/LHE/2025/LHE276.jpg"
+
+"LHE/2025/Learn_Hot_English_-_Issue_277_2025.pdf":
+  date: "2025-06"
+  key: "2025-06-issue-277"
+  label: "2025 年 6 月 · Issue 277"
+  cloud: "外文期刊/月刊/LHE/2025/LHE277.jpg"
+
+"LHE/2025/Learn_Hot_English_-_Issue_278_2025.pdf":
+  date: "2025-07"
+  key: "2025-07-issue-278"
+  label: "2025 年 7 月 · Issue 278"
+  cloud: "外文期刊/月刊/LHE/2025/LHE278.jpg"
+
+"LHE/2025/Learn_Hot_English_-_Issue_279_2025.pdf":
+  date: "2025-08"
+  key: "2025-08-issue-279"
+  label: "2025 年 8 月 · Issue 279"
+  cloud: "外文期刊/月刊/LHE/2025/LHE279.jpg"
+
+"LHE/2025/Learn_Hot_English_-_Issue_280_2025.pdf":
+  date: "2025-09"
+  key: "2025-09-issue-280"
+  label: "2025 年 9 月 · Issue 280"
+  cloud: "外文期刊/月刊/LHE/2025/LHE280.jpg"
+
+"LHE/2025/Learn_Hot_English_-_Issue_281_2025.pdf":
+  date: "2025-10"
+  key: "2025-10-issue-281"
+  label: "2025 年 10 月 · Issue 281"
+  cloud: "外文期刊/月刊/LHE/2025/LHE281.jpg"
+
+"LHE/2025/Learn_Hot_English_-_Issue_282_2025.pdf":
+  date: "2025-11"
+  key: "2025-11-issue-282"
+  label: "2025 年 11 月 · Issue 282"
+  cloud: "外文期刊/月刊/LHE/2025/LHE282.jpg"
+
+"LHE/2025/Learn_Hot_English_-_Issue_283_2025.pdf":
+  date: "2025-12"
+  key: "2025-12-issue-283"
+  label: "2025 年 12 月 · Issue 283"
+  cloud: "外文期刊/月刊/LHE/2025/LHE283.jpg"
+
+"LHE/2026/Learn_Hot_English_-_Issue_284_2026.pdf":
+  date: "2026-01"
+  key: "2026-01-issue-284"
+  label: "2026 年 1 月 · Issue 284"
+  cloud: "外文期刊/月刊/LHE/2026/LHE284.jpg"
+
+"LHE/2026/Learn_Hot_English_-_Issue_285_2026.pdf":
+  date: "2026-02"
+  key: "2026-02-issue-285"
+  label: "2026 年 2 月 · Issue 285"
+  cloud: "外文期刊/月刊/LHE/2026/LHE285.jpg"
+
+"LHE/2026/Learn_Hot_English_-_Issue_286_2026.pdf":
+  date: "2026-03"
+  key: "2026-03-issue-286"
+  label: "2026 年 3 月 · Issue 286"
+  cloud: "外文期刊/月刊/LHE/2026/LHE286.jpg"
+
+"LHE/2026/Learn_Hot_English_-_Issue_287_2026.pdf":
+  date: "2026-04"
+  key: "2026-04-issue-287"
+  label: "2026 年 4 月 · Issue 287"
+  cloud: "外文期刊/月刊/LHE/2026/LHE287.jpg"
+
+"LHE/2026/Learn_Hot_English_-_Issue_288_2026.pdf":
+  date: "2026-05"
+  key: "2026-05-issue-288"
+  label: "2026 年 5 月 · Issue 288"
+  cloud: "外文期刊/月刊/LHE/2026/LHE288.jpg"
+
+"LHE/2026/Learn_Hot_English_-_Issue_289_2026.pdf":
+  date: "2026-06"
+  key: "2026-06-issue-289"
+  label: "2026 年 6 月 · Issue 289"
+  cloud: "外文期刊/月刊/LHE/2026/LHE289.jpg"
+
+"LHE/2026/Learn_Hot_English_-_Issue_290_2026.pdf":
+  date: "2026-07"
+  key: "2026-07-issue-290"
+  label: "2026 年 7 月 · Issue 290"
+  cloud: "外文期刊/月刊/LHE/2026/LHE290.jpg"
+
+"LHE/2026/Learn_Hot_English_-_Issue_291_2026.pdf":
+  date: "2026-08"
+  key: "2026-08-issue-291"
+  label: "2026 年 8 月 · Issue 291"
+  cloud: "外文期刊/月刊/LHE/2026/LHE291.jpg"
+
+"LHE/2026/Learn_Hot_English_-_Issue_292_2026.pdf":
+  date: "2026-09"
+  key: "2026-09-issue-292"
+  label: "2026 年 9 月 · Issue 292"
+  cloud: "外文期刊/月刊/LHE/2026/LHE292.jpg"
+
+"LHE/2026/Learn_Hot_English_-_Issue_293_2026.pdf":
+  date: "2026-10"
+  key: "2026-10-issue-293"
+  label: "2026 年 10 月 · Issue 293"
+  cloud: "外文期刊/月刊/LHE/2026/LHE293.jpg"
+
+"LHE/2026/Learn_Hot_English_-_Issue_294_2026.pdf":
+  date: "2026-11"
+  key: "2026-11-issue-294"
+  label: "2026 年 11 月 · Issue 294"
+  cloud: "外文期刊/月刊/LHE/2026/LHE294.jpg"
+
+"SPB/2024/Spielbox_English_Edition_-_Issue_2_2024.pdf":
+  date: "2024-02"
+  key: "2024-02"
+  label: "2024 年 2 月"
+  cloud: "外文期刊/月刊/SPB/2024/SPB2402.jpg"
+
+"SPB/2024/Spielbox_English_Edition_-_Issue_4_2024.pdf":
+  date: "2024-04"
+  key: "2024-04"
+  label: "2024 年 4 月"
+  cloud: "外文期刊/月刊/SPB/2024/SPB2404.jpg"
+
+"SPB/2024/Spielbox_English_Edition_-_Issue_6_2024.pdf":
+  date: "2024-06"
+  key: "2024-06"
+  label: "2024 年 6 月"
+  cloud: "外文期刊/月刊/SPB/2024/SPB2406.jpg"
+
+"SPB/2024/Spielbox_I1_2024_freemagazines_top.pdf":
+  date: "2024-01"
+  key: "2024-01"
+  label: "2024 年 1 月"
+  cloud: "外文期刊/月刊/SPB/2024/SPB2401.jpg"
+
+"SPB/2024/Spielbox_I5_2024_freemagazines_top.pdf":
+  date: "2024-05"
+  key: "2024-05"
+  label: "2024 年 5 月"
+  cloud: "外文期刊/月刊/SPB/2024/SPB2405.jpg"
+
+"SPB/2025/Spielbox_English_Edition_-_Issue_1_2025.pdf":
+  date: "2025-01"
+  key: "2025-01"
+  label: "2025 年 1 月"
+  cloud: "外文期刊/月刊/SPB/2025/SPB2501.jpg"
+
+"SPB/2025/Spielbox_English_Edition_-_Issue_2_2025.pdf":
+  date: "2025-02"
+  key: "2025-02"
+  label: "2025 年 2 月"
+  cloud: "外文期刊/月刊/SPB/2025/SPB2502.jpg"
+
+"SPB/2025/Spielbox_English_Edition_-_Issue_3_2025.pdf":
+  date: "2025-03"
+  key: "2025-03"
+  label: "2025 年 3 月"
+  cloud: "外文期刊/月刊/SPB/2025/SPB2503.jpg"
+
+"SPB/2025/Spielbox_English_Edition_-_Issue_4_2025.pdf":
+  date: "2025-04"
+  key: "2025-04"
+  label: "2025 年 4 月"
+  cloud: "外文期刊/月刊/SPB/2025/SPB2504.jpg"
+
+"SPB/2025/Spielbox_English_Edition_-_Issue_5_2025.pdf":
+  date: "2025-05"
+  key: "2025-05"
+  label: "2025 年 5 月"
+  cloud: "外文期刊/月刊/SPB/2025/SPB2505.jpg"
+
+"SPB/2025/Spielbox_English_Edition_-_Issue_6_2025.pdf":
+  date: "2025-06"
+  key: "2025-06"
+  label: "2025 年 6 月"
+  cloud: "外文期刊/月刊/SPB/2025/SPB2506.jpg"
+
+"SPB/2025/Spielbox_English_Edition_-_Issue_7_2025.pdf":
+  date: "2025-07"
+  key: "2025-07"
+  label: "2025 年 7 月"
+  cloud: "外文期刊/月刊/SPB/2025/SPB2507.jpg"
+
+"SPB/2026/Spielbox_English_Edition_-_Issue_1_2026.pdf":
+  date: "2026-01"
+  key: "2026-01"
+  label: "2026 年 1 月"
+  cloud: "外文期刊/月刊/SPB/2026/SPB2601.jpg"
+
+"SPB/2026/Spielbox_English_Edition_-_Issue_2_2026.pdf":
+  date: "2026-02"
+  key: "2026-02"
+  label: "2026 年 2 月"
+  cloud: "外文期刊/月刊/SPB/2026/SPB2602.jpg"
+
+"SPB/2026/Spielbox_English_Edition_-_Issue_3_2026.pdf":
+  date: "2026-03"
+  key: "2026-03"
+  label: "2026 年 3 月"
+  cloud: "外文期刊/月刊/SPB/2026/SPB2603.jpg"
+
+"SPB/2026/Spielbox_English_Edition_-_Issue_4_2026.pdf":
+  date: "2026-04"
+  key: "2026-04"
+  label: "2026 年 4 月"
+  cloud: "外文期刊/月刊/SPB/2026/SPB2604.jpg"
+
+"SPB/2026/Spielbox_English_Edition_-_Issue_5_2026.pdf":
+  date: "2026-05"
+  key: "2026-05"
+  label: "2026 年 5 月"
+  cloud: "外文期刊/月刊/SPB/2026/SPB2605.jpg"
+
+"DPD/2024/Daphne_39_s_Diary_English_Edition_-_12_November_2024.pdf":
+  date: "2024-11-12"
+  key: "2024-11-12"
+  label: "2024 年 11 月 12 日"
+  cloud: "外文期刊/周刊/DPD/2024/DPD2411.jpg"
+
+"DPD/2024/Daphne_39_s_Diary_English_Edition_-_25_May_2024.pdf":
+  date: "2024-05-25"
+  key: "2024-05-25"
+  label: "2024 年 5 月 25 日"
+  cloud: "外文期刊/周刊/DPD/2024/DPD2405.jpg"
+
+"DPD/2024/Daphnes_Diary_I3_2024_freemagazines_top.pdf":
+  date: "2024-04"
+  key: "2024-04"
+  label: "2024 年 4 月 · No.3"
+  cloud: "外文期刊/周刊/DPD/2024/DPD24N03.jpg"
+
+"DPD/2024/Daphnes_Diary_I5_2024_freemagazines_top.pdf":
+  date: "2024-07"
+  key: "2024-07"
+  label: "2024 年 7 月 · No.5"
+  cloud: "外文期刊/周刊/DPD/2024/DPD24N05.jpg"
+
+"DPD/2024/Daphnes_Diary_No4_2024_freemagazines_top.pdf":
+  skip: true
+
+"DPD/2024/Daphnes_Diary_No6_2024_freemagazines_top.pdf":
+  date: "2024-08"
+  key: "2024-08"
+  label: "2024 年 8 月 · No.6"
+  cloud: "外文期刊/周刊/DPD/2024/DPD24N06.jpg"
+
+"DPD/2025/Daphnes_Diary_English_Edition_-_11_November_2025.pdf":
+  date: "2025-11-11"
+  key: "2025-11-11"
+  label: "2025 年 11 月 11 日"
+  cloud: "外文期刊/周刊/DPD/2025/DPD2511.jpg"
+
+"DPD/2025/Daphnes_Diary_English_Edition_-_19_August_2025.pdf":
+  date: "2025-08-19"
+  key: "2025-08-19"
+  label: "2025 年 8 月 19 日"
+  cloud: "外文期刊/周刊/DPD/2025/DPD2508.jpg"
+
+"DPD/2025/Daphnes_Diary_English_Edition_-_25_February_2025.pdf":
+  date: "2025-02-25"
+  key: "2025-02-25"
+  label: "2025 年 2 月 25 日"
+  cloud: "外文期刊/周刊/DPD/2025/DPD2502.jpg"
+
+"DPD/2025/Daphnes_Diary_English_Edition_-_27_May_2025.pdf":
+  date: "2025-05-27"
+  key: "2025-05-27"
+  label: "2025 年 5 月 27 日"
+  cloud: "外文期刊/周刊/DPD/2025/DPD2505.jpg"
+
+"DPD/2025/Daphnes_Diary_English_Edition_-_30_September_2025.pdf":
+  date: "2025-09-30"
+  key: "2025-09-30"
+  label: "2025 年 9 月 30 日"
+  cloud: "外文期刊/周刊/DPD/2025/DPD2509.jpg"
+
+"DPD/2025/Daphnes_Diary_English_Edition_-_7_January_2025.pdf":
+  date: "2025-01-07"
+  key: "2025-01-07"
+  label: "2025 年 1 月 7 日"
+  cloud: "外文期刊/周刊/DPD/2025/DPD2501.jpg"
+
+"DPD/2025/Daphnes_Diary_English_Edition_-_8_July_2025.pdf":
+  date: "2025-07-08"
+  key: "2025-07-08"
+  label: "2025 年 7 月 8 日"
+  cloud: "外文期刊/周刊/DPD/2025/DPD2507.jpg"
+
+"DPD/2025/Daphnes_Diary_No4_2025_freemagazines_top.pdf":
+  skip: true
+
+"DPD/2026/Daphnes_Diary_English_Edition_-_10_November_2026.pdf":
+  date: "2026-11-10"
+  key: "2026-11-10"
+  label: "2026 年 11 月 10 日"
+  cloud: "外文期刊/周刊/DPD/2026/DPD2611.jpg"
+
+"DPD/2026/Daphnes_Diary_English_Edition_-_18_August_2026.pdf":
+  date: "2026-08-18"
+  key: "2026-08-18"
+  label: "2026 年 8 月 18 日"
+  cloud: "外文期刊/周刊/DPD/2026/DPD2608.jpg"
+
+"DPD/2026/Daphnes_Diary_English_Edition_-_24_February_2026.pdf":
+  date: "2026-02-24"
+  key: "2026-02-24"
+  label: "2026 年 2 月 24 日"
+  cloud: "外文期刊/周刊/DPD/2026/DPD2602.jpg"
+
+"DPD/2026/Daphnes_Diary_English_Edition_-_26_May_2026.pdf":
+  date: "2026-05-26"
+  key: "2026-05-26"
+  label: "2026 年 5 月 26 日"
+  cloud: "外文期刊/周刊/DPD/2026/DPD2605.jpg"
+
+"DPD/2026/Daphnes_Diary_English_Edition_-_29_September_2026.pdf":
+  date: "2026-09-29"
+  key: "2026-09-29"
+  label: "2026 年 9 月 29 日"
+  cloud: "外文期刊/周刊/DPD/2026/DPD2609.jpg"
+
+"DPD/2026/Daphnes_Diary_English_Edition_-_6_January_2026.pdf":
+  date: "2026-01-06"
+  key: "2026-01-06"
+  label: "2026 年 1 月 6 日"
+  cloud: "外文期刊/周刊/DPD/2026/DPD2601.jpg"
+
+"DPD/2026/Daphnes_Diary_English_Edition_-_7_April_2026.pdf":
+  date: "2026-04-07"
+  key: "2026-04-07"
+  label: "2026 年 4 月 7 日"
+  cloud: "外文期刊/周刊/DPD/2026/DPD2604.jpg"
+
+"DPD/2026/Daphnes_Diary_English_Edition_-_7_July_2026.pdf":
+  date: "2026-07-07"
+  key: "2026-07-07"
+  label: "2026 年 7 月 7 日"
+  cloud: "外文期刊/周刊/DPD/2026/DPD2607.jpg"
+
+"CRA/2024/China_Report_ASEAN_08_09_2024_freemagazines_top.pdf":
+  date: "2024-08"
+  key: "2024-08"
+  label: "2024 年 8 月 – 9 月"
+  cloud: "外文期刊/月刊/CRA/2024/CRA2408.jpg"
+
+"ILE/2026/I_Love_English_Junior_-_Mai-Juni_2026.pdf":
+  date: "2026-05"
+  key: "2026-05"
+  label: "2026 年 5 月 – 6 月"
+  cloud: "外文期刊/月刊/ILE/2026/ILE2605.jpg"
+
+"ILE/2026/I_Love_English_Junior_-_July-August_2026.pdf":
+  date: "2026-07"
+  key: "2026-07"
+  label: "2026 年 7 月 – 8 月"
+  cloud: "外文期刊/月刊/ILE/2026/ILE2607.jpg"
+
+"CRP/2024/China_Report_03_2024.pdf":
+  date: "2024-03"
+  key: "2024-03"
+  label: "2024 年 3 月"
+  cloud: "外文期刊/周刊/CRP/2024/CRP2403.jpg"
+
+"CRP/2024/China_Report_05_2024_freemagazines_top.pdf":
+  date: "2024-05"
+  key: "2024-05"
+  label: "2024 年 5 月"
+  cloud: "外文期刊/周刊/CRP/2024/CRP2405.jpg"
+
+"CRP/2024/China_Report_06_2024_freemagazines_top.pdf":
+  date: "2024-06"
+  key: "2024-06"
+  label: "2024 年 6 月"
+  cloud: "外文期刊/周刊/CRP/2024/CRP2406.jpg"
+
+"CRP/2024/China_Report_07_2024_freemagazines_top.pdf":
+  date: "2024-07"
+  key: "2024-07"
+  label: "2024 年 7 月"
+  cloud: "外文期刊/周刊/CRP/2024/CRP2407.jpg"
+
+"CRP/2024/China_Report_09_2024_freemagazines_top.pdf":
+  date: "2024-09"
+  key: "2024-09"
+  label: "2024 年 9 月"
+  cloud: "外文期刊/周刊/CRP/2024/CRP2409.jpg"
+
+"CRP/2025/China_Report_02_2025_freemagazines_top.pdf":
+  date: "2025-02"
+  key: "2025-02"
+  label: "2025 年 2 月"
+  cloud: "外文期刊/周刊/CRP/2025/CRP2502.jpg"
+
+"CRP/2025/China_Report_05_2025_freemagazines_top.pdf":
+  skip: true
+
+"FHM/2021/Sweden/FHM_Sweden_-_February_2021(1).pdf":
+  skip: true
+
+"FHM/2023/India/FHM_India_-_Volume_14_Issue_9_2023.pdf":
+  date: "2023-09"
+  key: "2023-09-india-issue-9"
+  label: "2023 年 9 月 · Issue 9"
+  cloud: "外文期刊/月刊/FHM/2023/India/FHMIN2309.jpg"
+
+"FOR/2026/Africa/Forbes_Africa_Dec2025-Jan_2026.pdf":
+  skip: true
+
+"IOB/2022/IOB_Inside_Out_Babes_-_Spring_Edition_March_2022.pdf":
+  date: "2022-03"
+  key: "2022-03-iob-spring"
+  label: "2022 年 3 月 · Spring Edition"
+  cloud: "外文期刊/月刊/IOB/2022/IOBSP2203.jpg"
+
+"IOB/2023/IOB_Inside_Out_Babes_-_Special_Edition_January_2023.pdf":
+  date: "2023-01"
+  key: "2023-01-iob-special"
+  label: "2023 年 1 月 · Special Edition"
+  cloud: "外文期刊/月刊/IOB/2023/IOBS2301.jpg"
+
+"IOB/2024/IOB_Inside_Out_Babes_Special_Edition_-_November_2024.pdf":
+  date: "2024-11"
+  key: "2024-11-iob-special"
+  label: "2024 年 11 月 · Special Edition"
+  cloud: "外文期刊/月刊/IOB/2024/IOBS2411.jpg"
+
+"IOB/2025/IOB_Inside_Out_Babes_-_Special_Edition_February_2025.pdf":
+  date: "2025-02"
+  key: "2025-02-iob-special"
+  label: "2025 年 2 月 · Special Edition"
+  cloud: "外文期刊/月刊/IOB/2025/IOBS2502.jpg"
+
+"IOB/2025/IOB_Inside_Out_Babes_-_Special_Edition_May_2025.pdf":
+  date: "2025-05"
+  key: "2025-05-iob-special"
+  label: "2025 年 5 月 · Special Edition"
+  cloud: "外文期刊/月刊/IOB/2025/IOBS2505.jpg"
+
+"IOB/2025/IOB_Inside_Out_Babes_-_Special_Edition_June_2025.pdf":
+  date: "2025-06"
+  key: "2025-06-iob-special"
+  label: "2025 年 6 月 · Special Edition"
+  cloud: "外文期刊/月刊/IOB/2025/IOBS2506.jpg"
+
+"IOB/2025/IOB_Inside_Out_Babes_-_Special_Edition_July_2025.pdf":
+  date: "2025-07"
+  key: "2025-07-iob-special"
+  label: "2025 年 7 月 · Special Edition"
+  cloud: "外文期刊/月刊/IOB/2025/IOBS2507.jpg"
+
+"IOB/2025/IOB_Inside_Out_Babes_Special_Edition_-_November_2025.pdf":
+  date: "2025-11"
+  key: "2025-11-iob-special"
+  label: "2025 年 11 月 · Special Edition"
+  cloud: "外文期刊/月刊/IOB/2025/IOBS2511.jpg"
+
+"IOB/2026/IOB_Inside_Out_Babes_-_October_2026_Special_Edition.pdf":
+  date: "2026-10"
+  key: "2026-10-iob-special"
+  label: "2026 年 10 月 · Special Edition"
+  cloud: "外文期刊/月刊/IOB/2026/IOBS2610.jpg"
+
+"LGP/2021/Lingerie_Plus_Special_-_January_2021.pdf":
+  date: "2021-01"
+  key: "2021-01-special"
+  label: "2021 年 1 月 · Special"
+  cloud: "外文期刊/月刊/LGP/2021/LGPS2101.jpg"
+
+"LGP/2021/Lingerie_Plus_Special_-_April_2021.pdf":
+  date: "2021-04"
+  key: "2021-04-special"
+  label: "2021 年 4 月 · Special"
+  cloud: "外文期刊/月刊/LGP/2021/LGPS2104.jpg"
+
+"LGP/2021/Lingerie_Plus_Special_-_May_2021.pdf":
+  date: "2021-05"
+  key: "2021-05-special"
+  label: "2021 年 5 月 · Special"
+  cloud: "外文期刊/月刊/LGP/2021/LGPS2105.jpg"
+
+"LGP/2021/Lingerie_Plus_Special_-_June_2021.pdf":
+  date: "2021-06"
+  key: "2021-06-special"
+  label: "2021 年 6 月 · Special"
+  cloud: "外文期刊/月刊/LGP/2021/LGPS2106.jpg"
+
+"LGP/2023/Lingerie_Plus_Special_Edition_-_October_2023.pdf":
+  date: "2023-10"
+  key: "2023-10-special"
+  label: "2023 年 10 月 · Special"
+  cloud: "外文期刊/月刊/LGP/2023/LGPS2310.jpg"
+
+"LGP/2023/Lingerie_Plus_-_Special_December_2023.pdf":
+  date: "2023-12"
+  key: "2023-12-special"
+  label: "2023 年 12 月 · Special"
+  cloud: "外文期刊/月刊/LGP/2023/LGPS2312.jpg"
+
+"LGP/2024/Lingerie_Plus_Special_Edition_-_September_2024.pdf":
+  date: "2024-09"
+  key: "2024-09-special"
+  label: "2024 年 9 月 · Special"
+  cloud: "外文期刊/月刊/LGP/2024/LGPS2409.jpg"
+
+"LGP/2024/Lingerie_Plus_Special_Edition_-_October_2024.pdf":
+  date: "2024-10"
+  key: "2024-10-special"
+  label: "2024 年 10 月 · Special"
+  cloud: "外文期刊/月刊/LGP/2024/LGPS2410.jpg"
+
+"BOU/2022/Special/Boudoir_Inspiration_-_Best_of_Black_and_White_2022_Issue.pdf":
+  date: "2022-12"
+  key: "2022-12-black-and-white"
+  label: "2022 年 12 月 · Black and White"
+  cloud: "外文期刊/月刊/BOU/2022/Special/BOUBX2212.jpg"
+
+"BOU/2024/Special/Boudoir_Inspiration_-_Best_of_Black_and_White_2024_Issue.pdf":
+  date: "2024-12"
+  key: "2024-12-black-and-white"
+  label: "2024 年 12 月 · Black and White"
+  cloud: "外文期刊/月刊/BOU/2024/Special/BOUBX2412.jpg"
+
+"BOU/2024/Special/Boudoir_Inspiration_-_Best_of_Boudoir_2024_Issue.pdf":
+  date: "2024-12"
+  key: "2024-12-best-of-boudoir"
+  label: "2024 年 12 月 · Best of Boudoir"
+  cloud: "外文期刊/月刊/BOU/2024/Special/BOUBB2412.jpg"
+
+"BOU/2024/Special/Boudoir_Inspiration_-_Easter_Bunny_2024_Issue.pdf":
+  date: "2024-03"
+  key: "2024-03-easter-bunny"
+  label: "2024 年 3 月 · Easter Bunny"
+  cloud: "外文期刊/月刊/BOU/2024/Special/BOUEB2403.jpg"
+
+"BOU/2024/Special/Boudoir_Inspiration_-_Valentines_Day_2024_Couples_Boudoir_Issue.pdf":
+  date: "2024-02"
+  key: "2024-02-valentines-day-couples"
+  label: "2024 年 2 月 · Valentine's Day"
+  cloud: "外文期刊/月刊/BOU/2024/Special/BOUVD2402.jpg"
+
+"KDY/2022/Kandy_-_11_Year_Anniversary_Issue_2022.pdf":
+  date: "2022-01"
+  key: "2022-01-anniversary"
+  label: "2022 年 11 周年特刊"
+  cloud: "外文期刊/月刊/KDY/2022/KDYAN22.jpg"
+
+"KDY/2026/Kandy_Magazine_-_15_Year_Anniversary_Issue_2026.pdf":
+  date: "2026-01"
+  key: "2026-01-anniversary"
+  label: "2026 年 15 周年特刊"
+  cloud: "外文期刊/月刊/KDY/2026/KDYAN26.jpg"
+
+"KDY/2026/Kandy_Magazine_-_Midsummers_2026.pdf":
+  date: "2026-06"
+  key: "2026-06-midsummers"
+  label: "2026 年仲夏特刊"
+  cloud: "外文期刊/月刊/KDY/2026/KDYSU2606.jpg"
+
+"KDY/2024/Kandy_Magazine_-_September_2024.pdf":
+  date: "2024-09"
+  key: "2024-09-september"
+  label: "2024 年 9 月 · September"
+  cloud: "外文期刊/月刊/KDY/2024/KDY2409.jpg"
+
+"MAX/2023/USA/Maxim_USA_-_November-December_2023.pdf":
+  date: "2023-11"
+  key: "2023-11-usa"
+  label: "2023 年 11 月 – 12 月"
+  cloud: "外文期刊/月刊/MAX/2023/USA/MAXUS2311.jpg"
+
+"MAX/2023/USA/Maxim_USA_-_September-October_2023.pdf":
+  date: "2023-09"
+  key: "2023-09-usa"
+  label: "2023 年 9 月 – 10 月"
+  cloud: "外文期刊/月刊/MAX/2023/USA/MAXUS2309.jpg"
+
+"PLB/2017/Croatia/Playboy_Croatia__Kolovoz_2017.pdf":
+  date: "2017-08"
+  key: "2017-08-croatia"
+  label: "2017 年 8 月"
+  cloud: "外文期刊/月刊/PLB/2017/Croatia/PLBHR1708.jpg"
+
+"PLB/2017/Germany/Playboy_Germany_Special_Digital_Edition__Jubil_228_ums-Edition_2017.pdf":
+  date: "2017-12"
+  key: "2017-12-germany"
+  label: "2017 年 12 月 · Jubiläum 25 周年特刊"
+  cloud: "外文期刊/月刊/PLB/2017/Germany/PLBDE1712.jpg"
+
+"RDG/2025/India/Readers_Digest_India_-_October-November_2025.pdf":
+  date: "2025-10"
+  key: "2025-10-india"
+  label: "2025 年 10 月 – 11 月"
+  cloud: "外文期刊/月刊/RDG/2025/India/RDGIN2510.jpg"
+
+"RIC/2023/Riche_Magazine_-_Issue_140_Kate_Baker_2023.pdf":
+  date: "2023-07"
+  key: "2023-07-issue-140"
+  label: "2023 年 7 月 · Issue 140"
+  cloud: "外文期刊/月刊/RIC/2023/RIC140.jpg"
+
+"PBS/2025/Playbabes_Special_Edition_-_Swimsuit_Issue_2025.pdf":
+  date: "2025-05"
+  key: "2025-05-swimsuit"
+  label: "2025 年 5 月 · Swimsuit"
+  cloud: "外文期刊/月刊/PBS/2025/PBSSW2505.jpg"
+
+"PBS/2026/Playbabes_Special_Edition_-_Swimsuit_2026.pdf":
+  date: "2026-05"
+  key: "2026-05-swimsuit"
+  label: "2026 年 5 月 · Swimsuit"
+  cloud: "外文期刊/月刊/PBS/2026/PBSSW2605.jpg"

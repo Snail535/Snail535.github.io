@@ -25,6 +25,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent.parent          # myblog/
 REGISTRY = HERE / "data" / "magazines.yaml"
+OVERRIDES = HERE / "data" / "issue_overrides.yaml"
 OUT_CONTENT = HERE / "content" / "magazines"
 OUT_THUMBS = HERE / "static" / "thumbs" / "magazines"
 
@@ -113,6 +114,39 @@ def load_registry():
                 "magazines": []}
     with open(REGISTRY, encoding="utf-8") as f:
         return yaml.safe_load(f) or {}
+
+
+def load_overrides() -> dict:
+    """读 data/issue_overrides.yaml：按源目录相对路径指定期次覆盖。
+
+    键是相对原文档根目录的路径（用 / 分隔，如 "LHE/2024/xxx.pdf"），值支持：
+        date:   "YYYY-MM" 或 "YYYY-MM-DD"，覆盖文件名里解析不出的年月
+        key:    直接指定期次 key（如 "2022-03-iob"），用于与既有页面保持一致
+        label:  覆盖期次显示文案
+        edition: 覆盖地区版（空字符串表示强制不带地区）
+        skip:   true 表示这份 PDF 不生成页面（同一期的重复文件）
+    """
+    if not OVERRIDES.exists():
+        return {}
+    try:
+        import yaml
+    except ImportError:
+        print("[warn] 未安装 pyyaml，跳过期次覆盖表")
+        return {}
+    with open(OVERRIDES, encoding="utf-8") as f:
+        return yaml.safe_load(f) or {}
+
+
+def parse_override_date(text: str):
+    """把 "YYYY-MM" / "YYYY-MM-DD" 解析成 (start, end, label)。"""
+    m = re.fullmatch(r"(\d{4})-(\d{2})(?:-(\d{2}))?", str(text).strip())
+    if not m:
+        return None
+    y, mo, d = int(m.group(1)), int(m.group(2)), int(m.group(3) or 1)
+    start = (y, mo, d)
+    end = start
+    label = f"{y} 年 {mo} 月" + (f" {d} 日" if d != 1 else "")
+    return start, end, label
 
 
 def build_index(reg):
@@ -498,6 +532,7 @@ def write_section_indexes(mags, latest_cover):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--scan", action="store_true", help="只盘点不写文件")
+    ap.add_argument("--dump", action="store_true", help="配合 --scan 把期次清单导出到 .scan_dump.json")
     ap.add_argument("--no-thumbs", action="store_true", help="跳过缩略图生成")
     ap.add_argument("--force", action="store_true", help="覆盖已存在的 md 与图片")
     ap.add_argument("--only", default="", help="只处理指定 slug，逗号分隔")
@@ -512,6 +547,7 @@ def main():
     reg = load_registry()
     by_folder, mags = build_index(reg)
     editions = build_editions(reg)
+    overrides = load_overrides()
 
     if not ROOT_SRC.exists():
         sys.exit(f"找不到杂志库目录：{ROOT_SRC}")
@@ -550,8 +586,18 @@ def main():
         if only and mag["slug"] not in only:
             continue
 
+        ov = overrides.get(rel.as_posix(), {}) or {}
+        if ov.get("skip"):
+            print(f"  [skip-override] {rel}")
+            continue
+
         pub_part, date_part = split_publication_and_date(pdf.stem)
         parsed = parse_date_part(date_part)
+        if ov.get("date"):
+            parsed = parse_override_date(ov["date"])
+            if parsed is None:
+                print(f"  [skip] 覆盖表的 date 非法：{rel}")
+                continue
         if not parsed:
             print(f"  [skip] 无法解析日期：{rel}")
             continue
@@ -566,6 +612,8 @@ def main():
                 edition = detect_edition(part, editions)
                 if edition:
                     break
+        if "edition" in ov:
+            edition = ov["edition"]
         ed_slug = slugify(edition) if edition else ""
         variant = detect_variant(pub_part, date_part, mag, edition)
         v_slug = slugify(variant) if variant else ""
@@ -573,6 +621,10 @@ def main():
         key = issue + (f"-{ed_slug}" if ed_slug else "") + (f"-{v_slug}" if v_slug else "")
         if variant:
             label = f"{label} · {variant}"
+        if ov.get("key"):
+            key = ov["key"]
+        if ov.get("label"):
+            label = ov["label"]
         if any(r["mag"]["slug"] == mag["slug"] and r["key"] == key for r in records):
             print(f"  [dupe] {rel} 与已收录期次冲突，跳过")
             continue
@@ -592,6 +644,12 @@ def main():
         for slug, rs in sorted(by_mag.items()):
             dates = sorted(r["issue"] for r in rs)
             print(f"  {slug:<16} {len(rs):>3} 期   {dates[0]} → {dates[-1]}")
+        if args.dump:
+            dump = [{"slug": r["mag"]["slug"], "key": r["key"], "issue": r["issue"],
+                     "label": r["label"], "edition": r["edition"],
+                     "pdf": str(r["pdf"])} for r in records]
+            safe_write(HERE / ".scan_dump.json", json.dumps(dump, ensure_ascii=False, indent=1))
+            print(f"  → .scan_dump.json ({len(dump)} 条)")
         return
 
     if not records:

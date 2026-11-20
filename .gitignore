@@ -5,6 +5,7 @@ resources/
 
 # 生成脚本产出的盘点清单（可用 --scan 重新生成）
 .magazines.json
+.scan_dump.json
 
 # 系统杂物
 .DS_Store

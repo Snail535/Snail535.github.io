@@ -93,6 +93,8 @@ def main():
     ap.add_argument("--dry", action="store_true")
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--only", default="")
+    ap.add_argument("--keys", default="",
+                    help="只扫描指定的 slug/key 期次，逗号分隔（如 playboy/2024-05-us）")
     ap.add_argument("--strict", action="store_true")
     ap.add_argument("--threshold", type=float, default=0.25)
     args = ap.parse_args()
@@ -108,9 +110,20 @@ def main():
     detector = NudeDetector()
 
     issues = [(s, k) for s, k in adult_issues() if not args.only or s == args.only]
+    if args.keys:
+        wanted = {x.strip() for x in args.keys.split(",") if x.strip()}
+        issues = [(s, k) for s, k in issues if f"{s}/{k}" in wanted]
     print(f"待扫描 {len(issues)} 期，敏感标签 {len(labels)} 类，阈值 {args.threshold}")
 
-    mapping, stats, label_count = {}, collections.Counter(), collections.Counter()
+    # 以已有映射为基线合并：这样用 --only 只跑新刊物时，不会把历史打码记录清掉。
+    mapping = {}
+    if DATA.exists():
+        try:
+            mapping.update(json.loads(DATA.read_text(encoding="utf-8")))
+            print(f"载入历史映射 {len(mapping)} 条")
+        except Exception as e:
+            print(f"  [历史映射读取失败] {str(e)[:60]}")
+    stats, label_count = collections.Counter(), collections.Counter()
     flagged_img = scanned = 0
 
     for n, (slug, key) in enumerate(issues, 1):
