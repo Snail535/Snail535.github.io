@@ -346,7 +346,7 @@ magazines:
 
   - slug: champak
     name: "Champak"
-    category: "儿童教育"
+    category: "英语学习"
     folders: ["CPE"]
     cadence: "monthly"
     color: "#e07b1a"
@@ -373,7 +373,7 @@ magazines:
 
   - slug: learn-hot-english
     name: "Learn Hot English"
-    category: "语言学习"
+    category: "英语学习"
     folders: ["LHE"]
     cadence: "monthly"
     color: "#1d4ed8"
@@ -400,7 +400,7 @@ magazines:
 
   - slug: i-love-english-junior
     name: "I Love English Junior"
-    category: "语言学习"
+    category: "英语学习"
     folders: ["ILE"]
     cadence: "monthly"
     color: "#e11d48"

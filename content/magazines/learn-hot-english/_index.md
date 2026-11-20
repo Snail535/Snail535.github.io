@@ -1,7 +1,7 @@
 ---
 title: "Learn Hot English"
 weight: 330
-category: "语言学习"
+category: "英语学习"
 cadence: "monthly"
 color: "#1d4ed8"
 adult: false

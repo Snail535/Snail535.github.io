@@ -1,7 +1,7 @@
 ---
 title: "Champak"
 weight: 300
-category: "儿童教育"
+category: "英语学习"
 cadence: "monthly"
 color: "#e07b1a"
 adult: false

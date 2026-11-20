@@ -1,7 +1,7 @@
 ---
 title: "I Love English Junior"
 weight: 360
-category: "语言学习"
+category: "英语学习"
 cadence: "monthly"
 color: "#e11d48"
 adult: false
