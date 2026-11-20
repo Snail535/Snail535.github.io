@@ -13,8 +13,20 @@
 
 {{- if $isCat }}
 {{- $all := (site.GetPage "/magazines").Sections }}
+{{- /* 分类卡片顺序与 /magazines/ 保持一致，未列出的新分类补在末尾 */ -}}
+{{- $order := slice "英语学习" "科学期刊" "商业财经" "文化生活" "时事新闻" "男士杂志" "游戏娱乐" }}
+{{- $terms := .Data.Terms.ByCount }}
+{{- $sorted := slice }}
+{{- range $cat := $order }}
+  {{- range $terms }}
+    {{- if eq .Page.Title $cat }}{{ $sorted = $sorted | append . }}{{ end }}
+  {{- end }}
+{{- end }}
+{{- range $terms }}
+  {{- if not (in $order .Page.Title) }}{{ $sorted = $sorted | append . }}{{ end }}
+{{- end }}
 <div class="mc-grid">
-  {{- range .Data.Terms.ByCount }}
+  {{- range $sorted }}
   {{- $term := .Page }}
   {{- $mags := (where $all "Params.category" $term.Title).ByWeight }}
   {{- $first := index $mags 0 }}

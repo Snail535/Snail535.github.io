@@ -1,7 +1,7 @@
 ---
 title: "Scientific American"
 weight: 70
-category: "科学"
+category: "科学期刊"
 cadence: "monthly"
 color: "#c8102e"
 adult: false

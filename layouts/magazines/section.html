@@ -7,7 +7,24 @@
   <div class="list-stat">共 {{ len .Sections }} 种刊物 · {{ $total := 0 }}{{ range .Sections }}{{ $total = add $total (len .RegularPages) }}{{ end }}{{ $total }} 期</div>
 </header>
 
-{{- range .Sections.GroupByParam "category" }}
+{{- /* 分类展示顺序：按运营指定顺序固定排列，未列出的新分类自动补在最后 */ -}}
+{{- $order := slice "英语学习" "科学期刊" "商业财经" "文化生活" "时事新闻" "男士杂志" "游戏娱乐" }}
+{{- $sections := .Sections }}
+{{- range $cat := $order }}
+{{- $mags := where $sections "Params.category" $cat }}
+{{- with $mags }}
+<section class="cat-block">
+  <h2 class="cat-title">{{ $cat }}</h2>
+  <div class="mz-grid">
+    {{- range .ByWeight }}
+    {{ partial "mag_title_card.html" . }}
+    {{- end }}
+  </div>
+</section>
+{{- end }}
+{{- end }}
+{{- range $sections.GroupByParam "category" }}
+{{- if not (in $order .Key) }}
 <section class="cat-block">
   <h2 class="cat-title">{{ .Key }}</h2>
   <div class="mz-grid">
@@ -16,6 +33,7 @@
     {{- end }}
   </div>
 </section>
+{{- end }}
 {{- end }}
 
 {{- else }}

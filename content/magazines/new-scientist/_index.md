@@ -1,7 +1,7 @@
 ---
 title: "New Scientist"
 weight: 60
-category: "科学"
+category: "科学期刊"
 cadence: "weekly"
 color: "#b3123d"
 adult: false

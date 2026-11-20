@@ -132,7 +132,7 @@ magazines:
 
   - slug: new-scientist
     name: "New Scientist"
-    category: "科学"
+    category: "科学期刊"
     folders: ["NS"]
     cadence: "weekly"
     color: "#b3123d"
@@ -140,7 +140,7 @@ magazines:
 
   - slug: scientific-american
     name: "Scientific American"
-    category: "科学"
+    category: "科学期刊"
     folders: ["SCA"]
     cadence: "monthly"
     color: "#c8102e"
@@ -156,7 +156,7 @@ magazines:
 
   - slug: science
     name: "Science"
-    category: "科学"
+    category: "科学期刊"
     folders: ["SCI", "Science"]
     cadence: "weekly"
     color: "#0b6e4f"
@@ -418,7 +418,7 @@ magazines:
 
   - slug: spielbox
     name: "Spielbox"
-    category: "桌游生活"
+    category: "游戏娱乐"
     folders: ["SPB"]
     cadence: "monthly"
     color: "#7c3aed"

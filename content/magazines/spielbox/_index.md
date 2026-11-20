@@ -1,7 +1,7 @@
 ---
 title: "Spielbox"
 weight: 380
-category: "桌游生活"
+category: "游戏娱乐"
 cadence: "monthly"
 color: "#7c3aed"
 adult: false

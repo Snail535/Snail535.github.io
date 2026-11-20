@@ -1,7 +1,7 @@
 ---
 title: "Science"
 weight: 90
-category: "科学"
+category: "科学期刊"
 cadence: "weekly"
 color: "#0b6e4f"
 adult: false
