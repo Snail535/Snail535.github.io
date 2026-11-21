@@ -425,6 +425,25 @@ magazines:
     no_edition: true
     desc: "Spielbox，德国老牌桌游杂志，附赠桌游扩展与玩法评测。"
 
+  # ---------- 11-22 新增两刊（放末尾并显式指定 weight，避免其他刊物 weight 被重排）----------
+  - slug: science-news
+    name: "Science News"
+    category: "科学期刊"
+    folders: ["SN"]
+    cadence: "weekly"
+    color: "#e8663d"
+    weight: 410
+    desc: "科学新闻，美国老牌科学周刊，快速报道最新科研进展与发现。"
+
+  - slug: national-geographic
+    name: "National Geographic"
+    category: "文化生活"
+    folders: ["NG"]
+    cadence: "monthly"
+    color: "#ffcc00"
+    weight: 420
+    desc: "国家地理，以震撼摄影与深度报道探索自然、人文与科学的世界。"
+
   # ---------- 预留位 ----------
   # 若要新增刊种，照抄一段改字段即可；PDF 目录不存在时脚本会跳过，不会报错。
 

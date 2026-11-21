@@ -724,3 +724,693 @@
   key: "2026-05-swimsuit"
   label: "2026 年 5 月 · Swimsuit"
   cloud: "外文期刊/月刊/PBS/2026/PBSSW2605.jpg"
+
+# ===== 11-22 added SN(Science News)/NG(National Geographic) 104 issues =====
+"SN/2024/ScienceNews-051024_freemagazines_top.pdf":
+  date: "2024-10-05"
+  key: "2024-10-05"
+  label: "2024 年 10 月 5 日"
+  cloud: "外文期刊/周刊/SN/2024/SN241005.jpg"
+
+"SN/2025/Science_News_-_01_February_2025.pdf":
+  date: "2025-02"
+  key: "2025-02"
+  label: "2025 年 2 月"
+  cloud: "外文期刊/周刊/SN/2025/SN250201.jpg"
+
+"SN/2025/Science_News_-_01_January_2025.pdf":
+  date: "2025-01"
+  key: "2025-01"
+  label: "2025 年 1 月"
+  cloud: "外文期刊/周刊/SN/2025/SN250101.jpg"
+
+"SN/2024/Science_News_-_10_February_2024.pdf":
+  date: "2024-02-10"
+  key: "2024-02-10"
+  label: "2024 年 2 月 10 日"
+  cloud: "外文期刊/周刊/SN/2024/SN240210.jpg"
+
+"SN/2024/Science_News_-_13_January_2024.pdf":
+  date: "2024-01-13"
+  key: "2024-01-13"
+  label: "2024 年 1 月 13 日"
+  cloud: "外文期刊/周刊/SN/2024/SN240113.jpg"
+
+"SN/2024/Science_News_-_13_July_2024.pdf":
+  date: "2024-07-13"
+  key: "2024-07-13"
+  label: "2024 年 7 月 13 日"
+  cloud: "外文期刊/周刊/SN/2024/SN240713.jpg"
+
+"SN/2008/Science_News_-_16_August_2025.pdf":
+  date: "2008-08-16"
+  key: "2008-08-16"
+  label: "2008 年 8 月 16 日"
+  cloud: "外文期刊/周刊/SN/2008/SN080816.jpg"
+
+"SN/2024/Science_News_-_19_October_2024.pdf":
+  date: "2024-10-19"
+  key: "2024-10-19"
+  label: "2024 年 10 月 19 日"
+  cloud: "外文期刊/周刊/SN/2024/SN241019.jpg"
+
+"SN/2024/Science_News_-_20_April_2024.pdf":
+  date: "2024-04-20"
+  key: "2024-04-20"
+  label: "2024 年 4 月 20 日"
+  cloud: "外文期刊/周刊/SN/2024/SN240420.jpg"
+
+"SN/2024/Science_News_-_23_March_2024.pdf":
+  date: "2024-03-23"
+  key: "2024-03-23"
+  label: "2024 年 3 月 23 日"
+  cloud: "外文期刊/周刊/SN/2024/SN240323.jpg"
+
+"SN/2024/Science_News_-_24_August_2024.pdf":
+  date: "2024-08-24"
+  key: "2024-08-24"
+  label: "2024 年 8 月 24 日"
+  cloud: "外文期刊/周刊/SN/2024/SN240824.jpg"
+
+"SN/2024/Science_News_-_24_February_2024.pdf":
+  date: "2024-02-24"
+  key: "2024-02-24"
+  label: "2024 年 2 月 24 日"
+  cloud: "外文期刊/周刊/SN/2024/SN240224.jpg"
+
+"SN/2008/Science_News_-_24_May_2025.pdf":
+  date: "2008-05-24"
+  key: "2008-05-24"
+  label: "2008 年 5 月 24 日"
+  cloud: "外文期刊/周刊/SN/2008/SN080524.jpg"
+
+"SN/2024/Science_News_-_27_January_2024.pdf":
+  date: "2024-01-27"
+  key: "2024-01-27"
+  label: "2024 年 1 月 27 日"
+  cloud: "外文期刊/周刊/SN/2024/SN240127.jpg"
+
+"SN/2024/Science_News_-_30_November_2024.pdf":
+  date: "2024-11-30"
+  key: "2024-11-30"
+  label: "2024 年 11 月 30 日"
+  cloud: "外文期刊/周刊/SN/2024/SN241130.jpg"
+
+"SN/2024/Science_News_-_4_May_2024.pdf":
+  date: "2024-05-04"
+  key: "2024-05-04"
+  label: "2024 年 5 月 4 日"
+  cloud: "外文期刊/周刊/SN/2024/SN240504.jpg"
+
+"SN/2024/Science_News_-_6_April_2024.pdf":
+  date: "2024-04-06"
+  key: "2024-04-06"
+  label: "2024 年 4 月 6 日"
+  cloud: "外文期刊/周刊/SN/2024/SN240406.jpg"
+
+"SN/2008/Science_News_-_6_December_2024.pdf":
+  date: "2008-12-06"
+  key: "2008-12-06"
+  label: "2008 年 12 月 6 日"
+  cloud: "外文期刊/周刊/SN/2008/SN081206.jpg"
+
+"SN/2008/Science_News_-_7_June_2025.pdf":
+  date: "2008-06-07"
+  key: "2008-06-07"
+  label: "2008 年 6 月 7 日"
+  cloud: "外文期刊/周刊/SN/2008/SN080607.jpg"
+
+"SN/2024/Science_News_-_7_September_2024.pdf":
+  date: "2024-09-07"
+  key: "2024-09-07"
+  label: "2024 年 9 月 7 日"
+  cloud: "外文期刊/周刊/SN/2024/SN240907.jpg"
+
+"SN/2024/Science_News_-_9_March_2024.pdf":
+  date: "2024-03-09"
+  key: "2024-03-09"
+  label: "2024 年 3 月 9 日"
+  cloud: "外文期刊/周刊/SN/2024/SN240309.jpg"
+
+"SN/2025/Science_News_-_August_2025.pdf":
+  date: "2025-08"
+  key: "2025-08"
+  label: "2025 年 8 月"
+  cloud: "外文期刊/周刊/SN/2025/SN2508.jpg"
+
+"SN/2026/Science_News_-_August_2026.pdf":
+  date: "2026-08"
+  key: "2026-08"
+  label: "2026 年 8 月"
+  cloud: "外文期刊/周刊/SN/2026/SN2608.jpg"
+
+"SN/2026/Science_News_-_December_2026.pdf":
+  date: "2026-12"
+  key: "2026-12"
+  label: "2026 年 12 月"
+  cloud: "外文期刊/周刊/SN/2026/SN2612.jpg"
+
+"SN/2026/Science_News_-_January_2025.pdf":
+  date: "2026-01"
+  key: "2026-01"
+  label: "2026 年 1 月"
+  cloud: "外文期刊/周刊/SN/2026/SN2601.jpg"
+
+"SN/2025/Science_News_-_March_2025.pdf":
+  date: "2025-03"
+  key: "2025-03"
+  label: "2025 年 3 月"
+  cloud: "外文期刊/周刊/SN/2025/SN2503.jpg"
+
+"SN/2025/Science_News_-_May_2025_freemagazines_top.pdf":
+  date: "2025-05"
+  key: "2025-05"
+  label: "2025 年 5 月"
+  cloud: "外文期刊/周刊/SN/2025/SN2505.jpg"
+
+"SN/2024/Science_News_-_November_16_2024_freemagazines_top.pdf":
+  date: "2024-11-16"
+  key: "2024-11-16"
+  label: "2024 年 11 月 16 日"
+  cloud: "外文期刊/周刊/SN/2024/SN241116.jpg"
+
+"SN/2026/Science_News_-_November_2026_ebooksyard.pdf":
+  date: "2026-11"
+  key: "2026-11"
+  label: "2026 年 11 月"
+  cloud: "外文期刊/周刊/SN/2026/SN2611.jpg"
+
+"SN/2026/Science_News_-_October_2026.pdf":
+  date: "2026-10"
+  key: "2026-10"
+  label: "2026 年 10 月"
+  cloud: "外文期刊/周刊/SN/2026/SN2610.jpg"
+
+"SN/2026/Science_News_-_September_2026.pdf":
+  date: "2026-09"
+  key: "2026-09"
+  label: "2026 年 9 月"
+  cloud: "外文期刊/周刊/SN/2026/SN2609.jpg"
+
+"SN/2025/Science_News_04_2025_freemagazines_top.pdf":
+  date: "2025-04"
+  key: "2025-04"
+  label: "2025 年 4 月"
+  cloud: "外文期刊/周刊/SN/2025/SN2504.jpg"
+
+"SN/2024/Science_News_06_15_2024_freemagazines_top.pdf":
+  date: "2024-06-15"
+  key: "2024-06-15"
+  label: "2024 年 6 月 15 日"
+  cloud: "外文期刊/周刊/SN/2024/SN240615.jpg"
+
+"SN/2024/Science_News_06_1_2024_freemagazines_top.pdf":
+  date: "2024-06"
+  key: "2024-06"
+  label: "2024 年 6 月"
+  cloud: "外文期刊/周刊/SN/2024/SN240601.jpg"
+
+"SN/2025/Science_News_06_2025_freemagazines_top.pdf":
+  date: "2025-06"
+  key: "2025-06"
+  label: "2025 年 6 月"
+  cloud: "外文期刊/周刊/SN/2025/SN2506.jpg"
+
+"SN/2024/Science_News_06_29_2024_freemagazines_top.pdf":
+  date: "2024-06-29"
+  key: "2024-06-29"
+  label: "2024 年 6 月 29 日"
+  cloud: "外文期刊/周刊/SN/2024/SN240629.jpg"
+
+"SN/2024/Science_News_08_10_2024_freemagazines_top.pdf":
+  date: "2024-08-10"
+  key: "2024-08-10"
+  label: "2024 年 8 月 10 日"
+  cloud: "外文期刊/周刊/SN/2024/SN240810.jpg"
+
+"SN/2024/Science_News_11_2_2024_freemagazines_top.pdf":
+  date: "2024-11-02"
+  key: "2024-11-02"
+  label: "2024 年 11 月 2 日"
+  cloud: "外文期刊/周刊/SN/2024/SN241102.jpg"
+
+"SN/2024/Science_News_12_14_2024_freemagazines_top.pdf":
+  date: "2024-12-14"
+  key: "2024-12-14"
+  label: "2024 年 12 月 14 日"
+  cloud: "外文期刊/周刊/SN/2024/SN241214.jpg"
+
+"NG/2024/UK/National_Geographic_UK_-_April_2024.pdf":
+  date: "2024-04"
+  key: "2024-04-uk"
+  label: "2024 年 4 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2024/UK/NGUK2404.jpg"
+
+"NG/2025/UK/National_Geographic_UK_-_April_2025.pdf":
+  date: "2025-04"
+  key: "2025-04-uk"
+  label: "2025 年 4 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2025/UK/NGUK2504.jpg"
+
+"NG/2026/UK/National_Geographic_UK_-_April_2026.pdf":
+  date: "2026-04"
+  key: "2026-04-uk"
+  label: "2026 年 4 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2026/UK/NGUK2604.jpg"
+
+"NG/2024/UK/National_Geographic_UK_-_August_2024.pdf":
+  date: "2024-08"
+  key: "2024-08-uk"
+  label: "2024 年 8 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2024/UK/NGUK2408.jpg"
+
+"NG/2025/UK/National_Geographic_UK_-_August_2025.pdf":
+  date: "2025-08"
+  key: "2025-08-uk"
+  label: "2025 年 8 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2025/UK/NGUK2508.jpg"
+
+"NG/2026/UK/National_Geographic_UK_-_August_2026.pdf":
+  date: "2026-08"
+  key: "2026-08-uk"
+  label: "2026 年 8 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2026/UK/NGUK2608.jpg"
+
+"NG/2024/UK/National_Geographic_UK_-_December_2024.pdf":
+  date: "2024-12"
+  key: "2024-12-uk"
+  label: "2024 年 12 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2024/UK/NGUK2412.jpg"
+
+"NG/2025/UK/National_Geographic_UK_-_December_2025.pdf":
+  date: "2025-12"
+  key: "2025-12-uk"
+  label: "2025 年 12 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2025/UK/NGUK2512.jpg"
+
+"NG/2024/UK/National_Geographic_UK_-_February_2024.pdf":
+  date: "2024-02"
+  key: "2024-02-uk"
+  label: "2024 年 2 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2024/UK/NGUK2402.jpg"
+
+"NG/2025/UK/National_Geographic_UK_-_February_2025.pdf":
+  date: "2025-02"
+  key: "2025-02-uk"
+  label: "2025 年 2 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2025/UK/NGUK2502.jpg"
+
+"NG/2026/UK/National_Geographic_UK_-_February_2026.pdf":
+  date: "2026-02"
+  key: "2026-02-uk"
+  label: "2026 年 2 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2026/UK/NGUK2602.jpg"
+
+"NG/2024/UK/National_Geographic_UK_-_January_2024.pdf":
+  date: "2024-01"
+  key: "2024-01-uk"
+  label: "2024 年 1 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2024/UK/NGUK2401.jpg"
+
+"NG/2025/UK/National_Geographic_UK_-_January_2025.pdf":
+  date: "2025-01"
+  key: "2025-01-uk"
+  label: "2025 年 1 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2025/UK/NGUK2501.jpg"
+
+"NG/2026/UK/National_Geographic_UK_-_January_2026.pdf":
+  date: "2026-01"
+  key: "2026-01-uk"
+  label: "2026 年 1 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2026/UK/NGUK2601.jpg"
+
+"NG/2024/UK/National_Geographic_UK_-_July_2024.pdf":
+  date: "2024-07"
+  key: "2024-07-uk"
+  label: "2024 年 7 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2024/UK/NGUK2407.jpg"
+
+"NG/2025/UK/National_Geographic_UK_-_July_2025.pdf":
+  date: "2025-07"
+  key: "2025-07-uk"
+  label: "2025 年 7 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2025/UK/NGUK2507.jpg"
+
+"NG/2024/UK/National_Geographic_UK_-_June_2024.pdf":
+  date: "2024-06"
+  key: "2024-06-uk"
+  label: "2024 年 6 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2024/UK/NGUK2406.jpg"
+
+"NG/2025/UK/National_Geographic_UK_-_June_2025.pdf":
+  date: "2025-06"
+  key: "2025-06-uk"
+  label: "2025 年 6 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2025/UK/NGUK2506.jpg"
+
+"NG/2024/UK/National_Geographic_UK_-_March_2024.pdf":
+  date: "2024-03"
+  key: "2024-03-uk"
+  label: "2024 年 3 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2024/UK/NGUK2403.jpg"
+
+"NG/2025/UK/National_Geographic_UK_-_March_2025.pdf":
+  date: "2025-03"
+  key: "2025-03-uk"
+  label: "2025 年 3 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2025/UK/NGUK2503.jpg"
+
+"NG/2026/UK/National_Geographic_UK_-_March_2026.pdf":
+  date: "2026-03"
+  key: "2026-03-uk"
+  label: "2026 年 3 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2026/UK/NGUK2603.jpg"
+
+"NG/2024/UK/National_Geographic_UK_-_May_2024.pdf":
+  date: "2024-05"
+  key: "2024-05-uk"
+  label: "2024 年 5 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2024/UK/NGUK2405.jpg"
+
+"NG/2025/UK/National_Geographic_UK_-_May_2025.pdf":
+  date: "2025-05"
+  key: "2025-05-uk"
+  label: "2025 年 5 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2025/UK/NGUK2505.jpg"
+
+"NG/2026/UK/National_Geographic_UK_-_May_2026.pdf":
+  date: "2026-05"
+  key: "2026-05-uk"
+  label: "2026 年 5 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2026/UK/NGUK2605.jpg"
+
+"NG/2024/UK/National_Geographic_UK_-_November_2024.pdf":
+  date: "2024-11"
+  key: "2024-11-uk"
+  label: "2024 年 11 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2024/UK/NGUK2411.jpg"
+
+"NG/2025/UK/National_Geographic_UK_-_November_2025.pdf":
+  date: "2025-11"
+  key: "2025-11-uk"
+  label: "2025 年 11 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2025/UK/NGUK2511.jpg"
+
+"NG/2026/UK/National_Geographic_UK_-_November_2026.pdf":
+  date: "2026-11"
+  key: "2026-11-uk"
+  label: "2026 年 11 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2026/UK/NGUK2611.jpg"
+
+"NG/2024/UK/National_Geographic_UK_-_October_2024.pdf":
+  date: "2024-10"
+  key: "2024-10-uk"
+  label: "2024 年 10 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2024/UK/NGUK2410.jpg"
+
+"NG/2025/UK/National_Geographic_UK_-_October_2025.pdf":
+  date: "2025-10"
+  key: "2025-10-uk"
+  label: "2025 年 10 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2025/UK/NGUK2510.jpg"
+
+"NG/2026/UK/National_Geographic_UK_-_October_2026.pdf":
+  date: "2026-10"
+  key: "2026-10-uk"
+  label: "2026 年 10 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2026/UK/NGUK2610.jpg"
+
+"NG/2024/UK/National_Geographic_UK_-_September_2024.pdf":
+  date: "2024-09"
+  key: "2024-09-uk"
+  label: "2024 年 9 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2024/UK/NGUK2409.jpg"
+
+"NG/2025/UK/National_Geographic_UK_-_September_2025.pdf":
+  date: "2025-09"
+  key: "2025-09-uk"
+  label: "2025 年 9 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2025/UK/NGUK2509.jpg"
+
+"NG/2026/UK/National_Geographic_UK_-_September_2026.pdf":
+  date: "2026-09"
+  key: "2026-09-uk"
+  label: "2026 年 9 月"
+  edition: "UK"
+  cloud: "外文期刊/月刊/NG/2026/UK/NGUK2609.jpg"
+
+"NG/2024/USA/National_Geographic_USA_-_April_2024.pdf":
+  date: "2024-04"
+  key: "2024-04-usa"
+  label: "2024 年 4 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2024/USA/NGUS2404.jpg"
+
+"NG/2025/USA/National_Geographic_USA_-_April_2025.pdf":
+  date: "2025-04"
+  key: "2025-04-usa"
+  label: "2025 年 4 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2025/USA/NGUS2504.jpg"
+
+"NG/2026/USA/National_Geographic_USA_-_April_2026.pdf":
+  date: "2026-04"
+  key: "2026-04-usa"
+  label: "2026 年 4 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2026/USA/NGUS2604.jpg"
+
+"NG/2024/USA/National_Geographic_USA_-_August_2024.pdf":
+  date: "2024-08"
+  key: "2024-08-usa"
+  label: "2024 年 8 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2024/USA/NGUS2408.jpg"
+
+"NG/2025/USA/National_Geographic_USA_-_August_2025.pdf":
+  date: "2025-08"
+  key: "2025-08-usa"
+  label: "2025 年 8 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2025/USA/NGUS2508.jpg"
+
+"NG/2026/USA/National_Geographic_USA_-_August_2026.pdf":
+  date: "2026-08"
+  key: "2026-08-usa"
+  label: "2026 年 8 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2026/USA/NGUS2608.jpg"
+
+"NG/2024/USA/National_Geographic_USA_-_December_2024.pdf":
+  date: "2024-12"
+  key: "2024-12-usa"
+  label: "2024 年 12 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2024/USA/NGUS2412.jpg"
+
+"NG/2025/USA/National_Geographic_USA_-_December_2025.pdf":
+  date: "2025-12"
+  key: "2025-12-usa"
+  label: "2025 年 12 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2025/USA/NGUS2512.jpg"
+
+"NG/2025/USA/National_Geographic_USA_-_February_2025.pdf":
+  date: "2025-02"
+  key: "2025-02-usa"
+  label: "2025 年 2 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2025/USA/NGUS2502.jpg"
+
+"NG/2026/USA/National_Geographic_USA_-_February_2026.pdf":
+  date: "2026-02"
+  key: "2026-02-usa"
+  label: "2026 年 2 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2026/USA/NGUS2602.jpg"
+
+"NG/2024/USA/National_Geographic_USA_-_January_2024.pdf":
+  date: "2024-01"
+  key: "2024-01-usa"
+  label: "2024 年 1 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2024/USA/NGUS2401.jpg"
+
+"NG/2025/USA/National_Geographic_USA_-_January_2025.pdf":
+  date: "2025-01"
+  key: "2025-01-usa"
+  label: "2025 年 1 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2025/USA/NGUS2501.jpg"
+
+"NG/2026/USA/National_Geographic_USA_-_January_2026.pdf":
+  date: "2026-01"
+  key: "2026-01-usa"
+  label: "2026 年 1 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2026/USA/NGUS2601.jpg"
+
+"NG/2024/USA/National_Geographic_USA_-_July_2024.pdf":
+  date: "2024-07"
+  key: "2024-07-usa"
+  label: "2024 年 7 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2024/USA/NGUS2407.jpg"
+
+"NG/2025/USA/National_Geographic_USA_-_July_2025.pdf":
+  date: "2025-07"
+  key: "2025-07-usa"
+  label: "2025 年 7 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2025/USA/NGUS2507.jpg"
+
+"NG/2026/USA/National_Geographic_USA_-_July_2026.pdf":
+  date: "2026-07"
+  key: "2026-07-usa"
+  label: "2026 年 7 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2026/USA/NGUS2607.jpg"
+
+"NG/2024/USA/National_Geographic_USA_-_June_2024.pdf":
+  date: "2024-06"
+  key: "2024-06-usa"
+  label: "2024 年 6 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2024/USA/NGUS2406.jpg"
+
+"NG/2024/USA/National_Geographic_USA_-_March_2024.pdf":
+  date: "2024-03"
+  key: "2024-03-usa"
+  label: "2024 年 3 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2024/USA/NGUS2403.jpg"
+
+"NG/2025/USA/National_Geographic_USA_-_March_2025.pdf":
+  date: "2025-03"
+  key: "2025-03-usa"
+  label: "2025 年 3 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2025/USA/NGUS2503.jpg"
+
+"NG/2026/USA/National_Geographic_USA_-_March_2026.pdf":
+  date: "2026-03"
+  key: "2026-03-usa"
+  label: "2026 年 3 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2026/USA/NGUS2603.jpg"
+
+"NG/2024/USA/National_Geographic_USA_-_May_2024.pdf":
+  date: "2024-05"
+  key: "2024-05-usa"
+  label: "2024 年 5 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2024/USA/NGUS2405.jpg"
+
+"NG/2025/USA/National_Geographic_USA_-_May_2025.pdf":
+  date: "2025-05"
+  key: "2025-05-usa"
+  label: "2025 年 5 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2025/USA/NGUS2505.jpg"
+
+"NG/2026/USA/National_Geographic_USA_-_May_2026.pdf":
+  date: "2026-05"
+  key: "2026-05-usa"
+  label: "2026 年 5 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2026/USA/NGUS2605.jpg"
+
+"NG/2024/USA/National_Geographic_USA_-_November_2024.pdf":
+  date: "2024-11"
+  key: "2024-11-usa"
+  label: "2024 年 11 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2024/USA/NGUS2411.jpg"
+
+"NG/2025/USA/National_Geographic_USA_-_November_2025.pdf":
+  date: "2025-11"
+  key: "2025-11-usa"
+  label: "2025 年 11 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2025/USA/NGUS2511.jpg"
+
+"NG/2026/USA/National_Geographic_USA_-_November_2026.pdf":
+  date: "2026-11"
+  key: "2026-11-usa"
+  label: "2026 年 11 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2026/USA/NGUS2611.jpg"
+
+"NG/2024/USA/National_Geographic_USA_-_October_2024.pdf":
+  date: "2024-10"
+  key: "2024-10-usa"
+  label: "2024 年 10 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2024/USA/NGUS2410.jpg"
+
+"NG/2025/USA/National_Geographic_USA_-_October_2025.pdf":
+  date: "2025-10"
+  key: "2025-10-usa"
+  label: "2025 年 10 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2025/USA/NGUS2510.jpg"
+
+"NG/2026/USA/National_Geographic_USA_-_October_2026.pdf":
+  date: "2026-10"
+  key: "2026-10-usa"
+  label: "2026 年 10 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2026/USA/NGUS2610.jpg"
+
+"NG/2024/USA/National_Geographic_USA_-_September_2024.pdf":
+  date: "2024-09"
+  key: "2024-09-usa"
+  label: "2024 年 9 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2024/USA/NGUS2409.jpg"
+
+"NG/2025/USA/National_Geographic_USA_-_September_2025.pdf":
+  date: "2025-09"
+  key: "2025-09-usa"
+  label: "2025 年 9 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2025/USA/NGUS2509.jpg"
+
+"NG/2026/USA/National_Geographic_USA_-_September_2026.pdf":
+  date: "2026-09"
+  key: "2026-09-usa"
+  label: "2026 年 9 月"
+  edition: "USA"
+  cloud: "外文期刊/月刊/NG/2026/USA/NGUS2609.jpg"
