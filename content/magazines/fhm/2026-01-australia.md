@@ -27,5 +27,5 @@ preview3: "/thumbs/magazines/fhm/2026-01-australia/p3.webp"
 preview4: "/thumbs/magazines/fhm/2026-01-australia/p4.webp"
 has_download: true
 download_pwd: ""
-netdisk_file: "MAXAU2601.jpg"
+netdisk_file: "FHMAU2601.jpg"
 ---
