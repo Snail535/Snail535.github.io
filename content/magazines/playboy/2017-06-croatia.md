@@ -26,5 +26,7 @@ preview2: "/thumbs/magazines/playboy/2017-06-croatia/p2.webp"
 preview3: "/thumbs/magazines/playboy/2017-06-croatia/p3.webp"
 preview4: "/thumbs/magazines/playboy/2017-06-croatia/p4.webp"
 download_url: ""
+netdisk_file: "PLBHR1706.jpg"
+has_download: true
 download_pwd: ""
 ---

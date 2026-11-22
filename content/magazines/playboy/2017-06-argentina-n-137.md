@@ -26,5 +26,7 @@ preview2: "/thumbs/magazines/playboy/2017-06-argentina-n-137/p2.webp"
 preview3: "/thumbs/magazines/playboy/2017-06-argentina-n-137/p3.webp"
 preview4: "/thumbs/magazines/playboy/2017-06-argentina-n-137/p4.webp"
 download_url: ""
+netdisk_file: "PLBAR1706.jpg"
+has_download: true
 download_pwd: ""
 ---

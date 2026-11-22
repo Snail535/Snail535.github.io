@@ -26,5 +26,7 @@ preview2: "/thumbs/magazines/playboy/2017-04-ukraine/p2.webp"
 preview3: "/thumbs/magazines/playboy/2017-04-ukraine/p3.webp"
 preview4: "/thumbs/magazines/playboy/2017-04-ukraine/p4.webp"
 download_url: ""
+netdisk_file: "PLBUA1704.jpg"
+has_download: true
 download_pwd: ""
 ---
