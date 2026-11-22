@@ -72,7 +72,9 @@
   cloud: "外文期刊/月刊/LHE/2024/LHE271.jpg"
 
 "LHE/2024/Learn_Hot_English_I267_2024_freemagazines_top.pdf":
-  skip: true
+  date: "2024-08"
+  key: "2024-08-issue-267-alt"
+  label: "2024 年 8 月 · Issue 267 另一版本"
 
 "LHE/2024/Learn_Hot_English_I269_2024_freemagazines_top.pdf":
   date: "2024-10"
@@ -351,7 +353,9 @@
   cloud: "外文期刊/周刊/DPD/2024/DPD24N05.jpg"
 
 "DPD/2024/Daphnes_Diary_No4_2024_freemagazines_top.pdf":
-  skip: true
+  date: "2024-06"
+  key: "2024-06"
+  label: "2024 年 6 月 · No.4"
 
 "DPD/2024/Daphnes_Diary_No6_2024_freemagazines_top.pdf":
   date: "2024-08"
@@ -402,7 +406,9 @@
   cloud: "外文期刊/周刊/DPD/2025/DPD2507.jpg"
 
 "DPD/2025/Daphnes_Diary_No4_2025_freemagazines_top.pdf":
-  skip: true
+  date: "2025-04"
+  key: "2025-04"
+  label: "2025 年 4 月 · No.4"
 
 "DPD/2026/Daphnes_Diary_English_Edition_-_10_November_2026.pdf":
   date: "2026-11-10"
@@ -507,10 +513,14 @@
   cloud: "外文期刊/周刊/CRP/2025/CRP2502.jpg"
 
 "CRP/2025/China_Report_05_2025_freemagazines_top.pdf":
-  skip: true
+  date: "2025-05"
+  key: "2025-05-alt"
+  label: "2025 年 5 月 · 另一版本"
 
 "FHM/2021/Sweden/FHM_Sweden_-_February_2021(1).pdf":
-  skip: true
+  date: "2021-02"
+  key: "2021-02-sweden-alt"
+  label: "2021 年 2 月 · 另一版本"
 
 "FHM/2023/India/FHM_India_-_Volume_14_Issue_9_2023.pdf":
   date: "2023-09"
@@ -519,7 +529,9 @@
   cloud: "外文期刊/月刊/FHM/2023/India/FHMIN2309.jpg"
 
 "FOR/2026/Africa/Forbes_Africa_Dec2025-Jan_2026.pdf":
-  skip: true
+  date: "2026-01"
+  key: "2026-01-africa"
+  label: "2025 年 12 月 – 2026 年 1 月"
 
 "IOB/2022/IOB_Inside_Out_Babes_-_Spring_Edition_March_2022.pdf":
   date: "2022-03"
@@ -1235,3 +1247,12 @@
   edition: ""
   cloud: "外文期刊/月刊/NG/2026/USA/NGUS2609.jpg"
 
+"FOR/2026/USA/Forbes_USA_-_1_May_2026.pdf":
+  date: "2026-05-01"
+  key: "2026-05-01-usa"
+  label: "2026 年 5 月 1 日"
+
+"FOR/2026/USA/Forbes_USA_Apr-May_2026.pdf":
+  date: "2026-05"
+  key: "2026-05-usa"
+  label: "2026 年 4–5 月合刊"
