@@ -762,11 +762,11 @@
   label: "2024 年 7 月 13 日"
   cloud: "外文期刊/周刊/SN/2024/SN240713.jpg"
 
-"SN/2008/Science_News_-_16_August_2025.pdf":
-  date: "2008-08-16"
-  key: "2008-08-16"
-  label: "2008 年 8 月 16 日"
-  cloud: "外文期刊/周刊/SN/2008/SN080816.jpg"
+"SN/2025/Science_News_-_16_August_2025.pdf":
+  date: "2025-08-16"
+  key: "2025-08-16"
+  label: "2025 年 8 月 16 日"
+  cloud: "外文期刊/周刊/SN/2025/SN250816.jpg"
 
 "SN/2024/Science_News_-_19_October_2024.pdf":
   date: "2024-10-19"
@@ -798,11 +798,11 @@
   label: "2024 年 2 月 24 日"
   cloud: "外文期刊/周刊/SN/2024/SN240224.jpg"
 
-"SN/2008/Science_News_-_24_May_2025.pdf":
-  date: "2008-05-24"
-  key: "2008-05-24"
-  label: "2008 年 5 月 24 日"
-  cloud: "外文期刊/周刊/SN/2008/SN080524.jpg"
+"SN/2025/Science_News_-_24_May_2025.pdf":
+  date: "2025-05-24"
+  key: "2025-05-24"
+  label: "2025 年 5 月 24 日"
+  cloud: "外文期刊/周刊/SN/2025/SN250524.jpg"
 
 "SN/2024/Science_News_-_27_January_2024.pdf":
   date: "2024-01-27"
@@ -828,17 +828,17 @@
   label: "2024 年 4 月 6 日"
   cloud: "外文期刊/周刊/SN/2024/SN240406.jpg"
 
-"SN/2008/Science_News_-_6_December_2024.pdf":
-  date: "2008-12-06"
-  key: "2008-12-06"
-  label: "2008 年 12 月 6 日"
-  cloud: "外文期刊/周刊/SN/2008/SN081206.jpg"
+"SN/2024/Science_News_-_6_December_2024.pdf":
+  date: "2024-12-06"
+  key: "2024-12-06"
+  label: "2024 年 12 月 6 日"
+  cloud: "外文期刊/周刊/SN/2024/SN241206.jpg"
 
-"SN/2008/Science_News_-_7_June_2025.pdf":
-  date: "2008-06-07"
-  key: "2008-06-07"
-  label: "2008 年 6 月 7 日"
-  cloud: "外文期刊/周刊/SN/2008/SN080607.jpg"
+"SN/2025/Science_News_-_7_June_2025.pdf":
+  date: "2025-06-07"
+  key: "2025-06-07"
+  label: "2025 年 6 月 7 日"
+  cloud: "外文期刊/周刊/SN/2025/SN250607.jpg"
 
 "SN/2024/Science_News_-_7_September_2024.pdf":
   date: "2024-09-07"
@@ -858,6 +858,12 @@
   label: "2025 年 8 月"
   cloud: "外文期刊/周刊/SN/2025/SN2508.jpg"
 
+"SN/2026/Science_News_-_April_2026.pdf":
+  date: "2026-04"
+  key: "2026-04"
+  label: "2026 年 4 月"
+  cloud: "外文期刊/周刊/SN/2026/SN2604.jpg"
+
 "SN/2026/Science_News_-_August_2026.pdf":
   date: "2026-08"
   key: "2026-08"
@@ -869,6 +875,12 @@
   key: "2026-12"
   label: "2026 年 12 月"
   cloud: "外文期刊/周刊/SN/2026/SN2612.jpg"
+
+"SN/2026/Science_News_-_February_2026.pdf":
+  date: "2026-02"
+  key: "2026-02"
+  label: "2026 年 2 月"
+  cloud: "外文期刊/周刊/SN/2026/SN2602.jpg"
 
 "SN/2026/Science_News_-_January_2025.pdf":
   date: "2026-01"
@@ -893,6 +905,30 @@
   key: "2024-11-16"
   label: "2024 年 11 月 16 日"
   cloud: "外文期刊/周刊/SN/2024/SN241116.jpg"
+
+"SN/2026/Science_News_-_July_2026.pdf":
+  date: "2026-07"
+  key: "2026-07"
+  label: "2026 年 7 月"
+  cloud: "外文期刊/周刊/SN/2026/SN2607.jpg"
+
+"SN/2026/Science_News_-_June_2026.pdf":
+  date: "2026-06"
+  key: "2026-06"
+  label: "2026 年 6 月"
+  cloud: "外文期刊/周刊/SN/2026/SN2606.jpg"
+
+"SN/2026/Science_News_-_March_2026.pdf":
+  date: "2026-03"
+  key: "2026-03"
+  label: "2026 年 3 月"
+  cloud: "外文期刊/周刊/SN/2026/SN2603.jpg"
+
+"SN/2026/Science_News_-_May_2026.pdf":
+  date: "2026-05"
+  key: "2026-05"
+  label: "2026 年 5 月"
+  cloud: "外文期刊/周刊/SN/2026/SN2605.jpg"
 
 "SN/2026/Science_News_-_November_2026_ebooksyard.pdf":
   date: "2026-11"
