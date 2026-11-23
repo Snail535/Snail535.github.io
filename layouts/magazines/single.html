@@ -83,7 +83,7 @@
   <div class="mg-download" data-mgdl
        data-key="{{ $dlKey }}"
        data-api="{{ $api }}"
-       data-limit="{{ site.Params.linkDailyLimit | default 5 }}"
+       data-limit="{{ site.Params.linkDailyLimit | default 3 }}"
        {{- with $dlUrl }} data-dl="{{ . | base64Encode }}"{{ end }}>
     <h3>下载</h3>
     {{- if $dlHas }}
@@ -98,7 +98,7 @@
         <input type="text" placeholder="输入邀请码" maxlength="16" autocomplete="off" spellcheck="false" data-role="passinput">
         <button type="button" data-role="passredeem">解锁</button>
       </p>
-      <p class="mg-pass-box-hint">持通行证期间获取下载链接不限次，有效期以邀请码为准；没有通行证也不影响每日 5 次额度。</p>
+      <p class="mg-pass-box-hint">持通行证期间获取下载链接不限次，有效期以邀请码为准；没有通行证也不影响每日 3 次额度。</p>
       <p class="mg-pass-apply">还没有邀请码？<a href="/pass/">去通行证页看怎么申请 →</a></p>
     </div>
     {{- if hasSuffix (.Params.netdisk_file | default "") ".sssEFs" }}
@@ -184,7 +184,7 @@
     if (!box) return;
     var key = box.dataset.key || '';
     var api = (box.dataset.api || '').replace(/\/+$/, '');
-    var total = parseInt(box.dataset.limit, 10) || 5;
+    var total = parseInt(box.dataset.limit, 10) || 3;
     var statusEl = box.querySelector('[data-role="status"]');
     var btns = Array.prototype.slice.call(box.querySelectorAll('[data-act]'));
     var remaining = total;

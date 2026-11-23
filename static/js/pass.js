@@ -8,7 +8,7 @@
   var card = document.querySelector("[data-pass]");
   if (!card) return;
   var api = (card.dataset.api || "").replace(/\/+$/, "");
-  var total = parseInt(card.dataset.limit, 10) || 5;
+  var total = parseInt(card.dataset.limit, 10) || 3;
   var statusEl = card.querySelector('[data-role="status"]');
   var formEl = card.querySelector('[data-role="form"]');
   var inputEl = card.querySelector('[data-role="input"]');

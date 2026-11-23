@@ -4,14 +4,14 @@
   <header class="pass-hero">
     <h1>{{ .Title }}</h1>
     <p class="pass-tagline">
-      每天可以打开 5 次下载入口，对偶尔来读一本的朋友已经够用。
+      每天可以打开 3 次下载入口，对偶尔来读一本的朋友已经够用。
       常来的朋友可以用站长发的邀请码兑换一张通行证，有效期内不限次（时长以邀请码为准）。
     </p>
   </header>
 
   <section class="pass-card" data-pass
            data-api="{{ $api }}"
-           data-limit="{{ site.Params.linkDailyLimit | default 5 }}">
+           data-limit="{{ site.Params.linkDailyLimit | default 3 }}">
     <div class="pass-status" data-role="status">
       <span class="pass-spin"></span>正在确认当前状态…
     </div>
@@ -25,7 +25,7 @@
       </p>
       <p class="pass-form-hint">
         邀请码由站长私下分发，一码一次有效。没有邀请码也完全不影响浏览，
-        每日 5 次下载额度照常可用；申请方式见下方「邀请码从哪里来」。
+        每日 3 次下载额度照常可用；申请方式见下方「邀请码从哪里来」。
       </p>
     </div>
 
@@ -47,8 +47,8 @@
     <dl>
       <dt>邀请码从哪里来？</dt>
       <dd>请发邮件至 <a class="pass-mail" href="mailto:827942110wan@163.com?subject=%E9%82%80%E8%AF%B7%E7%A0%81">827942110wan@163.com</a> 获取邀请码，邮件主题请填「邀请码」，看到就会回复。</dd>
-      <dt>通行证和「下载 5 次」是什么关系？</dt>
-      <dd>没有通行证时每天最多打开 5 次下载入口，第二天 0 点恢复；持有通行证期间不限次。两者浏览、看预览、搜索都不受影响。</dd>
+      <dt>通行证和「下载 3 次」是什么关系？</dt>
+      <dd>没有通行证时每天最多打开 3 次下载入口，第二天 0 点恢复；持有通行证期间不限次。两者浏览、看预览、搜索都不受影响。</dd>
       <dt>为什么这么设计？</dt>
       <dd>网盘入口的成本有限度，全部放开容易失效得快。用次数门槛挡掉批量抓取的脚本，把不限次的名额留给真的在读的人。</dd>
     </dl>

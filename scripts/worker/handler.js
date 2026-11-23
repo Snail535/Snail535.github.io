@@ -77,7 +77,7 @@ function clientIp(request) {
   return "0.0.0.0";
 }
 
-// 站长白名单：密钥（?t= 或 cookie mg_admin）或固定 IP，都不计数、不受 5 次限制。
+// 站长白名单：密钥（?t= 或 cookie mg_admin）或固定 IP，都不计数、不受次数限制。
 export function isExempt(request, env, url) {
   const ips = (env.BYPASS_IPS || "")
     .split(",")
@@ -383,13 +383,13 @@ export async function handle(request, env, now = Date.now(), ctx = null) {
     return json({ ok: false, reason: "method" }, 405, cors);
   }
   if (url.pathname !== "/link") {
-    return json({ ok: true, service: "magazine-links", limit: Number(env.DAILY_LIMIT) || 5 }, 200, cors);
+    return json({ ok: true, service: "magazine-links", limit: Number(env.DAILY_LIMIT) || 3 }, 200, cors);
   }
 
   const key = url.searchParams.get("k");
   if (!key) return json({ ok: false, reason: "missing_key" }, 400, cors);
 
-  const limit = Number(env.DAILY_LIMIT) || 5;
+  const limit = Number(env.DAILY_LIMIT) || 3;
   const ip = clientIp(request);
   const counterKey = `c:${shanghaiDay(now)}:${ip}`;
   const reset = resetAt(now);
@@ -407,7 +407,7 @@ export async function handle(request, env, now = Date.now(), ctx = null) {
     );
   }
 
-  // 持通行证：不限次、不占 5 次配额，但下载热度照记（会员也是真实兴趣）
+  // 持通行证：不限次、不占每日配额，但下载热度照记（会员也是真实兴趣）
   const passInfo = await checkPass(env, url.searchParams.get("p"), now);
   if (passInfo) {
     const rec = await env.LINKS.get(`i:${key}`, { type: "json" });

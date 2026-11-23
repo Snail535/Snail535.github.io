@@ -5,7 +5,7 @@ account_id = "f5309cc14e54f70864c5b1405751ddb8"
 
 # 每天允许打开网盘入口的次数
 [vars]
-DAILY_LIMIT = "5"
+DAILY_LIMIT = "3"
 # 允许调用的站点来源，逗号分隔
 ALLOWED_ORIGINS = "https://snail535.github.io,https://www.snail535.github.io"
 # 站长白名单 IP（逗号分隔，可留空）。家里宽带 IP 变了就在这里改，或者干脆用 ADMIN_KEY 方式
