@@ -4,7 +4,7 @@ weight: 431
 category: "男士杂志"
 cadence: "monthly"
 color: "#c2185b"
-adult: true
+adult: false
 description: "Mece Magazine，时尚人物与写真专题月刊。"
 cover:
   thumb: "/thumbs/magazines/mece-magazine/2026-09/thumb.webp"

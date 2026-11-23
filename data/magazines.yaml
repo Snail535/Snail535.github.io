@@ -452,7 +452,7 @@ magazines:
     cadence: "monthly"
     color: "#e91e63"
     weight: 430
-    adult: true
+    adult: false
     desc: "Bikini Plus，泳装与夏日风格写真月刊。"
 
   - slug: mece-magazine
@@ -462,7 +462,7 @@ magazines:
     cadence: "monthly"
     color: "#c2185b"
     weight: 431
-    adult: true
+    adult: false
     desc: "Mece Magazine，时尚人物与写真专题月刊。"
 
   - slug: modelsmania
@@ -472,7 +472,7 @@ magazines:
     cadence: "bimonthly"
     color: "#8e24aa"
     weight: 432
-    adult: true
+    adult: false
     desc: "ModelsMania，双月刊模特写真集。"
 
   - slug: purple-candy
@@ -482,7 +482,7 @@ magazines:
     cadence: "monthly"
     color: "#7e57c2"
     weight: 433
-    adult: true
+    adult: false
     desc: "Purple Candy，时尚写真与人物专题月刊。"
 
   # ---------- 预留位 ----------
