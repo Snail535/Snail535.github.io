@@ -444,6 +444,47 @@ magazines:
     weight: 420
     desc: "国家地理，以震撼摄影与深度报道探索自然、人文与科学的世界。"
 
+  # ---------- 11-24 新增四刊（成人写真月刊，封面默认遮罩）----------
+  - slug: bikini-plus
+    name: "Bikini Plus"
+    category: "男士杂志"
+    folders: ["BP"]
+    cadence: "monthly"
+    color: "#e91e63"
+    weight: 430
+    adult: true
+    desc: "Bikini Plus，泳装与夏日风格写真月刊。"
+
+  - slug: mece-magazine
+    name: "Mece Magazine"
+    category: "男士杂志"
+    folders: ["MCE"]
+    cadence: "monthly"
+    color: "#c2185b"
+    weight: 431
+    adult: true
+    desc: "Mece Magazine，时尚人物与写真专题月刊。"
+
+  - slug: modelsmania
+    name: "ModelsMania"
+    category: "男士杂志"
+    folders: ["MM"]
+    cadence: "bimonthly"
+    color: "#8e24aa"
+    weight: 432
+    adult: true
+    desc: "ModelsMania，双月刊模特写真集。"
+
+  - slug: purple-candy
+    name: "Purple Candy"
+    category: "男士杂志"
+    folders: ["PC"]
+    cadence: "monthly"
+    color: "#7e57c2"
+    weight: 433
+    adult: true
+    desc: "Purple Candy，时尚写真与人物专题月刊。"
+
   # ---------- 预留位 ----------
   # 若要新增刊种，照抄一段改字段即可；PDF 目录不存在时脚本会跳过，不会报错。
 
