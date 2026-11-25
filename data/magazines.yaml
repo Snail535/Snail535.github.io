@@ -485,6 +485,16 @@ magazines:
     adult: false
     desc: "Purple Candy，时尚写真与人物专题月刊。"
 
+  - slug: bbc-science-focus
+    name: "BBC Science Focus"
+    category: "科学期刊"
+    folders: ["BSF"]
+    cadence: "monthly"
+    color: "#0a5ea8"
+    weight: 434
+    adult: false
+    desc: "BBC Science Focus，英国科普月刊，以可读的笔触解读前沿科学与日常现象。"
+
   # ---------- 预留位 ----------
   # 若要新增刊种，照抄一段改字段即可；PDF 目录不存在时脚本会跳过，不会报错。
 

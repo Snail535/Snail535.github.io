@@ -7,7 +7,7 @@ color: "#e2231a"
 adult: false
 description: "时代周刊，封面人物即时代切片。"
 cover:
-  thumb: "/thumbs/magazines/time/2026-11-09-usa/thumb.webp"
+  thumb: "/thumbs/magazines/time/2026-11-23-usa/thumb.webp"
   alt: "TIME"
 ---
 
