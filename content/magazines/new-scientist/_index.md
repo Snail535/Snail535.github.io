@@ -7,7 +7,7 @@ color: "#b3123d"
 adult: false
 description: "新科学家，面向大众的科技进展与科学新闻周刊。"
 cover:
-  thumb: "/thumbs/magazines/new-scientist/2026-11-14/thumb.webp"
+  thumb: "/thumbs/magazines/new-scientist/2026-11-21/thumb.webp"
   alt: "New Scientist"
 ---
 
