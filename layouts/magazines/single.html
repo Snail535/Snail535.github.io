@@ -17,13 +17,10 @@
 
   <div class="mg-hero{{ if .Params.adult }} is-adult{{ end }}">
     {{- with .Params.cover.image }}
+    {{- /* 敏感图片一律输出文件级打码版，页面不保留原图路径、无切换入口 */ -}}
     {{- $safe := index (site.Data.censored_previews | default dict) . | default . }}
-    <div class="mg-hero-cover{{ if ne $safe . }} mg-censored{{ end }}">
-      <img src="{{ $safe | relURL }}" alt="{{ $.Params.cover.alt | default $.Title }}" decoding="async" fetchpriority="high"{{ if ne $safe . }} data-raw="{{ . | relURL }}"{{ end }}>
-      {{- if ne $safe . }}
-      <span class="mg-censor-tag">已打码</span>
-      <button type="button" class="mg-reveal">查看原图</button>
-      {{- end }}
+    <div class="mg-hero-cover">
+      <img src="{{ $safe | relURL }}" alt="{{ $.Params.cover.alt | default $.Title }}" decoding="async" fetchpriority="high">
       {{- if $.Params.adult }}<span class="mg-adult">18+</span>{{ end }}
     </div>
     {{- end }}
@@ -54,18 +51,11 @@
     <h3>内页预览</h3>
     <div class="mg-preview-grid">
       {{- range . }}
+      {{- /* 命中打码映射就直接用打码图，不输出原图地址 */ -}}
       {{- $safe := index (site.Data.censored_previews | default dict) . | default . }}
-      {{- if ne $safe . }}
-      <div class="mg-preview-item mg-censored">
-        <img src="{{ $safe | relURL }}" alt="内页预览（已打码）" loading="lazy" decoding="async" data-raw="{{ . | relURL }}">
-        <span class="mg-censor-tag">已打码</span>
-        <button type="button" class="mg-reveal">查看原图</button>
-      </div>
-      {{- else }}
-      <a href="{{ . | relURL }}" target="_blank" rel="noopener">
-        <img src="{{ . | relURL }}" alt="内页预览" loading="lazy" decoding="async">
+      <a href="{{ $safe | relURL }}" target="_blank" rel="noopener">
+        <img src="{{ $safe | relURL }}" alt="内页预览" loading="lazy" decoding="async">
       </a>
-      {{- end }}
       {{- end }}
     </div>
   </div>
@@ -161,18 +151,6 @@
         ta.value = t; document.body.appendChild(ta); ta.select();
         document.execCommand('copy'); document.body.removeChild(ta); done();
       }
-    });
-  });
-  document.querySelectorAll('.mg-reveal').forEach(function (b) {
-    b.addEventListener('click', function () {
-      var box = b.closest('.mg-censored');
-      var img = box && box.querySelector('img');
-      if (!img || !img.dataset.raw) return;
-      img.src = img.dataset.raw;
-      img.alt = img.alt.replace('（已打码）', '');
-      box.classList.add('is-revealed');
-      b.disabled = true;
-      b.textContent = '已显示原图';
     });
   });
   </script>

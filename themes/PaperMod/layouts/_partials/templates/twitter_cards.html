@@ -1,9 +1,12 @@
-{{- if .Params.cover.image -}}
+{{- /* 敏感封面统一输出打码图，不给社交卡片留原图 */ -}}
+{{- $coverImg := .Params.cover.image -}}
+{{- with $coverImg }}{{ $coverImg = index (site.Data.censored_previews | default dict) . | default . }}{{ end -}}
+{{- if $coverImg -}}
 <meta name="twitter:card" content="summary_large_image">
 {{- if (ne $.Params.cover.relative true) }}
-<meta name="twitter:image" content="{{ .Params.cover.image | absURL }}">
+<meta name="twitter:image" content="{{ $coverImg | absURL }}">
 {{- else }}
-<meta name="twitter:image" content="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}">
+<meta name="twitter:image" content="{{ (path.Join .RelPermalink $coverImg ) | absURL }}">
 {{- end}}
 {{- else }}
 {{- $images := partial "templates/_funcs/get-page-images" . }}

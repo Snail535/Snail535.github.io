@@ -77,12 +77,15 @@
   "articleBody": {{ .Content | safeJS | htmlUnescape | plainify }},
   "wordCount" : "{{ .WordCount }}",
   "inLanguage": {{ .Language.Lang | default "en-us" }},
-  {{ if .Params.cover.image -}}
+  {{- /* 结构化数据同样只用打码封面 */ -}}
+  {{- $coverImg := .Params.cover.image -}}
+  {{- with $coverImg }}{{ $coverImg = index (site.Data.censored_previews | default dict) . | default . }}{{ end -}}
+  {{ if $coverImg -}}
   "image":
     {{- if (ne .Params.cover.relative true) -}}
-    {{ .Params.cover.image | absURL }},
+    {{ $coverImg | absURL }},
     {{- else -}}
-    {{ (path.Join .RelPermalink .Params.cover.image ) | absURL }},
+    {{ (path.Join .RelPermalink $coverImg ) | absURL }},
     {{- end}}
   {{- else }}
     {{- $images := partial "templates/_funcs/get-page-images" . -}}

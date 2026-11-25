@@ -1,5 +1,8 @@
 {{- with .cxt}} {{/* Apply proper context from dict */}}
-{{- if (and .Params.cover.image (not $.isHidden)) }}
+{{- /* 敏感封面统一展示文件级打码图，不输出可点开的原图 */ -}}
+{{- $safeCover := .Params.cover.image -}}
+{{- with $safeCover }}{{ $safeCover = index (site.Data.censored_previews | default dict) . | default . }}{{ end -}}
+{{- if (and $safeCover (not $.isHidden)) }}
 <figure class="entry-cover">
     {{- $loading := cond $.IsSingle "eager" "lazy" }}
     {{- $addLink := (and site.Params.cover.linkFullImages $.IsSingle) }}
@@ -7,8 +10,8 @@
     {{- $alt := (.Params.cover.alt | default .Params.cover.caption | plainify) }}
     {{- $responsiveImages := (.Params.cover.responsiveImages | default site.Params.cover.responsiveImages) | default true }}
 
-    {{- $pageBundleCover := (.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
-    {{- $globalResourcesCover := (resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
+    {{- $pageBundleCover := (.Resources.ByType "image").GetMatch (printf "*%s*" $safeCover) }}
+    {{- $globalResourcesCover := (resources.ByType "image").GetMatch (printf "*%s*" $safeCover) }}
     {{- $cover := (or $pageBundleCover $globalResourcesCover)}}
     {{- /* We are not using the .Param.cover.relative to decide the location of image */}}
     {{- /* If we have the image in pageBundle or globalResources we can process the image */}}
@@ -19,7 +22,7 @@
         {{- $processableFormats = $processableFormats | append "webp" -}}
     {{- end -}}
 
-    {{- $imgdl := (.Params.cover.image) | absURL }}
+    {{- $imgdl := $safeCover | absURL }}
     {{- if $cover -}}
         {{- $imgdl = $cover.Permalink }}
     {{- end -}}

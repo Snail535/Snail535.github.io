@@ -35,11 +35,14 @@
   <meta property="og:type" content="website">
 {{- end }}
 
-{{- if .Params.cover.image -}}
+{{- /* 敏感封面统一输出文件级打码图，社交分享不暴露原图 */ -}}
+{{- $coverImg := .Params.cover.image -}}
+{{- with $coverImg }}{{ $coverImg = index (site.Data.censored_previews | default dict) . | default . }}{{ end -}}
+{{- if $coverImg -}}
   {{- if (ne .Params.cover.relative true) }}
-    <meta property="og:image" content="{{ .Params.cover.image | absURL }}">
+    <meta property="og:image" content="{{ $coverImg | absURL }}">
   {{- else}}
-    <meta property="og:image" content="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}">
+    <meta property="og:image" content="{{ (path.Join .RelPermalink $coverImg ) | absURL }}">
   {{- end}}
 {{- else }}
   {{- with partial "_funcs/get-page-images" . }}

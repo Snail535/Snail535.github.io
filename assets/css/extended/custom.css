@@ -446,24 +446,8 @@
 .mg-download.is-locked .mg-dl-status { color: #b3261e; font-weight: 600; }
 .mg-download.is-locked .mg-pwd { opacity: .55; }
 
-/* ---------- 内容识别打码（原图保留，点击查看才显示） ---------- */
-.mg-censored,
+/* ---------- 敏感图片统一展示文件级打码图，无原图切换 ---------- */
 .mg-preview-item { position: relative; }
-.mg-censor-tag {
-  position: absolute; top: 6px; left: 6px; z-index: 2;
-  font-size: 10px; line-height: 1.4; padding: 2px 6px;
-  border-radius: 4px; background: #b3261e; color: #fff;
-  pointer-events: none;
-}
-.mg-reveal {
-  position: absolute; right: 6px; bottom: 6px; z-index: 2;
-  font-size: 11px; padding: 3px 8px; cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, .55); border-radius: 5px;
-  background: rgba(20, 20, 20, .74); color: #fff;
-}
-.mg-reveal:hover { background: rgba(20, 20, 20, .92); }
-.mg-reveal:disabled { opacity: .6; cursor: default; }
-.mg-censored.is-revealed .mg-censor-tag { display: none; }
 
 /* ==========================================================
    分类索引：封面拼贴卡片
