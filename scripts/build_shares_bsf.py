@@ -45,6 +45,10 @@ def stem_from_fname(mod, abbr, fname):
 def build_map():
     mod = load_archive_mod()
     mp = {}
+    try:
+        have = set(json.load(open(LINKS, encoding="utf-8")))
+    except Exception:
+        have = set()
     for abbr, slug in MAGS.items():
         for md in sorted((CONTENT / slug).glob("*.md")):
             if md.name == "_index.md":
@@ -62,6 +66,8 @@ def build_map():
             yr = re.search(r"(20\d{2})", fname).group(1)
             cloud_dir = f"外文期刊/月刊/{abbr}/{yr}"
             key = f"{slug}-{md.stem}"
+            if key in have:
+                continue  # 已有分享，不重复建
             mp[key] = (cloud_dir, stem + ".jpg", md, slug, md.stem)
     return mp
 
