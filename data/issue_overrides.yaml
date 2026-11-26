@@ -1256,3 +1256,9 @@
   date: "2026-05"
   key: "2026-05-usa"
   label: "2026 年 4–5 月合刊"
+
+"BSF/2025/BBC_Science_Focus_-_June_2025.pdf":
+  date: "2025-06"
+  key: "2025-06-regular"
+  label: "2025 年 6 月"
+  cloud: "外文期刊/月刊/BSF/2025/BSFUK2506.jpg"
