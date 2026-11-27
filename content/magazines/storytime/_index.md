@@ -1,7 +1,7 @@
 ---
 title: "Storytime"
 weight: 440
-category: "文化生活"
+category: "英语学习"
 cadence: "monthly"
 color: "#ef6c00"
 adult: false
