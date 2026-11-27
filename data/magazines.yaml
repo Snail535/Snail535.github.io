@@ -517,7 +517,7 @@ magazines:
 
   - slug: storytime
     name: "Storytime"
-    category: "文化生活"
+    category: "英语学习"
     folders: ["STO"]
     cadence: "monthly"
     color: "#ef6c00"
