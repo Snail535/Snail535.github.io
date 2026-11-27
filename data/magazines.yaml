@@ -495,6 +495,36 @@ magazines:
     adult: false
     desc: "BBC Science Focus，英国科普月刊，以可读的笔触解读前沿科学与日常现象。"
 
+  - slug: how-it-works
+    name: "How It Works"
+    category: "科学期刊"
+    folders: ["HIW"]
+    cadence: "monthly"
+    color: "#d81b60"
+    weight: 436
+    adult: false
+    desc: "How It Works，英国科普月刊，用图解讲清楚万物运转的原理，一起看懂世界的怎么来的。"
+
+  - slug: what-on-earth
+    name: "What on Earth"
+    category: "科学期刊"
+    folders: ["WOE"]
+    cadence: "monthly"
+    color: "#2e7d32"
+    weight: 438
+    adult: false
+    desc: "What on Earth!，英国儿童科普月刊，和百科全书 Britannica 合作，把知识变成好看好玩的杂志。"
+
+  - slug: storytime
+    name: "Storytime"
+    category: "文化生活"
+    folders: ["STO"]
+    cadence: "monthly"
+    color: "#ef6c00"
+    weight: 440
+    adult: false
+    desc: "Storytime，英国儿童故事月刊，经典童话、传说与新创作插画故事，适合亲子共读。"
+
   # ---------- 预留位 ----------
   # 若要新增刊种，照抄一段改字段即可；PDF 目录不存在时脚本会跳过，不会报错。
 

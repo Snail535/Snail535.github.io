@@ -1262,3 +1262,205 @@
   key: "2025-06-regular"
   label: "2025 年 6 月"
   cloud: "外文期刊/月刊/BSF/2025/BSFUK2506.jpg"
+
+# ---------- 2026-11-26 新增 How It Works（期号命名，月份=上市/发布月） ----------
+"HIW/2024/How_It_Works_Annual_-_Volume_15_2024.pdf":
+  date: "2024-10-08"
+  key: "2024-10-annual-vol-15"
+  label: "2024 年 10 月 · Annual Volume 15"
+  cloud: "外文期刊/月刊/HIW/2024/HIWAN15.jpg"
+"HIW/2025/How_It_Works_Annual_-_Volume_16_2025.pdf":
+  date: "2025-11-07"
+  key: "2025-11-annual-vol-16"
+  label: "2025 年 11 月 · Annual Volume 16"
+  cloud: "外文期刊/月刊/HIW/2025/HIWAN16.jpg"
+"HIW/2026/How_It_Works_Annual_-_Volume_17_2026.pdf":
+  date: "2026-11-21"
+  key: "2026-11-annual-vol-17"
+  label: "2026 年 11 月 · Annual Volume 17"
+  cloud: "外文期刊/月刊/HIW/2026/HIWAN17.jpg"
+"HIW/2024/How_It_Works_-_Issue_186.pdf":
+  date: "2024-01"
+  key: "2024-01-issue-186"
+  label: "2024 年 1 月 · Issue 186"
+  cloud: "外文期刊/月刊/HIW/2024/HIW186.jpg"
+"HIW/2024/How_It_Works_-_Issue_187.pdf":
+  date: "2024-02"
+  key: "2024-02-issue-187"
+  label: "2024 年 2 月 · Issue 187"
+  cloud: "外文期刊/月刊/HIW/2024/HIW187.jpg"
+"HIW/2024/How_It_Works_-_Issue_188.pdf":
+  date: "2024-03"
+  key: "2024-03-issue-188"
+  label: "2024 年 3 月 · Issue 188"
+  cloud: "外文期刊/月刊/HIW/2024/HIW188.jpg"
+"HIW/2024/How_It_Works_-_Issue_189.pdf":
+  date: "2024-04"
+  key: "2024-04-issue-189"
+  label: "2024 年 4 月 · Issue 189"
+  cloud: "外文期刊/月刊/HIW/2024/HIW189.jpg"
+"HIW/2024/How_It_Works_-_Issue_190.pdf":
+  date: "2024-05"
+  key: "2024-05-issue-190"
+  label: "2024 年 5 月 · Issue 190"
+  cloud: "外文期刊/月刊/HIW/2024/HIW190.jpg"
+"HIW/2024/How_It_Works_-_Issue_191.pdf":
+  date: "2024-06"
+  key: "2024-06-issue-191"
+  label: "2024 年 6 月 · Issue 191"
+  cloud: "外文期刊/月刊/HIW/2024/HIW191.jpg"
+"HIW/2024/How_It_Works_-_Issue_192.pdf":
+  date: "2024-07"
+  key: "2024-07-issue-192"
+  label: "2024 年 7 月 · Issue 192"
+  cloud: "外文期刊/月刊/HIW/2024/HIW192.jpg"
+"HIW/2024/How_It_Works_-_Issue_193.pdf":
+  date: "2024-08"
+  key: "2024-08-issue-193"
+  label: "2024 年 8 月 · Issue 193"
+  cloud: "外文期刊/月刊/HIW/2024/HIW193.jpg"
+"HIW/2024/How_It_Works_-_Issue_194.pdf":
+  date: "2024-09"
+  key: "2024-09-issue-194"
+  label: "2024 年 9 月 · Issue 194"
+  cloud: "外文期刊/月刊/HIW/2024/HIW194.jpg"
+"HIW/2024/How_It_Works_-_Issue_195.pdf":
+  date: "2024-10"
+  key: "2024-10-issue-195"
+  label: "2024 年 10 月 · Issue 195"
+  cloud: "外文期刊/月刊/HIW/2024/HIW195.jpg"
+"HIW/2024/How_It_Works_-_Issue_196.pdf":
+  date: "2024-11"
+  key: "2024-11-issue-196"
+  label: "2024 年 11 月 · Issue 196"
+  cloud: "外文期刊/月刊/HIW/2024/HIW196.jpg"
+"HIW/2025/How_It_Works_-_Issue_197.pdf":
+  date: "2024-12"
+  key: "2024-12-issue-197"
+  label: "2024 年 12 月 · Issue 197"
+  cloud: "外文期刊/月刊/HIW/2025/HIW197.jpg"
+"HIW/2025/How_It_Works_-_Issue_198.pdf":
+  date: "2025-01"
+  key: "2025-01-issue-198"
+  label: "2025 年 1 月 · Issue 198"
+  cloud: "外文期刊/月刊/HIW/2025/HIW198.jpg"
+"HIW/2025/How_It_Works_-_Issue_199.pdf":
+  date: "2025-02"
+  key: "2025-02-issue-199"
+  label: "2025 年 2 月 · Issue 199"
+  cloud: "外文期刊/月刊/HIW/2025/HIW199.jpg"
+"HIW/2025/How_It_Works_-_Issue_200.pdf":
+  date: "2025-03"
+  key: "2025-03-issue-200"
+  label: "2025 年 3 月 · Issue 200"
+  cloud: "外文期刊/月刊/HIW/2025/HIW200.jpg"
+"HIW/2025/How_It_Works_-_Issue_201.pdf":
+  date: "2025-04"
+  key: "2025-04-issue-201"
+  label: "2025 年 4 月 · Issue 201"
+  cloud: "外文期刊/月刊/HIW/2025/HIW201.jpg"
+"HIW/2025/How_It_Works_-_Issue_202.pdf":
+  date: "2025-05"
+  key: "2025-05-issue-202"
+  label: "2025 年 5 月 · Issue 202"
+  cloud: "外文期刊/月刊/HIW/2025/HIW202.jpg"
+"HIW/2025/How_It_Works_-_Issue_203.pdf":
+  date: "2025-06"
+  key: "2025-06-issue-203"
+  label: "2025 年 6 月 · Issue 203"
+  cloud: "外文期刊/月刊/HIW/2025/HIW203.jpg"
+"HIW/2025/How_It_Works_-_Issue_204.pdf":
+  date: "2025-06"
+  key: "2025-06-issue-204"
+  label: "2025 年 6 月 · Issue 204"
+  cloud: "外文期刊/月刊/HIW/2025/HIW204.jpg"
+"HIW/2025/How_It_Works_-_Issue_205.pdf":
+  date: "2025-07"
+  key: "2025-07-issue-205"
+  label: "2025 年 7 月 · Issue 205"
+  cloud: "外文期刊/月刊/HIW/2025/HIW205.jpg"
+"HIW/2025/How_It_Works_-_Issue_206.pdf":
+  date: "2025-08"
+  key: "2025-08-issue-206"
+  label: "2025 年 8 月 · Issue 206"
+  cloud: "外文期刊/月刊/HIW/2025/HIW206.jpg"
+"HIW/2025/How_It_Works_-_Issue_207.pdf":
+  date: "2025-09"
+  key: "2025-09-issue-207"
+  label: "2025 年 9 月 · Issue 207"
+  cloud: "外文期刊/月刊/HIW/2025/HIW207.jpg"
+"HIW/2025/How_It_Works_-_Issue_208.pdf":
+  date: "2025-10"
+  key: "2025-10-issue-208"
+  label: "2025 年 10 月 · Issue 208"
+  cloud: "外文期刊/月刊/HIW/2025/HIW208.jpg"
+"HIW/2025/How_It_Works_-_Issue_209.pdf":
+  date: "2025-11"
+  key: "2025-11-issue-209"
+  label: "2025 年 11 月 · Issue 209"
+  cloud: "外文期刊/月刊/HIW/2025/HIW209.jpg"
+"HIW/2026/How_It_Works_-_Issue_210.pdf":
+  date: "2025-12"
+  key: "2025-12-issue-210"
+  label: "2025 年 12 月 · Issue 210"
+  cloud: "外文期刊/月刊/HIW/2026/HIW210.jpg"
+"HIW/2026/How_It_Works_-_Issue_211.pdf":
+  date: "2026-01"
+  key: "2026-01-issue-211"
+  label: "2026 年 1 月 · Issue 211"
+  cloud: "外文期刊/月刊/HIW/2026/HIW211.jpg"
+"HIW/2026/How_It_Works_-_Issue_212.pdf":
+  date: "2026-02"
+  key: "2026-02-issue-212"
+  label: "2026 年 2 月 · Issue 212"
+  cloud: "外文期刊/月刊/HIW/2026/HIW212.jpg"
+"HIW/2026/How_It_Works_-_Issue_213.pdf":
+  date: "2026-03"
+  key: "2026-03-issue-213"
+  label: "2026 年 3 月 · Issue 213"
+  cloud: "外文期刊/月刊/HIW/2026/HIW213.jpg"
+"HIW/2026/How_It_Works_-_Issue_214.pdf":
+  date: "2026-04"
+  key: "2026-04-issue-214"
+  label: "2026 年 4 月 · Issue 214"
+  cloud: "外文期刊/月刊/HIW/2026/HIW214.jpg"
+"HIW/2026/How_It_Works_-_Issue_215.pdf":
+  date: "2026-05"
+  key: "2026-05-issue-215"
+  label: "2026 年 5 月 · Issue 215"
+  cloud: "外文期刊/月刊/HIW/2026/HIW215.jpg"
+"HIW/2026/How_It_Works_-_Issue_216.pdf":
+  date: "2026-05"
+  key: "2026-05-issue-216"
+  label: "2026 年 5 月 · Issue 216"
+  cloud: "外文期刊/月刊/HIW/2026/HIW216.jpg"
+"HIW/2026/How_It_Works_-_Issue_217.pdf":
+  date: "2026-06"
+  key: "2026-06-issue-217"
+  label: "2026 年 6 月 · Issue 217"
+  cloud: "外文期刊/月刊/HIW/2026/HIW217.jpg"
+"HIW/2026/How_It_Works_-_Issue_218.pdf":
+  date: "2026-07"
+  key: "2026-07-issue-218"
+  label: "2026 年 7 月 · Issue 218"
+  cloud: "外文期刊/月刊/HIW/2026/HIW218.jpg"
+"HIW/2026/How_It_Works_-_Issue_219.pdf":
+  date: "2026-08"
+  key: "2026-08-issue-219"
+  label: "2026 年 8 月 · Issue 219"
+  cloud: "外文期刊/月刊/HIW/2026/HIW219.jpg"
+"HIW/2026/How_It_Works_-_Issue_220.pdf":
+  date: "2026-09"
+  key: "2026-09-issue-220"
+  label: "2026 年 9 月 · Issue 220"
+  cloud: "外文期刊/月刊/HIW/2026/HIW220.jpg"
+"HIW/2026/How_It_Works_-_Issue_221.pdf":
+  date: "2026-10"
+  key: "2026-10-issue-221"
+  label: "2026 年 10 月 · Issue 221"
+  cloud: "外文期刊/月刊/HIW/2026/HIW221.jpg"
+"HIW/2026/How_It_Works_-_Issue_222.pdf":
+  date: "2026-11"
+  key: "2026-11-issue-222"
+  label: "2026 年 11 月 · Issue 222"
+  cloud: "外文期刊/月刊/HIW/2026/HIW222.jpg"
