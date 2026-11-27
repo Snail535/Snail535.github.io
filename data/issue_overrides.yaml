@@ -1263,6 +1263,13 @@
   label: "2025 年 6 月"
   cloud: "外文期刊/月刊/BSF/2025/BSFUK2506.jpg"
 
+# ---------- 2026-11-27 Summer 2024 特刊与 June 正刊并存（同 2025 先例） ----------
+"BSF/2024/BBC_Science_Focus_-_June_2024.pdf":
+  date: "2024-06"
+  key: "2024-06-regular"
+  label: "2024 年 6 月"
+  cloud: "外文期刊/月刊/BSF/2024/BSFUK2406.jpg"
+
 # ---------- 2026-11-26 新增 How It Works（期号命名，月份=上市/发布月） ----------
 "HIW/2024/How_It_Works_Annual_-_Volume_15_2024.pdf":
   date: "2024-10-08"
