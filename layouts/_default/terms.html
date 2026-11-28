@@ -14,7 +14,7 @@
 {{- if $isCat }}
 {{- $all := (site.GetPage "/magazines").Sections }}
 {{- /* 分类卡片顺序与 /magazines/ 保持一致，未列出的新分类补在末尾 */ -}}
-{{- $order := slice "英语学习" "科学期刊" "商业财经" "文化生活" "时事新闻" "男士杂志" "游戏娱乐" }}
+{{- $order := slice "英语学习" "儿童教育" "科学期刊" "商业财经" "文化生活" "时事新闻" "男士杂志" "游戏娱乐" }}
 {{- $terms := .Data.Terms.ByCount }}
 {{- $sorted := slice }}
 {{- range $cat := $order }}

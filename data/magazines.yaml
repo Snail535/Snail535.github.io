@@ -525,6 +525,79 @@ magazines:
     adult: false
     desc: "Storytime，英国儿童故事月刊，经典童话、传说与新创作插画故事，适合亲子共读。"
 
+  - slug: ask
+    name: "Ask"
+    category: "儿童教育"
+    folders: ["ASK"]
+    cadence: "monthly"
+    color: "#1976d2"
+    weight: 441
+    adult: false
+    desc: "Ask，Cricket Media 出品的儿童科普杂志，用故事和实验解答孩子关于世界的好奇。"
+  - slug: babybug
+    name: "Babybug"
+    category: "儿童教育"
+    folders: ["BAB"]
+    cadence: "monthly"
+    color: "#f2a900"
+    weight: 442
+    adult: false
+    desc: "Babybug，Cricket Media 出品的幼儿文学杂志，为 3-6 岁孩子准备的韵律故事与图画。"
+  - slug: click
+    name: "Click"
+    category: "儿童教育"
+    folders: ["CLI"]
+    cadence: "monthly"
+    color: "#0288d1"
+    weight: 443
+    adult: false
+    desc: "Click，Cricket Media 出品的儿童科学杂志，用漫画和互动栏目讲科学。"
+  - slug: cricket
+    name: "Cricket"
+    category: "儿童教育"
+    folders: ["CRI"]
+    cadence: "monthly"
+    color: "#c62828"
+    weight: 444
+    adult: false
+    desc: "Cricket，Cricket Media 出品的经典儿童文学杂志，童话、传说与原创故事。"
+  - slug: faces
+    name: "Faces"
+    category: "儿童教育"
+    folders: ["FAC"]
+    cadence: "monthly"
+    color: "#6a1b9a"
+    weight: 445
+    adult: false
+    desc: "Faces，Cricket Media 出品的儿童人文杂志，每月带孩子认识世界不同文化。"
+  - slug: ladybug
+    name: "Ladybug"
+    category: "儿童教育"
+    folders: ["LAD"]
+    cadence: "monthly"
+    color: "#e65100"
+    weight: 446
+    adult: false
+    desc: "Ladybug，Cricket Media 出品的幼儿文学杂志，为 5-9 岁孩子精选故事与诗歌。"
+  - slug: muse
+    name: "Muse"
+    category: "儿童教育"
+    folders: ["MUS"]
+    cadence: "monthly"
+    color: "#00838f"
+    weight: 447
+    adult: false
+    desc: "Muse，Cricket Media 出品的儿童科学与艺术杂志，跨学科启发好奇心。"
+  - slug: spider
+    name: "Spider"
+    category: "儿童教育"
+    folders: ["SPI"]
+    cadence: "monthly"
+    color: "#388e3c"
+    weight: 448
+    adult: false
+    desc: "Spider，Cricket Media 出品的儿童文学杂志，为 6-9 岁孩子提供趣味故事与活动。"
+
   # ---------- 预留位 ----------
   # 若要新增刊种，照抄一段改字段即可；PDF 目录不存在时脚本会跳过，不会报错。
 
